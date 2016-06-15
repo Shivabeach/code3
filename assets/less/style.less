@@ -1,0 +1,26 @@
+// out: ../dist/styles-dist.css, compress: true, autoprefixer
+@import (css) url("../../bower_components/normalize-css/normalize.css");
+@import (less) url("colors.less");
+@import (css) url("typo-dist.css");
+@import (css) url("flex-dist.css");
+body, html {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+  background-color: @vintage4;
+  background-blend-mode: difference;
+	font-family: georgia;
+	line-height: 1.618;
+	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: all 300ms ease;
+  overflow: auto;
+}
+nav ul li {
+	display: inline;
+}
+header {
+	width: 80%;
+	margin: 0 auto;
+}
