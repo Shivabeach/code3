@@ -11,7 +11,16 @@ class Pages extends CI_Controller{
 
   function index()
   {
-    $this->load->view("Pages/prime");
+    $data['title'] = "Home Page";
+    $this->db->select("title, content, date")->from("posts")->order_by("id", "desc");
+    $query = $this->db->get();
+    if($query->result()){
+      $data["mainContent"] = $query->result();
+    }
+    $this->load->view("pages/header/head", $data);
+    $this->load->view("Pages/prime", $data);
+    $this->load->view("pages/footer/footer");;
+
   }
 
 }
