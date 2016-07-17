@@ -1,15 +1,20 @@
-// out: ../dist/links-dist.css, compress: true, autoprefixer
+// out: ../dist/links-dist.css, compress: true
 @import (less) url("colors.less");
 a {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.25s;
-  border-bottom: 1px solid @vintage4;
+  border-bottom: 1px solid #E6DEDB;
   padding-bottom: 8px;
-  font-size: 1em;
+  font-size: 1em !important;
+  font-family: 'tanglewood_tales_nfregular';
+  cursor: pointer;
 }
 a:hover {
-  border-color: #225500;
+  border-color: rgb(34, 85, 0);
   padding-bottom: 1px;
-  font-size: 0.9rem;
+  font-size: 1em;
+}
+footer a {
+  text-transform: none;
 }

@@ -33,7 +33,5 @@
           <?php endforeach;?>
       </div>
       <div class="flex-small">
-        <?php include("nav.php");
-        echo current_url();
-        ?>
+        <?php include(APPPATH . "/views/nav/nav.php");?>
       </div>

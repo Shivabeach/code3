@@ -1,5 +1,6 @@
-$(function () {
+$(function() {
     'use strict';
+
     function showSize() {
         $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
         $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
@@ -11,22 +12,22 @@ $(function () {
 $(function() {
     "use strict";
     $('A[rel="external"]')
-    .click( function() {
-    window.open( $(this).attr('href'),
-    rel="noopener noreferrer");
-    return false;
-    var newWnd = window.open();
-    newWnd.opener = null;
-    });
+        .click(function() {
+            window.open($(this).attr('href'),
+                rel = "noopener noreferrer");
+            return false;
+            var newWnd = window.open();
+            newWnd.opener = null;
+        });
 });
-$(function () {
+$(function() {
     "use strict";
-    $('form#ajax').on('submit', function () {
+    $('form#ajax').on('submit', function() {
         var that = $(this),
             url = that.attr('action'),
             type = that.attr('method'),
             data = {};
-        that.find('[name]').each(function (index, value) {
+        that.find('[name]').each(function(index, value) {
             var that = $(this),
                 name = that.attr('name'),
                 value = that.val();
@@ -36,10 +37,10 @@ $(function () {
             url: url,
             type: type,
             data: data,
-            success: function (response) {
+            success: function(response) {
                 $('#display').html(response);
             },
-            error: function () {
+            error: function() {
                 alert('Sumptin not right');
             }
         });
