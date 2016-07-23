@@ -38,7 +38,7 @@ $(function() {
             type: type,
             data: data,
             success: function(response) {
-                $('#display').html(response).delay(5000).fadeOut(1000);
+                $('#display').html(response).delay(8000).fadeOut(1000);
             }
         });
         return false;
