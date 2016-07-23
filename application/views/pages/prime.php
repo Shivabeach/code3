@@ -35,3 +35,4 @@
       <div class="flex-small">
         <?php include(APPPATH . "/views/nav/nav.php");?>
       </div>
+  </div>

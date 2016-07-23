@@ -2,6 +2,7 @@
       <div class="nav-grid box1">
         <h6 class="centered">VanHorn Family</h6>
         <ul>
+          <li class="line"><?php echo anchor('Pages/van','VanHorn History', 'title="VanHorn"');?></li>
           <li class="line"><a href="#">DNA</a></li>
           <li class="line"><a href="#">Linages</a></li>
           <li class="line"><a href="#">Stories</a></li>
@@ -10,6 +11,7 @@
       <div class="nav-grid box2">
         <h6 class="centered">Bostick Family</h6>
         <ul>
+          <li class="line"><?php echo anchor('Pages/bos','Bostick History');?></li>
           <li class="line"><a href="#">DNA</a></li>
           <li class="line"><a href="#">Linages</a></li>
           <li class="line"><a href="#">Stories</a></li>
@@ -18,19 +20,12 @@
       <div class="nav-grid box3">
         <h6 class="centered">General Links</h6>
         <ul>
-          <li class="line"><a href="#">DNA</a></li>
+          <li class="line"><?php echo anchor("Pages/entry", "Entry"); ?></li>
           <li class="line"><a href="#">Linages</a></li>
           <li class="line"><a href="#">Stories</a></li>
         </ul>
       </div>
-      <!-- <div class="nav-grid box4">
-        <h6 class="centered">Reed Family</h6>
-        <ul>
-          <li class="line"><a href="#">DNA</a></li>
-          <li class="line"><a href="#">Linages</a></li>
-          <li class="line"><a href="#">Stories</a></li>
-      </ul>
-      </div> -->
+
       <div class="nav-grid box5">
         <p class="small">&copy; <?php
            $fromYear = 2008;

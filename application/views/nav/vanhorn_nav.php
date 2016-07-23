@@ -5,4 +5,4 @@
   <li class="line"><a href="#">Stories</a></li>
 </ul>
 </header>
-//include (APPPATH . "/views/loginscript.php");
+<!-- include (APPPATH . "/views/loginscript.php"); -->

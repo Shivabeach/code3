@@ -14,8 +14,8 @@ class Pages extends CI_Controller{
   {
     $data['title'] = "Home Page";
     $parent = "main";
-    $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->order_by("id", "desc");
-    $query = $this->db->get();
+
+    $query = $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc")->get();
     if($query->result()){
       $data["mainContent"] = $query->result();
     }
@@ -26,8 +26,13 @@ class Pages extends CI_Controller{
   public function van()
   {
     $data['title'] = "VanHorn Page";
-    $data['head'] = "VanHorns";
-    //$data['navy'] = $this->load->view("nav/vanhorn_nav");
+    $data['head'] = "A VanHorn History";
+    $parent = "VanHorn";
+    $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $query = $this->db->get();
+    if($query->result()){
+      $data["mainContent"] = $query->result();
+    }
     $this->load->view("pages/header/head", $data);
     $this->load->view("Pages/van");
     $this->load->view("pages/footer/footer");
@@ -36,9 +41,22 @@ class Pages extends CI_Controller{
   {
     $data['title'] = "Bostick Page";
     $data['head'] = "Bosticks";
+    $parent = "Bostick";
+    $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $query = $this->db->get();
+    if($query->result()){
+      $data["mainContent"] = $query->result();
+    }
     $this->load->view("pages/header/head", $data);
     $this->load->view("Pages/bos");
     $this->load->view("pages/footer/footer");
   }
-
+  function entry()
+  {
+    $data['title'] = "Post Entry";
+    $data['head'] = "Post Entry";
+    $this->load->view("pages/header/head", $data);
+    $this->load->view("admin/postEntry");
+    $this->load->view("pages/footer/footer");
+  }
 }

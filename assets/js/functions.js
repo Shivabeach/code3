@@ -38,12 +38,17 @@ $(function() {
             type: type,
             data: data,
             success: function(response) {
-                $('#display').html(response);
-            },
-            error: function() {
-                alert('Sumptin not right');
+                $('#display').html(response).delay(5000).fadeOut(1000);
             }
         });
         return false;
     });
 });
+for (var i = 0; i < document.links.length; i++) {/*this highlights the current active link*/
+    if (document.links[i].href == document.URL) {
+        document.links[i].className = 'current';
+    }
+}
+$(function() {
+  $("#date").datepicker();
+})

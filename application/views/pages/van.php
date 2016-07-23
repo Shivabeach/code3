@@ -4,12 +4,16 @@
   </header>
 <div class="container">
   <div class="flex-large">
-    <?php $this->load->view("nav/vanhorn_nav");?>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione iste necessitatibus at sed sunt. Culpa error, illo tenetur qui quaerat!</p>
+    <?php foreach($mainContent as $row):?>
+      <article class="ancestry">
+        <h2 class="ancestryTitle item"><?php echo $row->title;?></h2>
+        <div class="ancestryContent item"><?php echo $this->typography->auto_typography($row->content);?> </div>
+        <h6 class="ancestryDate"><?php echo $row->date;?></h6>
+    </article>
+    <?php endforeach;?>
   </div>
   <div class="flex-small">
-    <?php include("nav.php");
-    echo current_url();
-    ?>
+    <?php include(APPPATH . "/views/nav/nav.php");
+    echo current_url(); ?>
   </div>
+</div>
