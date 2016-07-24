@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Forms extends CI_Controller{
+class Forms extends CI_Controller
+{
 
   public function __construct()
   {
@@ -49,7 +50,7 @@ public function maint()
     $this->table->set_caption("<h3>Post Updates and Other Maintenance</h3>");
     $data['title'] = 'maintenance';
     $this->load->view('posts/post_maint', $data);
-    }
+}
 //fill the update form
 public function fill_form()
 {
@@ -62,3 +63,4 @@ public function fill_form()
   $data['title'] = 'form update';
   $this->load->view('posts/post_update', $data);
 }//end of file
+}
