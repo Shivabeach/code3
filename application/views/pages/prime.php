@@ -6,6 +6,7 @@
       <div class="flex-large">
         <article class="ancestry">
           <h2 class="ancestryTitle item">Family History</h2>
+          <button class="grab pure-button">Read More</button>
           <div class="ancestryContent item">
             <p> Where we are from in the last 500 years or so!
         <blockquote>
@@ -20,19 +21,24 @@
         </blockquote>
 
         <p>You may well ask how can there be bleed over from one area to the other. It is a good question. Remember, those of our English ancestors also had Scottish, French and Dutch ancestors themselves. We pick that up in our DNA. Our Caucasus DNA is slightly deeper and more on Mom's side than Dad's. Remember the path out of Africa passed through the middle east on their way to Europe, Mediterranean, Russia and beyond.</p>
-        <p>Our deep ancestry is shown on the VanHorn and Bostick headings on the menu.</p>
+        <p>Our deep ancestry is shown on the VanHorn and Bostick pages.</p>
           </div>
           <h6 class="ancestryDate">2/20/2016</h6>
         </article>
             <?php foreach($mainContent as $row):?>
               <article class="ancestry">
                 <h2 class="ancestryTitle item"><?php echo $row->title;?></h2>
+                <button class="grab pure-button">Read More</button>
                 <div class="ancestryContent item"><?php echo $this->typography->auto_typography($row->content);?> </div>
                 <h6 class="ancestryDate"><?php echo $row->date;?></h6>
             </article>
           <?php endforeach;?>
+          <?php echo $this->pagination->create_links();?>
       </div>
       <div class="flex-small">
-        <?php include(APPPATH . "/views/nav/nav.php");?>
+        <?php
+        echo current_url();
+        include(APPPATH . "/views/pages/includes/side.php");
+        ?>
       </div>
   </div>

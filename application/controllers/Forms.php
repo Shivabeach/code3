@@ -14,11 +14,11 @@ class Forms extends CI_Controller
   function enterPosts()
   {
     $data = [
-      'title' => htmlspecialchars(trim($this->input->post('title'))),
-      'content' => strip_tags($this->input->post('content','<strong><a><span>'),
-      'date' => htmlspecialchars(trim($this->input->post('date'))),
-      'parent' => htmlspecialchars(trim($this->input->post('parent'))),
-      'status' => htmlspecialchars(trim($this->input->post('status'))),
+      'title'   => htmlspecialchars(trim($this->input->post('title'))),
+      'content' => strip_tags($this->input->post('content','<strong><a><span>')),
+      'date'    => htmlspecialchars(trim($this->input->post('date'))),
+      'parent'  => htmlspecialchars(trim($this->input->post('parent'))),
+      'status'  => htmlspecialchars(trim($this->input->post('status'))),
     ];
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required');
@@ -34,11 +34,33 @@ class Forms extends CI_Controller
 		}
   } //end of enterposts
 
+  function upPosts()
+  {
+    $data = [
+      'id'      => $this->input->post('id'),
+      'title'   => html_escape(trim($this->input->post('title'))),
+      'content' => strip_tags($this->input->post('content','<strong><a><span><table>')),
+      'status'  => html_escape(trim($this->input->post('status'))),
+      'date' => html_escape(trim($this->input->post('date'))),
+      'parent' => html_escape(trim($this->input->post('parent')))
+    ];
+    $this->form_validation->set_rules('title', 'Title', 'required');
+    $this->form_validation->set_rules('content', 'content', 'required');
+    $this->form_validation->set_rules('status', 'Status', 'required');
+    if( $this->form_validation->run() == FALSE) {
+			echo validation_errors();
+		}else
+		{
+			$this->db->replace('posts', $data);
+			echo "grand shit";
+		}
+  } //end of enterposts
+
 public function maint()
 {
     //$this->is_logged_in();
     $data = array();
-    if ($query = $this->model_form->get_record())
+    if ($query = $this->Model_form->get_record())
     {
         $data['records'] = $query;
     }
@@ -55,12 +77,19 @@ public function maint()
 public function fill_form()
 {
   //$this->is_logged_in();
-  $data = array();
-  if ($query = $this->model_form->fill_form())
+  $id = $this->uri->segment(3);
+  $this->db->where('id', $id);
+  $query = $this->db->get('posts');
+
+  if ($query->result())
   {
-      $data['records'] = $query;
+      $data['records'] = $query->result();
   }
-  $data['title'] = 'form update';
-  $this->load->view('posts/post_update', $data);
+  $data["title"] = "Post update";
+  $data['head'] = "Post update";
+$this->load->view('pages/header/head', $data);
+$this->load->view('admin/post_update', $data);
+$this->load->view('pages/footer/footer');
 }//end of file
-}
+
+}//end of class

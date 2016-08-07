@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /includes/
+# You can and should secure other folders too, like...
+disallow: /application/
+disallow: /assets/
+disallow: /system/
