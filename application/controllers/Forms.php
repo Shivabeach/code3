@@ -10,7 +10,7 @@ class Forms extends CI_Controller
     //Codeigniter : Write Less Do More
     $this->load->library('form_validation');
   }
-  
+
   function enterPosts()
   {
     $data = [
