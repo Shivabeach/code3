@@ -61,5 +61,8 @@
   <hr>
   <div id="display"></div>
   <hr>
+  <p>
+    Did the results show up?
+  </p>
   </div>
 </div>
