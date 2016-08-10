@@ -4,7 +4,6 @@
 //   else    window.location.reload();
 // }, 7200000);
 
-
 $(function() {
     'use strict';
 function showSize() {
