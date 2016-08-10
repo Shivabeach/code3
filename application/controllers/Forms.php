@@ -10,7 +10,7 @@ class Forms extends CI_Controller
     //Codeigniter : Write Less Do More
     $this->load->library('form_validation');
   }
-
+  
   function enterPosts()
   {
     $data = [
@@ -20,6 +20,7 @@ class Forms extends CI_Controller
       'parent'  => htmlspecialchars(trim($this->input->post('parent'))),
       'status'  => htmlspecialchars(trim($this->input->post('status'))),
     ];
+    $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required');
     $this->form_validation->set_rules('date', 'Date', 'required');
@@ -34,16 +35,17 @@ class Forms extends CI_Controller
 		}
   } //end of enterposts
 
-  function upPosts()
+  function upPosts()//update posts
   {
     $data = [
       'id'      => $this->input->post('id'),
       'title'   => html_escape(trim($this->input->post('title'))),
-      'content' => strip_tags($this->input->post('content','<strong><a><span><table>')),
+      'content' => strip_tags($this->input->post('content','<strong><a><ul><li><span><table>')),
       'status'  => html_escape(trim($this->input->post('status'))),
-      'date' => html_escape(trim($this->input->post('date'))),
-      'parent' => html_escape(trim($this->input->post('parent')))
+      'date'    => html_escape(trim($this->input->post('date'))),
+      'parent'  => html_escape(trim($this->input->post('parent')))
     ];
+    $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
@@ -51,7 +53,7 @@ class Forms extends CI_Controller
 			echo validation_errors();
 		}else
 		{
-			$this->db->replace('posts', $data);
+			$this->db->update('posts', $data);
 			echo "grand shit";
 		}
   } //end of enterposts
@@ -86,10 +88,38 @@ public function fill_form()
       $data['records'] = $query->result();
   }
   $data["title"] = "Post update";
-  $data['head'] = "Post update";
-$this->load->view('pages/header/head', $data);
-$this->load->view('admin/post_update', $data);
-$this->load->view('pages/footer/footer');
+  $data['head']  = "Post update";
+  $this->load->view('pages/header/head', $data);
+  $this->load->view('admin/post_update', $data);
+  $this->load->view('pages/footer/footer');
 }//end of file
 
+  public function cities()
+  {
+    $data = array(
+    'borncity'  => htmlspecialchars(trim($this->input->post('borncity'))),
+    'state'     => htmlspecialchars(trim($this->input->post('state'))),
+    'country'   => htmlspecialchars(trim($this->input->post('country'))),
+    'family'    => htmlspecialchars(trim($this->input->post('family'))),
+    'year'      => htmlspecialchars(trim($this->input->post('year'))),
+    'state1'    => htmlspecialchars(trim($this->input->post('state1'))),
+    'deathcity' => htmlspecialchars(trim($this->input->post('deathcity')))
+    );
+    $data = $this->security->xss_clean($data);
+    $this->form_validation->set_rules('borncity', 'city of birth', 'required|trim');
+    $this->form_validation->set_rules('state', 'state', 'required|trim');
+    $this->form_validation->set_rules('country', 'country', 'required|trim');
+    $this->form_validation->set_rules('family', 'family', 'required|trim');
+    $this->form_validation->set_rules('year', 'year', 'required|trim');
+    $this->form_validation->set_rules('state1', 'Born State', 'required|trim');
+    $this->form_validation->set_rules('deathcity', 'Death City', 'required|trim');
+
+    if( $this->form_validation->run() == FALSE) {
+      echo validation_errors();
+    }else
+    {
+      $this->db->insert('cities', $data);
+      echo "grand shit";
+    }
+  }
 }//end of class

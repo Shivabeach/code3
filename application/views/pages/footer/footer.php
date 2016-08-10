@@ -23,6 +23,7 @@
           <li class="line"><?php echo anchor("", "Home"); ?></li>
           <li class="line"><?php echo anchor("Pages/entry", "Entry"); ?></li>
           <li class="line"><?php echo anchor("Pages/post_up", "Update"); ?></li>
+          <li class="line"><?php echo anchor("Pages/cities", "Cities"); ?></li>
           <li class="line"><a href="#">Stories</a></li>
         </ul>
       </div>

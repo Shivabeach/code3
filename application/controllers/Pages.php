@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pages extends CI_Controller{
+class Pages extends CI_Controller
+{
 
   public function __construct()
   {
@@ -95,8 +96,8 @@ class Pages extends CI_Controller{
     }
     $tmpl = array (
       'table_open'     => '<table class="pure-table pure-table-horizontal" width="100%"',
-      'cell_start' => '<td class="small">',
-      'cell_end'   => '</td>',
+      'cell_start'     => '<td class="small">',
+      'cell_end'       => '</td>',
       'cell_alt_start' => '<td class="small">',
       'table_close'    => '</table>'
     );
@@ -134,4 +135,15 @@ class Pages extends CI_Controller{
   $this->load->view('admin/post_update', $data);
   $this->load->view('pages/footer/footer');
   }
-}
+
+  public function cities()
+  {
+    //logged in only
+      $data['head'] = "Cities entry";
+      $data['title'] = 'Cities entry';
+      $this->load->view('pages/header/head', $data);
+      $this->load->view('admin/cities', $data);
+      $this->load->view('pages/footer/footer');
+
+  }
+} //end of file
