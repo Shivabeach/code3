@@ -1,8 +1,8 @@
 "use strict";
-setInterval(function () {
-  if(alert('Your session has expired!')){}
-  else    window.location.reload();
-}, 7200000);
+// setInterval(function () {
+//   if(alert('Your session has expired!')){}
+//   else    window.location.reload();
+// }, 7200000);
 
 
 $(function() {
