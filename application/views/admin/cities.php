@@ -4,7 +4,7 @@
   </header>
 <div class="container">
   <div class="flex-large">
-    <fieldset><legend>Post Entry Form</legend>
+    <fieldset><legend>City Entry Form</legend>
       <?php echo validation_errors(); ?>
 <?php $attr = [
   'id' => 'ajax',

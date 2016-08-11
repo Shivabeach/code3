@@ -35,5 +35,5 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/dist/flex-dist.css');?>" media="screen" title="no title" charset="utf-8">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/pure.min.css');?>" media="screen">
-    <link rel="stylesheet" href="<?php echo base_url('bower_components/jquery-ui/themes/redmond/jquery-ui.css');?>" media="screen">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
   </head>

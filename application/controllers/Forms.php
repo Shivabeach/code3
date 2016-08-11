@@ -53,7 +53,7 @@ class Forms extends CI_Controller
 			echo validation_errors();
 		}else
 		{
-			$this->db->update('posts', $data);
+			$this->db->replace('posts', $data);
 			echo "grand shit";
 		}
   } //end of enterposts
@@ -112,7 +112,7 @@ public function fill_form()
     $this->form_validation->set_rules('family', 'family', 'required|trim');
     $this->form_validation->set_rules('year', 'year', 'required|trim');
     $this->form_validation->set_rules('state1', 'Born State', 'required|trim');
-    $this->form_validation->set_rules('deathcity', 'Death City', 'required|trim');
+    $this->form_validation->set_rules('deathcity', 'Death City', 'trim');
 
     if( $this->form_validation->run() == FALSE) {
       echo validation_errors();

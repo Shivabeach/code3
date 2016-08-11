@@ -58,6 +58,10 @@ $(function() {
   $("#date").datepicker();
 });
 
+$( function () {
+  $(".grab").tooltip();
+});
+
  $(function(){
    $(".ancestryContent").hide();
   	$('button.grab').on('click', function(){
