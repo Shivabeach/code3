@@ -5,4 +5,5 @@
   <li><i class="icon-hand-right"></i> 14,902 People in the current tree</li>
   <li><i class="icon-hand-right"></i> 1617 Photos</li>
   <li><i class="icon-hand-right"></i> 371 4th or closer Cousins</li>
+  <li><i class="icon-hand-right"></i> 371 4th or closer Cousins</li>
 </ul>
