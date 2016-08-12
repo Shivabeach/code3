@@ -20,8 +20,10 @@
       <div class="nav-grid box3">
         <h6 class="centered">General Links</h6>
         <ul>
+          <li class="line"><?php echo anchor("", "Home"); ?></li>
           <li class="line"><?php echo anchor("Pages/entry", "Entry"); ?></li>
-          <li class="line"><a href="#">Linages</a></li>
+          <li class="line"><?php echo anchor("Pages/post_up", "Update"); ?></li>
+          <li class="line"><?php echo anchor("Pages/cities", "Cities"); ?></li>
           <li class="line"><a href="#">Stories</a></li>
         </ul>
       </div>
@@ -37,6 +39,7 @@
   </footer>
   <script src="<?php echo base_url('bower_components/jquery/dist/jquery.min.js');?>"></script>
   <script src="<?php echo base_url('bower_components/jquery-ui/jquery-ui.min.js');?>"></script>
-  <script src="<?php echo base_url('assets/js/functions.js');?>"></script>
+  <script src="<?php echo base_url('assets/js/functions.min.js');?>"></script>
+
 </body>
 </html>

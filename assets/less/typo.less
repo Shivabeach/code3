@@ -62,6 +62,7 @@ dfn {
 mark {
   background: #ffff00;
   color: #000000;
+  font-family: "bornregular";
 }
 
 .small {
@@ -121,7 +122,7 @@ blockquote {
 .error {
   color: white;
   background: tomato;
-  font-size: 1.5em;
+  font-size: 1.15em;
   border-radius: 5px;
 }
 .center {
@@ -143,7 +144,6 @@ blockquote {
   justify-content: flex-start;
   width: 100%;
   margin: 0;
-  .tangle;
 }
 .air {
   font-family: "air_conditionerregular";
@@ -162,4 +162,30 @@ blockquote {
 }
 .tangle {
   font-family: "tanglewood_tales_nfregular";
+}
+li {
+  list-style: none;
+  color: @kular4;
+  padding: 5px 0;
+}
+// .hidden {
+//   display: none;
+// }
+.show {
+  display: block;
+}
+.pagination {
+  font-size: 1.5em;
+}
+.grab {
+  width: 100px;
+  transition: all 0.25s ease-in;
+}
+.grab:hover {
+  background-color: @kular3;
+  box-shadow: 1px 1px 4px @kular4;
+  border: 1px inset @kular4;
+}
+.current {
+  background-color: orange;
 }

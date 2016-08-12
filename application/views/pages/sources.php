@@ -4,10 +4,9 @@
   </header>
 <div class="container">
   <div class="flex-large">
-  <?php include("update.php");?>
+
   </div>
   <div class="flex-small">
-    <div id="display"></div>
-
+    <?php include(APPPATH . "/views/pages/includes/side.php");?>
   </div>
 </div>
