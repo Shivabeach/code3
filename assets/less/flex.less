@@ -8,6 +8,7 @@
 @import (css) url("nav-dist.css");
 
 body, html {
+  color: #555555;
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -23,6 +24,7 @@ body, html {
           transition: all 300ms ease;
   overflow: auto;
   box-sizing: border-box;
+  HEIGHT: 100vh;
 }
 .container {
   display: -webkit-box;
@@ -79,6 +81,9 @@ header {
     margin: 0.5rem 0;
     letter-spacing: 2px;
   }
+  td {
+    padding: 4px 0;
+  }
 }
 .item {
   max-width: 100%;
@@ -93,9 +98,9 @@ header {
   display: flex;
   -ms-flex-flow: column wrap;
       flex-flow: column wrap;
-  border-bottom: 1px dotted gray;
+  border-bottom: 1px dotted @kular4;
 }
-.ancestry:last-child {
+.ancestry:last-of-type {
   border-bottom: none;
   margin-bottom: 20px;
 }
@@ -104,7 +109,7 @@ header {
   align-self: flex-start;
   margin: 0.5rem 0;
   font-family: "tanglewood_tales_nfregular";
-  text-shadow: 0 1px 2px black, -1px 0 1px black;
+  text-shadow: 0 1px 2px @kular1, -1px 0 1px @kular4;
   letter-spacing: 2px;
 }
 .ancestryDate {
@@ -129,7 +134,7 @@ footer {
 .nav-grid {
   border: 1px dashed silver;
   flex: 1;
-  background-color: rgba(255,255, 255, 0.2);
+  background-color: @kular6;
   li {
     display: block;
   }
@@ -142,7 +147,6 @@ footer {
 }
 .box4 {
 }
-
 textarea {
   width: 50%;
   height: 250px;
