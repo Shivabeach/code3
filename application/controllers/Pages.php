@@ -144,6 +144,14 @@ class Pages extends CI_Controller
       $this->load->view('pages/header/head', $data);
       $this->load->view('admin/cities', $data);
       $this->load->view('pages/footer/footer');
+  }
 
+  public function vandna()
+  {
+      $data['head'] = "Our VanHorn DNA";
+      $data['title'] = 'VanHorn DNA';
+      $this->load->view('pages/header/head', $data);
+      $this->load->view('dna/vandna', $data);
+      $this->load->view('pages/footer/footer');
   }
 } //end of file

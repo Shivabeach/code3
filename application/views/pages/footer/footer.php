@@ -3,7 +3,7 @@
         <h6 class="centered">VanHorn Family</h6>
         <ul>
           <li class="line"><?php echo anchor('Pages/van','VanHorn History', 'title="VanHorn"');?></li>
-          <li class="line"><a href="#">DNA</a></li>
+          <li class="line"><?php echo anchor('Pages/vandna','VanHorn DNA', 'title="DNA"');?></li>
           <li class="line"><a href="#">Linages</a></li>
           <li class="line"><a href="#">Stories</a></li>
         </ul>
