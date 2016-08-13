@@ -12,7 +12,7 @@
         <h6 class="centered">Bostick Family</h6>
         <ul>
           <li class="line"><?php echo anchor('Pages/bos','Bostick History');?></li>
-          <li class="line"><a href="#">DNA</a></li>
+          <li class="line"><?php echo anchor('Pages/bosdna','Bostick DNA');?></li>
           <li class="line"><a href="#">Linages</a></li>
           <li class="line"><a href="#">Stories</a></li>
         </ul>
