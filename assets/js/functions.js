@@ -1,13 +1,13 @@
+"use strict";
 $(function() {
     'use strict';
-
-    function showSize() {
-        $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
-        $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
-        $('#size3').html('HEIGHT : ' + $('.main-content').height() + '<br>WIDTH : ' + $('.main-content').width());
-    }
-    $(window).on('resize', showSize);
-    showSize();
+function showSize() {
+  $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
+  $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
+  $('#size3').html('HEIGHT : ' + $('.main-content').height() + '<br>WIDTH : ' + $('.main-content').width());
+}
+  $(window).on('resize', showSize);
+  showSize();
 });
 $(function() {
     "use strict";
@@ -51,4 +51,33 @@ for (var i = 0; i < document.links.length; i++) {/*this highlights the current a
 }
 $(function() {
   $("#date").datepicker();
-})
+});
+
+$( function () {
+  $(".grab").tooltip();
+});
+
+ $(function(){
+   $(".ancestryContent").hide();
+  	$('button.grab').on('click', function(){
+ 		$(this).next('.ancestryContent').slideToggle('slow');
+ 	});
+});
+
+//  $(function(){
+//     	$(".ancestryContent").hide();
+//     $(".grab").on('click', function () {
+//    $(".grab").toggle(
+//      function(e) {
+//          e.preventDefault();
+//          $(this).next(".ancestryContent").slideDown('slow');
+//          $(this).html("Hide Content");
+//  		$(this).css("opacity", ".5")},
+//     function(e) {
+//          e.preventDefault();
+//          $(this).next(".ancestryContent").hide("explode", { pieces: 16 }, 2000);
+//          $(this).html("Read More");
+//  		$(this).css("opacity", "1.0");
+//    });
+// });
+// });

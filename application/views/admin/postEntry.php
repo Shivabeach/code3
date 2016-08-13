@@ -6,7 +6,6 @@
   <div class="flex-large">
     <fieldset><legend>Post Entry Form</legend>
       <?php echo validation_errors(); ?>
-      <div id="display" class="error"></div>
     <?php
     $attr1 = [
       "id"    => "ajax",
@@ -22,7 +21,7 @@
       "maxlength"   => "100",
       "style"       => "width: 50%",
       "placeholder" => "Title",
-      'value'       => s$row->title
+      'value'       => set_value('title')
     ];
 
     echo form_input($attr2);?>
@@ -31,7 +30,8 @@
     <?php $attr2 = [
       "id"        => "content",
       "name"      => "content",
-      'value' => $row->content
+      'placeholder' => 'Content',
+      'value' => set_value('content')
     ];
 
     echo form_textarea($attr2);
@@ -44,7 +44,7 @@
       "type"  => "date",
       "class" => "datestamp",
       "class" => "pure-form pure-input-1-2",
-      'value' => $row->date
+      'value' => set_value('date')
     ];
 
     echo form_input($attr3); ?>
@@ -65,8 +65,7 @@
       "VanHorn" => "VanHorn",
       "Bostick" => "Bostick",
       "main"    => "main",
-      "general" => "General",
-      'value'   => $row->parent
+      "general" => "General"
     ];
 
     echo form_dropdown('parent', $attr4);?>
@@ -81,7 +80,21 @@
   </div>
   <div class="flex-small">
     <p>
-      File list.
+    Results
     </p>
+    <hr>
+    <div id="display"></div>
+    <hr>
+    <?php foreach($getlist as $row)
+    {
+        $id = "Forms/fill_form/$row->id";
+        $this->table->add_row(
+        anchor($id, $row->id),
+        $row->title,
+        $row->status
+        );
+    }
+    echo $this->table->generate();
+    ?>
   </div>
 </div>
