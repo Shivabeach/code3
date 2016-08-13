@@ -1,9 +1,4 @@
 "use strict";
-// setInterval(function () {
-//   if(alert('Your session has expired!')){}
-//   else    window.location.reload();
-// }, 7200000);
-
 $(function() {
     'use strict';
 function showSize() {
@@ -56,6 +51,10 @@ for (var i = 0; i < document.links.length; i++) {/*this highlights the current a
 }
 $(function() {
   $("#date").datepicker();
+});
+
+$( function () {
+  $(".grab").tooltip();
 });
 
  $(function(){
