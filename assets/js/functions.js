@@ -9,6 +9,7 @@ function showSize() {
   $(window).on('resize', showSize);
   showSize();
 });
+
 $(function() {
     "use strict";
     $('A[rel="external"]')
