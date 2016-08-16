@@ -3,9 +3,11 @@
 and (max-width: 1026px) {
   body {
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
   .container {
-    width: 100%;
+    width: 100% !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -53,5 +55,21 @@ and (max-width: 1026px) {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 3;
+    width: 100% !important;
   }
+  .ancestry {
+    padding: 0 1em;
+  }
+}
+
+@media all
+and (max-width: 800px) {
+  body {
+    width: 100%;
+  }
+  .box5 {
+    display: none !important;
+  }
+
+
 }
