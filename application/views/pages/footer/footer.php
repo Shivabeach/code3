@@ -21,9 +21,7 @@
         <h6 class="centered">General Links</h6>
         <ul>
           <li class="line"><?php echo anchor("", "Home"); ?></li>
-          <li class="line"><?php echo anchor("Pages/entry", "Post Entry"); ?></li>
-          <li class="line"><?php echo anchor("Pages/post_up", "Post Update"); ?></li>
-          <li class="line"><?php echo anchor("Pages/cities", "Cities Entry"); ?></li>
+          <li class="line"><?php echo anchor("checkin", "Log In"); ?></li>
           <li class="line"><a href="#">Stories</a></li>
         </ul>
       </div>
