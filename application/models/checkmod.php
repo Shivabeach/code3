@@ -9,4 +9,12 @@ class Checkmod extends CI_Model{
     //Codeigniter : Write Less Do More
   }
 
+  function better_crypt($input, $rounds = 10)
+  {
+    $crypt_options = array(
+      'cost' => $rounds
+    );
+    return password_hash($input, PASSWORD_BCRYPT, $crypt_options);
+  }
+
 }
