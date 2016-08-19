@@ -34,7 +34,15 @@ class Checkin extends CI_Controller{
   			echo validation_errors();
   		}else
   		{
-  			$this->db->insert('check', $data);
+        $options = [
+           'cost' => 10
+          ];
+        $data1 = [
+          'name'  => html_escape($this->input->post('name')),
+          'pass'  => password_hash($this->input->post('password'), PASSWORD_BCRYPT, $options),
+          'email' => html_escape($this->input->post('email'))
+        ];
+  			$this->db->insert('check', $data1);
   			echo "grand shit";
   		}
 
