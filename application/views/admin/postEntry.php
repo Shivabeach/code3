@@ -96,5 +96,6 @@
     }
     echo $this->table->generate();
     ?>
+    <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
   </div>
 </div>

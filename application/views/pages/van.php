@@ -4,6 +4,7 @@
   </header>
 <div class="container">
   <div class="flex-large">
+    <?php echo $this->session->userdata('name'); ?>
     <?php foreach($mainContent as $row):?>
       <article class="ancestry">
         <h2 class="ancestryTitle item"><?php echo $row->title;?></h2>

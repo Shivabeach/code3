@@ -7,6 +7,7 @@ class Checkin extends CI_Controller{
   {
     parent::__construct();
     $this->load->model("checkmod");
+    $this->load->library('session');
   }
 
   function index()
@@ -39,13 +40,54 @@ class Checkin extends CI_Controller{
           ];
         $data1 = [
           'name'  => html_escape($this->input->post('name')),
-          'pass'  => password_hash($this->input->post('password'), PASSWORD_BCRYPT, $options),
+          'pass'  => password_hash($this->input->post('pass'), PASSWORD_BCRYPT, $options),
           'email' => html_escape($this->input->post('email'))
         ];
   			$this->db->insert('check', $data1);
   			echo "grand shit";
   		}
+    }
+    public function is_logged_in()
+    {
+        $is_logged_in = $this->session->userdata('is_logged_in');
+        if (!isset($is_logged_in) || $is_logged_in != true)
+        {
+        echo 'You don\'t have permission to access this page.';
+        die();
+            //$this->load->view('login_form');
+        }
+    }
+    public function logout()
+    {
+        $this->session->unset_userdata('name');
+        $this->session->sess_destroy();
+        redirect('Pages');
+        //$this->index();
+    }
 
-  } //end of process
+      public function legal()
+      {
+          $name  = $this->input->post('name');
+          $email = $this->input->post('email');
+          $pass1  = $this->input->post('pass');
 
+        $this->db->select('email, name, pass')->where('email', $email);
+        $query = $this->db->get('check');
+        if ($query->num_rows() != 1){
+          echo "email not found";
+        }else
+        {
+          $row = $query->row();
+          $stored = $row->pass;
+        if (password_verify($pass1, $stored)){
+            $data = array(
+              'name'         => $row->name,
+              'email'        => $row->email,
+              'is_logged_in' => TRUE
+            );
+            $this->session->set_userdata($data);
+            redirect("Pages/entry");
+        }
+      }
+    }
 } //end of controller

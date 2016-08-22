@@ -1,4 +1,4 @@
-// out: ../dist/typo-dist.min.css, sourcemap: true, compress: true, autoprefixer
+// out: ../dist/typo-dist.css, sourcemap: true, compress: true, autoprefixer
 
 @import (less) url("colors.less");
 h1 {
@@ -179,8 +179,10 @@ li {
   font-size: 1.5em;
 }
 .grab {
-  width: 100px;
+  width: 110px;
   transition: all 0.25s ease-in;
+  border: 1px solid rgb(20, 60, 90);
+  background-color: @kular5;
 }
 .grab:hover {
   background-color: @kular3;

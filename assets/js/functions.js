@@ -45,6 +45,7 @@ $(function() {
         return false;
     });
 });
+
 for (var i = 0; i < document.links.length; i++) {/*this highlights the current active link*/
     if (document.links[i].href == document.URL) {
         document.links[i].className = 'current';

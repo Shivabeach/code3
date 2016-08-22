@@ -5,15 +5,17 @@
 <div class="container">
   <div class="flex-large">
     <h3>Register or log in</h3>
+     <?php echo $this->session->userdata('name');?>
+     <?php //echo $_SESSION['username']; ?>
     <fieldset>
       <legend>Login</legend>
 
       <?php
       $attr = [
-        'id'    => 'ajax',
+        'id'    => 'ajax1',
         "class" => "pure-form pure-form-stacked"
       ];
-      echo form_open("/checkin/process", $attr)?>
+      echo form_open("/checkin/legal", $attr)?>
 <p>
 
 <label for="name"> name </label> <br />
@@ -24,16 +26,16 @@
   <?php
   $attr1 = [
     'style' => 'width: 50%',
-    'id' => 'password',
-    'name' => 'password'
+    'id' => 'pass',
+    'name' => 'pass'
 ];
    ?>
-<label for="password"> password </label> <br />
+<label for="pass"> password </label> <br />
 <?php echo form_input($attr1);?>
 <p/>
 
-<p>
-  <?php
+<!-- <p>
+ <?php
   $attr2 = [
     'style' => 'width: 50%',
     'id' => 'password2',
@@ -42,7 +44,7 @@
    ?>
 <label for="password2"> password2 </label> <br />
 <?php echo form_input($attr2);?>
-<p/>
+<p/> -->
 
 <p>
 <label for="email"> email </label> <br />
