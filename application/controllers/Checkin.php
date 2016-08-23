@@ -62,19 +62,19 @@ class Checkin extends CI_Controller{
         $this->session->unset_userdata('name');
         $this->session->sess_destroy();
         redirect('Pages');
-        //$this->index();
     }
 
       public function legal()
       {
-          $name  = $this->input->post('name');
-          $email = $this->input->post('email');
-          $pass1  = $this->input->post('pass');
+          $name  = html_escape($this->input->post('name'));
+          $email = html_escape($this->input->post('email'));
+          $pass1  = html_escape($this->input->post('pass'));
 
         $this->db->select('email, name, pass')->where('email', $email);
         $query = $this->db->get('check');
         if ($query->num_rows() != 1){
           echo "email not found";
+          die();
         }else
         {
           $row = $query->row();
@@ -87,6 +87,8 @@ class Checkin extends CI_Controller{
             );
             $this->session->set_userdata($data);
             redirect("Pages/entry");
+        }else {
+          die();
         }
       }
     }
