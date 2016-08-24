@@ -9,11 +9,11 @@
      <?php //echo $_SESSION['username']; ?>
     <fieldset>
       <legend>Login</legend>
+      <?php echo validation_errors('<span class="error">', '</span>');
 
-      <?php
       $attr = [
-        'id'    => 'ajax1',
-        "class" => "pure-form pure-form-stacked"
+        'id'      => 'ajax1',
+        "class"   => "pure-form pure-form-stacked"
       ];
       echo form_open("/checkin/legal", $attr)?>
 <p>
@@ -27,7 +27,8 @@
   $attr1 = [
     'style' => 'width: 50%',
     'id' => 'pass',
-    'name' => 'pass'
+    'name' => 'pass',
+    'placeholder' => 'Password'
 ];
    ?>
 <label for="pass"> password </label> <br />

@@ -64,32 +64,47 @@ class Checkin extends CI_Controller{
         redirect('Pages');
     }
 
-      public function legal()
-      {
-          $name  = html_escape($this->input->post('name'));
-          $email = html_escape($this->input->post('email'));
-          $pass1  = html_escape($this->input->post('pass'));
-
-        $this->db->select('email, name, pass')->where('email', $email);
-        $query = $this->db->get('check');
-        if ($query->num_rows() != 1){
-          echo "email not found";
-          die();
-        }else
-        {
-          $row = $query->row();
-          $stored = $row->pass;
-        if (password_verify($pass1, $stored)){
-            $data = array(
-              'name'         => $row->name,
-              'email'        => $row->email,
-              'is_logged_in' => TRUE
-            );
-            $this->session->set_userdata($data);
-            redirect("Pages/entry");
-        }else {
-          die();
-        }
+    public function legal()
+    {
+      $data = [
+        'name' => html_escape($this->input->post('name')),
+        'email' => html_escape($this->input->post('email')),
+        'pass' => html_escape($this->input->post('pass'))
+      ];
+      $this->form_validation->set_rules('name', 'name', 'required|min_length[3]|max_length[5]',array('required' => 'just do it', 'min_length' => 'more', 'max_length' => 'bejesus already'));
+      $this->form_validation->set_rules('pass', 'password', 'required|min_length[24]|max_length[26]', array('required' => 'Think it over', 'min_length' => 'Hmmmm', 'max_length' => 'Whoa'));
+      $this->form_validation->set_rules('email', 'email', 'required|valid_email');
+      if( $this->form_validation->run() == FALSE) {
+        //do this if you are not using ajax
+        $data['head'] = "Login to admin";
+        $data['title'] = 'Login to Admin';
+        $this->load->view('pages/header/head', $data);
+        $this->load->view('pages/login/log', $data);
+        $this->load->view('pages/footer/footer');
+  		}else {
+  		  $name  = html_escape($this->input->post('name'));
+        $email = html_escape($this->input->post('email'));
+        $pass1  = html_escape($this->input->post('pass'));
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+      $this->db->select('email, name, pass')->where('email', $email);
+      $query = $this->db->get('check');
+      if ($query->num_rows() != 1){
+        die('sorry');
+      }else {
+        $row = $query->row();
+        $stored = $row->pass;
+      if (password_verify($pass1, $stored)){
+          $data = array(
+            'name'         => $row->name,
+            'email'        => $row->email,
+            'is_logged_in' => TRUE
+          );
+          $this->session->set_userdata($data);
+          redirect("Pages/entry");
+      }else {
+        die();
       }
     }
+  }
+}
 } //end of controller
