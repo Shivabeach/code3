@@ -40,7 +40,7 @@ class Forms extends CI_Controller
     $data = [
       'id'      => $this->input->post('id'),
       'title'   => html_escape(trim($this->input->post('title'))),
-      'content' => strip_tags($this->input->post('content','<strong><a><ul><li><span><table>')),
+      'content' => strip_tags($this->input->post('content','<strong><a><ul><li><span><blockquote>')),
       'status'  => html_escape(trim($this->input->post('status'))),
       'date'    => html_escape(trim($this->input->post('date'))),
       'parent'  => html_escape(trim($this->input->post('parent')))
