@@ -9,7 +9,7 @@
      <?php //echo $_SESSION['username']; ?>
     <fieldset>
       <legend>Login</legend>
-      <?php echo validation_errors('<span class="error">', '</span>');
+      <?php echo validation_errors('<li class="error">', '</li>');
 
       $attr = [
         'id'      => 'ajax1',

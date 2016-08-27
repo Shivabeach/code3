@@ -26,6 +26,7 @@ class Checkin extends CI_Controller{
       'password2' => html_escape($this->input->post('password2')),
       'email'     => html_escape($this->input->post('email')),
       );
+      $data = $this->security->xss_clean($data);
       $this->form_validation->set_rules('name', 'name', 'required');
       $this->form_validation->set_rules('password', 'password', 'required');
       $this->form_validation->set_rules('password2', 'password2', 'required|matches[password2]');
@@ -67,9 +68,9 @@ class Checkin extends CI_Controller{
     public function legal()
     {
       $data = [
-        'name'  => html_escape($this->input->post('name')),
-        'email' => html_escape($this->input->post('email')),
-        'pass'  => html_escape($this->input->post('pass'))
+        'name'  => trim(html_escape($this->input->post('name'))),
+        'email' => trim(html_escape($this->input->post('email'))),
+        'pass'  => trim(html_escape($this->input->post('pass')))
       ];
       $this->form_validation->set_rules('name', 'name', 'required|min_length[3]|max_length[5]',
       array(
@@ -80,7 +81,7 @@ class Checkin extends CI_Controller{
       $this->form_validation->set_rules('pass', 'password', 'required|min_length[24]|max_length[26]',
       array(
         'required'   => 'Think it over',
-        'min_length' => 'Hmmmm',
+        'min_length' => 'Try 8',
         'max_length' => 'Whoa'
       ));
       $this->form_validation->set_rules('email', 'email', 'required|valid_email',
