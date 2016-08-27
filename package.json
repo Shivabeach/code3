@@ -1,0 +1,25 @@
+{
+  "name": "code3",
+  "version": "1.0.0",
+  "description": "This is a website that I am designing for my ancestry.",
+  "main": "index.js",
+  "dependencies": {
+    "lesshat": "^4.1.0",
+    "csscomb": "^3.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivabeach/code3.git"
+  },
+  "keywords": [],
+  "author": "Brad VanHorn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shivabeach/code3/issues"
+  },
+  "homepage": "https://github.com/Shivabeach/code3#readme"
+}
