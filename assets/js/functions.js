@@ -77,6 +77,9 @@ for (var i = 0; i < document.links.length; i++) {/*this highlights the current a
 $(function() {
   $("#date").datepicker();
 });
+$(function() {
+  $("#last_date").datepicker();
+});
 
 $( function () {
   $(".grab").tooltip();

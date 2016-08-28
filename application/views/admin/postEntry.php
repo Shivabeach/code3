@@ -85,7 +85,7 @@
     <hr>
     <?php
     if($this->session->userdata('name') == true){
-        echo "Hello" .  $this->session->userdata('name');
+        echo "Hello " .  $this->session->userdata('name');
     }else {
       echo "no session";
     }?>

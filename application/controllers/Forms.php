@@ -47,22 +47,27 @@ class Forms extends CI_Controller
   function upPosts()//update posts
   {
     $data = [
-      'id'      => html_escape($this->input->post('id')),
-      'title'   => html_escape(trim($this->input->post('title'))),
-      'content' => html_escape(strip_tags($this->input->post('content','<strong><a><ul><li><span><blockquote>'))),
-      'status'  => html_escape(trim($this->input->post('status'))),
-      'date'    => html_escape(trim($this->input->post('date'))),
-      'parent'  => html_escape(trim($this->input->post('parent')))
+      'id'        => html_escape($this->input->post('id')),
+      'title'     => html_escape(trim($this->input->post('title'))),
+      'content'   => strip_tags($this->input->post('content','<strong><a><ul><li><span><blockquote><table><th><tr><td>')),
+      'status'    => html_escape(trim($this->input->post('status'))),
+      'last_date' => html_escape(trim($this->input->post('last_date'))),
+      'parent'    => html_escape(trim($this->input->post('parent')))
     ];
     $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
+    $this->form_validation->set_rules('last_date', 'Last Date', 'required');
+    $this->form_validation->set_rules('parent', 'Parent', 'required');
+
     if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
 		}else
 		{
-			$this->db->replace('posts', $data);
+      $id = html_escape($this->input->post('id'));
+      $this->db->where('id', $id);
+			$this->db->update('posts', $data);
 			echo "grand shit";
 		}
   } //end of enterposts

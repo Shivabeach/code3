@@ -17,9 +17,16 @@
       ];
       echo form_open("/checkin/legal", $attr)?>
 <p>
-
-<label for="name"> name </label> <br />
-<input type="text" name="name" id="name" />
+  <?php
+  $attr4 = [
+    'style' => 'width: 50%',
+    'id' => 'name',
+    'name' => 'name',
+    'placeholder' => 'Name'
+  ];
+   ?>
+<label for="name"> Name </label>
+<?php echo form_input($attr4);?>
 <p/>
 
 <p>
@@ -31,7 +38,7 @@
     'placeholder' => 'Password'
 ];
    ?>
-<label for="pass"> password </label> <br />
+<label for="pass"> password </label>
 <?php echo form_input($attr1);?>
 <p/>
 
@@ -48,8 +55,16 @@
 <p/> -->
 
 <p>
-<label for="email"> email </label> <br />
-<input type="email" name="email" id="email" />
+  <?php
+  $attr3 = [
+    'style' => 'width: 50%',
+    'id' => 'emails',
+    'name' => 'email',
+    'placeholder' => 'email'
+];
+   ?>
+<label for="email"> email </label>
+<?php echo form_input($attr3);?>
 <p/>
 
 <div class="pure-controls">
@@ -63,8 +78,13 @@
   </div>
   <div class="flex-small">
     <?php
-    echo current_url();
-    $this->load->file(APPPATH . "/views/pages/includes/side1.php");
+    if($this->session->userdata('name') == true){
+        echo "Hello " .  $this->session->userdata('name'). nbs(3), anchor("Pages/entry", " Enter ");
+    }else {
+      echo "";
+    }?>
+    <?php
+    $this->load->file(APPPATH . "/views/pages/includes/side.php");
     ?>
     <div id="display"></div>
   </div>
