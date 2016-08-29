@@ -49,6 +49,12 @@ class Pages extends CI_Controller
             //$this->load->view('login_form');
         }
     }
+    public function logout()
+    {
+        $this->session->unset_userdata('name');
+        $this->session->sess_destroy();
+        redirect('Pages');
+    }
   public function van()
   {
     $data['title'] = "VanHorn Page";

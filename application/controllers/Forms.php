@@ -10,13 +10,24 @@ class Forms extends CI_Controller
     //Codeigniter : Write Less Do More
     $this->load->library('form_validation');
   }
+  public function is_logged_in()
+  {
+      $is_logged_in = $this->session->userdata('is_logged_in');
+      if (!isset($is_logged_in) || $is_logged_in != true)
+      {
+      echo 'You don\'t have permission to access this page.';
+      die();
+          //$this->load->view('login_form');
+      }
+  }
 
   function enterPosts()
   {
     $this->is_logged_in();
+    $tags = '<strong><a><ul><li><span><blockquote><table><th><tr><td><p>';
     $data = [
       'title'   => html_escape(trim($this->input->post('title'))),
-      'content' => html_escape(strip_tags($this->input->post('content','<strong><a><span>'))),
+      'content' => htmlspecialchars($this->input->post('content')),
       'date'    => html_escape(trim($this->input->post('date'))),
       'parent'  => html_escape(trim($this->input->post('parent'))),
       'status'  => html_escape(trim($this->input->post('status'))),
@@ -46,10 +57,12 @@ class Forms extends CI_Controller
 
   function upPosts()//update posts
   {
+    $this->is_logged_in();
+    $tags = '<strong><a><ul><li><span><blockquote><table><th><tr><td><p>';
     $data = [
       'id'        => html_escape($this->input->post('id')),
       'title'     => html_escape(trim($this->input->post('title'))),
-      'content'   => strip_tags($this->input->post('content','<strong><a><ul><li><span><blockquote><table><th><tr><td>')),
+      'content'   => htmlspecialchars($this->input->post('content')),
       'status'    => html_escape(trim($this->input->post('status'))),
       'last_date' => html_escape(trim($this->input->post('last_date'))),
       'parent'    => html_escape(trim($this->input->post('parent')))
@@ -74,7 +87,7 @@ class Forms extends CI_Controller
 
 public function maint()
 {
-    //$this->is_logged_in();
+    $this->is_logged_in();
     $data = array();
     if ($query = $this->Model_form->get_record())
     {
