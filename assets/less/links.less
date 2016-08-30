@@ -1,29 +1,31 @@
 // out: ../dist/links-dist.css, sourcemap: true, compress: true
 @import (less) url("colors.less");
 a {
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-transition:all .25s;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.25s;
           transition: all 0.25s;
-    font-size: 1em !important;
-    font-family: 'tanglewood_tales_nfregular';
-    cursor: pointer;
-    color: @kular4;
-    font-variant: small-caps;
+  font-size: 1em !important;
+  font-family: "tanglewood_tales_nfregular";
+  cursor: pointer;
+  color: @kular4;
+  font-variant: small-caps;
 }
+
 a:hover {
-    /*border-color: rgb(34, 85, 0);*/
-    padding-bottom: 1px;
-    font-size: 1em;
-    border-bottom: 1px solid #E6DEDB;
-    color: @kular6;
-    background: @vintage;
+  /*border-color: rgb(34, 85, 0);*/
+  padding-bottom: 1px;
+  font-size: 1em;
+  border-bottom: 1px solid #e6dedb;
+  color: @kular6;
+  background: @vintage;
 }
+
 a:active {
   color: @vintage4;
   background-color: transparent;
 }
 
 footer a {
-    text-transform: none;
+  text-transform: none;
 }

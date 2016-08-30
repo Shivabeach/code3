@@ -7,7 +7,7 @@
     <?php foreach($mainContent as $row):?>
       <article class="ancestry">
         <h2 class="ancestryTitle item"><?php echo $row->title;?></h2>
-        <button class="grab pure-button">Read More</button>
+        <button class="grab pure-button" title="Click to open and close">Read More</button>
         <div class="ancestryContent item"><?php echo $this->typography->auto_typography($row->content);?> </div>
         <h6 class="ancestryDate"><?php echo $row->date;?></h6>
     </article>
@@ -15,6 +15,6 @@
       <?php echo $this->pagination->create_links();?>
   </div>
   <div class="flex-small">
-    <?php include(APPPATH . "/views/pages/includes/side.php"); ?> 
+    <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
   </div>
 </div>

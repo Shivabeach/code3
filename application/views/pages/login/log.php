@@ -73,7 +73,6 @@
   echo '<button type="reset" class="pure-button pure-button-active">Reset</button>';
   echo form_close();
   ?>
-
     </fieldset>
   </div>
   <div class="flex-small">
@@ -87,5 +86,6 @@
     $this->load->file(APPPATH . "/views/pages/includes/side.php");
     ?>
     <div id="display"></div>
+    
   </div>
 </div>

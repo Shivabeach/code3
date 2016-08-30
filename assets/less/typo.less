@@ -1,197 +1,224 @@
 // out: ../dist/typo-dist.css, sourcemap: true, compress: true, autoprefixer
-
 @import (less) url("colors.less");
 h1 {
-  font-size: 3.3rem; /*40px 50rem*/
-  margin: 0.8em 0;
-  line-height: 1.35;
-  font-weight: 900;
+    font-size: 3.3rem;
+    /*40px 50rem*/
+    margin: 0.8em 0;
+    line-height: 1.35;
+    font-weight: 900;
 }
+
 h2 {
-  font-size: 2.3rem;
-  margin: 1em 0;
-  line-height: 1.45;
-  color: gray;
-  font-weight: 800;
+    font-size: 2.3rem;
+    margin: 1em 0;
+    line-height: 1.45;
+    color: gray;
+    font-weight: 800;
 }
+
 h3 {
-  font-size: 1.85rem;
-  margin: 1.3em 0;
-  line-height: 1.6;
-  font-weight: 700;
-  font-variant-caps: small-caps;
+    font-size: 1.85rem;
+    margin: 1.3em 0;
+    line-height: 1.6;
+    font-weight: 700;
+    font-variant-caps: small-caps;
 }
 
 h4 {
-  font-size: 1.55rem;
-  margin: 1.5em 0;
-  line-height: 1.7;
-  font-weight: 700;
+    font-size: 1.55rem;
+    margin: 1.5em 0;
+    line-height: 1.7;
+    font-weight: 700;
 }
 
 h5 {
-  font-size: 1.4rem;
-  margin: 1.6em 0;
-  line-height: 1.6;
-  font-weight: 600;
+    font-size: 1.4rem;
+    margin: 1.6em 0;
+    line-height: 1.6;
+    font-weight: 600;
 }
+
 h6 {
-  font-size: 1.25rem;
-  margin: 1.6em 0;
-  line-height: 1.6;
-  font-weight: 500;
+    font-size: 1.25rem;
+    margin: 1.6em 0;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 p {
-  line-height: 1.6;
-  .sidenotes {
-    font-size: 0.8em;
-  }
+    line-height: 1.6;
+    .sidenotes {
+        font-size: 0.8em;
+    }
 }
 
 abbr[title] {
-  border-bottom: 1px dotted;
+    border-bottom: 1px dotted;
 }
-b, strong {
-  font-weight: bold;
+
+b,
+strong {
+    font-weight: bold;
 }
 
 dfn {
-  font-style: italic;
+    font-style: italic;
 }
 
 mark {
-  background: @vintage4;
-  color: #000000;
-  font-family: "bornregular";
+    background: @vintage4;
+    color: #000000;
+    font-family: "bornregular";
 }
 
 .small {
-  font-size: 80%;
+    font-size: 80%;
 }
 
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sup {
-  top: -0.5em;
+    top: -0.5em;
 }
 
 sub {
-  bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 img {
-  border: 0;
+    border: 0;
 }
 
 svg:not(:root) {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 figure {
-  margin: 1em 40px;
+    margin: 1em 40px;
 }
 
 hr {
-  box-sizing: content-box;
-  height: 0;
+    box-sizing: content-box;
+    height: 0;
 }
 
 pre {
-  overflow: auto;
+    overflow: auto;
 }
 
-code, kbd, pre, samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
 
 blockquote {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .mid-size {
-  font-size: 2em;
-  font-weight: 600;
+    font-size: 2em;
+    font-weight: 600;
 }
 
 .error {
-  color: white;
-  background: tomato;
-  font-size: 1.15em;
-  border-radius: 5px;
+    color: white;
+    background: tomato;
+    font-size: 1.15em;
+    border-radius: 5px;
 }
+
 .center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
 }
+
 .centered {
-  text-align: center;
+    text-align: center;
 }
+
 .line {
-  display: inline;
+    display: inline;
 }
+
 .left {
-  justify-content: flex-start;
-  width: 100%;
-  margin: 0;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
 }
+
 .air {
-  font-family: "air_conditionerregular";
+    font-family: "air_conditionerregular";
 }
+
 .bitter {
-  font-family: "bittersweet_nfregular";
+    font-family: "bittersweet_nfregular";
 }
+
 .england {
-  font-family: "england_hand_dbregular";
+    font-family: "england_hand_dbregular";
 }
+
 .hallo {
-  font-family: "hallo_sansregular";
+    font-family: "hallo_sansregular";
 }
+
 .soria {
-  font-family: soriasoria;
+    font-family: soriasoria;
 }
+
 .tangle {
-  font-family: "tanglewood_tales_nfregular";
+    font-family: "tanglewood_tales_nfregular";
 }
+
 li {
-  list-style: none;
-  color: @kular4;
-  padding: 5px 0;
+    list-style: none;
+    color: @kular4;
+    padding: 5px 0;
 }
+
 .hidden {
-  display: none;
+    display: none;
 }
+
 .show {
-  display: block;
+    display: block;
 }
+
 .pagination {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
+
 .grab {
-  width: 110px;
-  transition: all 0.25s ease-in;
-  border: 1px solid rgb(20, 60, 90);
-  background-color: @kular5;
+    width: 110px;
+    transition: all 0.25s ease-in;
+    border: 1px solid rgb(20, 60, 90);
+    background-color: @kular5;
 }
+
 .grab:hover {
-  background-color: @kular3;
-  box-shadow: 1px 1px 4px @kular4;
-  border: 1px inset @kular4;
+    background-color: @kular3;
+    box-shadow: 1px 1px 4px @kular4;
+    border: 1px inset @kular4;
 }
+
 .current {
-  background-color: @vintage4;
+    background-color: @vintage4;
 }
+
 input[type="text"] {
-  min-width: 45%;
+    min-width: 45%;
 }

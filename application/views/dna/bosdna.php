@@ -109,7 +109,6 @@
   </div>
   <div class="flex-small">
     <?php
-    echo current_url();
     $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
     <h3>Page Menu</h3>
       <ul>

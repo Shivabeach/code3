@@ -48,6 +48,10 @@ class Checkin extends CI_Controller{
   			echo "grand shit";
   		}
     }
+    /**
+     * deterines if you are logged in
+     * @return boolean [description]
+     */
     public function is_logged_in()
     {
         $is_logged_in = $this->session->userdata('is_logged_in');
@@ -58,13 +62,21 @@ class Checkin extends CI_Controller{
             //$this->load->view('login_form');
         }
     }
+
+    /**
+     * logs you out and ends the session
+     * @return [type] [description]
+     */
     public function logout()
     {
         $this->session->unset_userdata('name');
         $this->session->sess_destroy();
         redirect('Pages');
     }
-
+    /**
+     * Log in script
+     * @return [type] [description]
+     */
     public function legal()
     {
       $data = [
@@ -81,7 +93,7 @@ class Checkin extends CI_Controller{
       $this->form_validation->set_rules('pass', 'password', 'required|min_length[24]|max_length[26]',
       array(
         'required'   => 'Think it over',
-        'min_length' => 'Try 8',
+        'min_length' => 'Not yet',
         'max_length' => 'Whoa'
       ));
       $this->form_validation->set_rules('email', 'email', 'required|valid_email',
@@ -101,19 +113,25 @@ class Checkin extends CI_Controller{
         $email = html_escape($this->input->post('email'));
         $pass1 = html_escape($this->input->post('pass'));
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-      $this->db->select('email, name, pass')->where('email', $email);
-      $query = $this->db->get('check');
+      //$this->db->select('email, name, pass')->where('email', $email);
+      $limit  = 1;
+      $offset = 0;
+      $query = $this->db->get_where('check',
+      array(
+        'email' => $email,
+        'name'  => $name
+      ),$limit, $offset);
+      //$query = $this->db->get('check');
       if ($query->num_rows() != 1){
         die('sorry');
       }else
       {
-        $row = $query->row();
+        $row    = $query->row();
         $stored = $row->pass;
         if (password_verify($pass1, $stored))
         {
           $data = array(
             'name'         => $row->name,
-            'email'        => $row->email,
             'is_logged_in' => TRUE
           );
           $this->session->set_userdata($data);

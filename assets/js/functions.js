@@ -1,13 +1,14 @@
 "use strict";
 $(function() {
     'use strict';
-function showSize() {
-  $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
-  $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
-  $('#size3').html('HEIGHT : ' + $('.main-content').height() + '<br>WIDTH : ' + $('.main-content').width());
-}
-  $(window).on('resize', showSize);
-  showSize();
+
+    function showSize() {
+        $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
+        $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
+        $('#size3').html('HEIGHT : ' + $('.main-content').height() + '<br>WIDTH : ' + $('.main-content').width());
+    }
+    $(window).on('resize', showSize);
+    showSize();
 });
 
 $(function() {
@@ -69,27 +70,27 @@ $(function() {
 //     });
 // });
 
-for (var i = 0; i < document.links.length; i++) {/*this highlights the current active link*/
+for (var i = 0; i < document.links.length; i++) { /*this highlights the current active link*/
     if (document.links[i].href == document.URL) {
         document.links[i].className = 'current';
     }
 }
 $(function() {
-  $("#date").datepicker();
+    $("#date").datepicker();
 });
 $(function() {
-  $("#last_date").datepicker();
+    $("#last_date").datepicker();
 });
 
-$( function () {
-  $(".grab").tooltip();
+$(function() {
+    $(".grab").tooltip();
 });
 
- $(function(){
-   $(".ancestryContent").hide();
-  	$('button.grab').on('click', function(){
- 		$(this).next('.ancestryContent').slideToggle('slow');
- 	});
+$(function() {
+    $(".ancestryContent").hide();
+    $('button.grab').on('click', function() {
+        $(this).next('.ancestryContent').slideToggle('slow');
+    });
 });
 
 //  $(function(){
