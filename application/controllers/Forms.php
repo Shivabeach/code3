@@ -15,9 +15,7 @@ class Forms extends CI_Controller
       $is_logged_in = $this->session->userdata('is_logged_in');
       if (!isset($is_logged_in) || $is_logged_in != true)
       {
-      echo 'You don\'t have permission to access this page.';
-      die();
-          //$this->load->view('login_form');
+        redirect("Checkin");
       }
   }
 

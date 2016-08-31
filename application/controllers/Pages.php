@@ -16,9 +16,7 @@ class Pages extends CI_Controller
 
   public function index()
   {
-    $data['title'] = "Code 3";
     $parent = "main";
-
     $this->db->select("title, content, date")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get('posts');
     if($query->result()){
@@ -34,9 +32,9 @@ class Pages extends CI_Controller
     $config['full_tag_close']   = "</div>";
 
     $this->pagination->initialize($config);
-    $this->load->view("pages/header/head", $data);
-    $this->load->view("Pages/prime", $data);
-    $this->load->view("pages/footer/footer");
+    $data['title'] = "Code 3";
+    $data['main_content'] = 'Pages/prime';
+    $this->load->view('pages/includes/template', $data);
   }
 
   public function is_logged_in()
@@ -44,8 +42,7 @@ class Pages extends CI_Controller
         $is_logged_in = $this->session->userdata('is_logged_in');
         if (!isset($is_logged_in) || $is_logged_in != true)
         {
-        echo 'You don\'t have permission to access this page.';
-        die();
+          redirect("Checkin");
             //$this->load->view('login_form');
         }
     }

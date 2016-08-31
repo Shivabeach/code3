@@ -14,9 +14,8 @@ class Checkin extends CI_Controller{
   {
     $data['head'] = "Login to admin";
     $data['title'] = 'Login to Admin';
-    $this->load->view('pages/header/head', $data);
-    $this->load->view('pages/login/log', $data);
-    $this->load->view('pages/footer/footer');
+    $data['main_content'] = 'pages/login/log';
+    $this->load->view('pages/includes/template', $data);
   }
   public function process()
   {
@@ -49,7 +48,7 @@ class Checkin extends CI_Controller{
   		}
     }
     /**
-     * deterines if you are logged in
+     * determines if you are logged in
      * @return boolean [description]
      */
     public function is_logged_in()
@@ -57,8 +56,7 @@ class Checkin extends CI_Controller{
         $is_logged_in = $this->session->userdata('is_logged_in');
         if (!isset($is_logged_in) || $is_logged_in != true)
         {
-        echo 'You don\'t have permission to access this page.';
-        die();
+          redirect("Checkin");
             //$this->load->view('login_form');
         }
     }
