@@ -8,7 +8,7 @@
 @import (css) url("nav-dist.css");
 
 body, html {
-  color: #555555;
+  color: rgb(85, 85, 85);
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -24,7 +24,7 @@ body, html {
           transition: all 300ms ease;
   overflow: auto;
   box-sizing: border-box;
-  HEIGHT: 100vh;
+  height: 100vh;
 }
 .container {
   display: -webkit-box;
@@ -34,7 +34,6 @@ body, html {
       flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
-  height: 100vh;
 }
 .top {
   clear: both;
@@ -65,7 +64,7 @@ header {
   -webkit-box-flex: 3;
   -ms-flex: 3;
       flex: 3;
-  border-top: 1px dotted gray;
+  border-top: 1px dotted rgb(128, 128, 128);
 }
 .flex-small {
   -webkit-box-flex: 1;
@@ -73,6 +72,7 @@ header {
       flex: 1;
   padding: 0 1rem;
   border-top: 1px dotted gray;
+  background: @kular1;
   p {
     margin: 5px 1em;
   }
@@ -126,7 +126,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 300px;
+  align-content: flex-end;
+  min-height: 250px;
   flex-wrap: wrap;
   margin: 0 auto;
   width: 80%;
@@ -148,6 +149,66 @@ footer {
 .box4 {
 }
 textarea {
+  width: 90%;
+  height: 300px;
+}
+select {
+  width: 30%;
+}
+.fifty {
   width: 50%;
-  height: 250px;
+  th, td {
+    text-align: center;
+  }
+}
+
+/*
+Modal https://webdesignerhut.com/pure-css-modal-window-effect/
+ */
+ .lightbox .box {
+     width: -webkit-min-content;
+     width: -moz-min-content;
+     width: min-content;
+        min-width:500px;
+     margin: 2% auto;
+     padding:20px;
+     background-color:#FFF;
+     box-shadow: 0px 1px 26px -3px #777777;
+     }
+     .lightbox .title {
+         margin:0;
+         padding:0 0 10px 0px;
+         border-bottom:1px #ccc solid;
+         font-size:22px;
+         }
+     .lightbox .content {
+         display:block;
+         padding:10px 0 0 0px;
+         font-size:18px;
+         line-height:22px;
+         }
+     .lightbox .close {
+         float:right;
+         display:block;
+         text-decoration:none;
+         font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+         font-size:22px;
+         color:#858585;
+         }
+         .lightbox {
+         /** Hide the lightbox */
+         display: none;
+         /** Apply basic lightbox styling */
+         position: fixed;
+         z-index: 9999;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         color:#333333;
+         }
+         .lightbox:target {
+    /** Show lightbox when it is target */
+    display: block;
+    outline: none;
 }

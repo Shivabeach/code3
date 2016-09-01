@@ -54,14 +54,13 @@ echo form_dropdown('status', $attr5, array('value' => $row->status));?>
 
 echo form_dropdown('parent', $attr4, array('value' => $row->parent));?>
 
-<label for="date">Date</label>
+<label for="Last_date">Date</label>
 <?php $attr3 = [
-  "id"    => "date",
-  "name"  => "date",
+  "id"    => "last_date",
+  "name"  => "last_date",
   "type"  => "date",
   "class" => "datestamp",
-  "class" => "pure-form pure-input-1-2",
-  'value' => $row->date
+  "class" => "pure-form pure-input-1-2"
 ];
 
 echo form_input($attr3);

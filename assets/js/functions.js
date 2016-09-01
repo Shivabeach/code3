@@ -1,13 +1,14 @@
 "use strict";
 $(function() {
     'use strict';
-function showSize() {
-  $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
-  $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
-  $('#size3').html('HEIGHT : ' + $('.main-content').height() + '<br>WIDTH : ' + $('.main-content').width());
-}
-  $(window).on('resize', showSize);
-  showSize();
+
+    function showSize() {
+        $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
+        $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
+        $('#size3').html('HEIGHT : ' + $('.main-content').height() + '<br>WIDTH : ' + $('.main-content').width());
+    }
+    $(window).on('resize', showSize);
+    showSize();
 });
 
 $(function() {
@@ -45,40 +46,70 @@ $(function() {
         return false;
     });
 });
-for (var i = 0; i < document.links.length; i++) {/*this highlights the current active link*/
+
+// $(function() {
+//     "use strict";
+//     $('form#ajax1').on('submit', function() {
+//         var that = $(this),
+//             url = that.attr('action'),
+//             type = that.attr('method'),
+//             data = {};
+//         that.find('[name]').each(function(index, value) {
+//             var that = $(this),
+//                 name = that.attr('name'),
+//                 value = that.val();
+//             data[name] = value;
+//         });
+//         $.ajax({
+//             url: url,
+//             type: type,
+//             data: data,
+//
+//         });
+//         return false;
+//     });
+// });
+
+for (var i = 0; i < document.links.length; i++) { /*this highlights the current active link*/
     if (document.links[i].href == document.URL) {
         document.links[i].className = 'current';
     }
 }
 $(function() {
-  $("#date").datepicker();
+    $("#date").datepicker();
+});
+$(function() {
+    $("#last_date").datepicker();
 });
 
-$( function () {
-  $(".grab").tooltip();
+$(function() {
+    $(".grab").tooltip();
 });
 
- $(function(){
-   $(".ancestryContent").hide();
-  	$('button.grab').on('click', function(){
- 		$(this).next('.ancestryContent').slideToggle('slow');
- 	});
+$(function() {
+    $(".ancestryContent").hide();
+    $('button.grab').on('click', function() {
+        $(this).next('.ancestryContent').slideToggle('slow');
+    });
 });
-
-//  $(function(){
-//     	$(".ancestryContent").hide();
-//     $(".grab").on('click', function () {
-//    $(".grab").toggle(
-//      function(e) {
-//          e.preventDefault();
-//          $(this).next(".ancestryContent").slideDown('slow');
-//          $(this).html("Hide Content");
-//  		$(this).css("opacity", ".5")},
-//     function(e) {
-//          e.preventDefault();
-//          $(this).next(".ancestryContent").hide("explode", { pieces: 16 }, 2000);
-//          $(this).html("Read More");
-//  		$(this).css("opacity", "1.0");
-//    });
-// });
-// });
+$('#pass').keyup(function(e) {
+     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+     var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+     var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+     if (false == enoughRegex.test($(this).val())) {
+             $('#passstrength').html('More Characters');
+     } else if (strongRegex.test($(this).val())) {
+             $('#passstrength').className = 'ok';
+             $('#passstrength').html('Strong!');
+     } else if (mediumRegex.test($(this).val())) {
+             $('#passstrength').className = 'alert';
+             $('#passstrength').html('Medium!');
+     } else {
+             $('#passstrength').className = 'error';
+             $('#passstrength').html('Weak!');
+     }
+     return true;
+});
+// example
+// <input type="password" name="pass" id="pass" />
+// <span id="passstrength"></span>

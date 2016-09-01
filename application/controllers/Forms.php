@@ -10,19 +10,37 @@ class Forms extends CI_Controller
     //Codeigniter : Write Less Do More
     $this->load->library('form_validation');
   }
+  public function is_logged_in()
+  {
+      $is_logged_in = $this->session->userdata('is_logged_in');
+      if (!isset($is_logged_in) || $is_logged_in != true)
+      {
+        redirect("Checkin");
+      }
+  }
 
   function enterPosts()
   {
+    $this->is_logged_in();
+    $tags = '<strong><a><ul><li><span><blockquote><table><th><tr><td><p>';
     $data = [
-      'title'   => htmlspecialchars(trim($this->input->post('title'))),
-      'content' => strip_tags($this->input->post('content','<strong><a><span>')),
-      'date'    => htmlspecialchars(trim($this->input->post('date'))),
-      'parent'  => htmlspecialchars(trim($this->input->post('parent'))),
-      'status'  => htmlspecialchars(trim($this->input->post('status'))),
+      'title'   => html_escape(trim($this->input->post('title'))),
+      'content' => htmlspecialchars($this->input->post('content')),
+      'date'    => html_escape(trim($this->input->post('date'))),
+      'parent'  => html_escape(trim($this->input->post('parent'))),
+      'status'  => html_escape(trim($this->input->post('status'))),
     ];
     $data = $this->security->xss_clean($data);
-    $this->form_validation->set_rules('title', 'Title', 'required');
-    $this->form_validation->set_rules('content', 'content', 'required');
+    $this->form_validation->set_rules('title', 'Title', 'required|max_length[50]',
+    array(
+      'required' => 'necessary',
+      'max_length' => 'Stop right there'
+    ));
+    $this->form_validation->set_rules('content', 'content', 'required|min_length[50]',
+    array(
+      'required' => 'Missing content',
+      'min_length' => 'Add more characters'
+    ));
     $this->form_validation->set_rules('date', 'Date', 'required');
     $this->form_validation->set_rules('parent', 'Parent', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
@@ -37,30 +55,37 @@ class Forms extends CI_Controller
 
   function upPosts()//update posts
   {
+    $this->is_logged_in();
+    $tags = '<strong><a><ul><li><span><blockquote><table><th><tr><td><p>';
     $data = [
-      'id'      => $this->input->post('id'),
-      'title'   => html_escape(trim($this->input->post('title'))),
-      'content' => strip_tags($this->input->post('content','<strong><a><ul><li><span><table>')),
-      'status'  => html_escape(trim($this->input->post('status'))),
-      'date'    => html_escape(trim($this->input->post('date'))),
-      'parent'  => html_escape(trim($this->input->post('parent')))
+      'id'        => html_escape($this->input->post('id')),
+      'title'     => html_escape(trim($this->input->post('title'))),
+      'content'   => htmlspecialchars($this->input->post('content')),
+      'status'    => html_escape(trim($this->input->post('status'))),
+      'last_date' => html_escape(trim($this->input->post('last_date'))),
+      'parent'    => html_escape(trim($this->input->post('parent')))
     ];
     $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
+    $this->form_validation->set_rules('last_date', 'Last Date', 'required');
+    $this->form_validation->set_rules('parent', 'Parent', 'required');
+
     if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
 		}else
 		{
-			$this->db->replace('posts', $data);
+      $id = html_escape($this->input->post('id'));
+      $this->db->where('id', $id);
+			$this->db->update('posts', $data);
 			echo "grand shit";
 		}
   } //end of enterposts
 
 public function maint()
 {
-    //$this->is_logged_in();
+    $this->is_logged_in();
     $data = array();
     if ($query = $this->Model_form->get_record())
     {

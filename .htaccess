@@ -19,7 +19,7 @@ RewriteRule "(^|/)\." - [F]
  <IfModule mod_autoindex.c>
     Options -Indexes
 </IfModule>
-
+#
 <FilesMatch "(^#.*#|\.(bak|config|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
 #
     # Apache < 2.3
@@ -47,6 +47,8 @@ RewriteRule "(^|/)\." - [F]
          Header unset X-XSS-Protection
      </FilesMatch>
  </IfModule>
+
+Redirect 301 /wp-config.php http://www.fbi.gov/
 
  # ------------------------------------------------------------------------------
 # | Compression                                                                |

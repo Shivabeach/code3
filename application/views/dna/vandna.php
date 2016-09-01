@@ -125,7 +125,6 @@
   </div>
   <div class="flex-small">
     <?php
-    echo current_url();
     $this->load->file(APPPATH . "/views/pages/includes/side.php");
     //include(APPPATH . "/views/pages/includes/side.php");
     ?>

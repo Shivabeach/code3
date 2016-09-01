@@ -83,6 +83,12 @@
     Results
     </p>
     <hr>
+    <?php
+    if($this->session->userdata('name') == true){
+        echo "Hello " .  $this->session->userdata('name');
+    }else {
+      echo "no session";
+    }?>
     <div id="display"></div>
     <hr>
     <?php foreach($getlist as $row)
@@ -96,5 +102,6 @@
     }
     echo $this->table->generate();
     ?>
+    <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
   </div>
 </div>

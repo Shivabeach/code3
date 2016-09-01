@@ -16,9 +16,7 @@ class Pages extends CI_Controller
 
   public function index()
   {
-    $data['title'] = "Code 3";
     $parent = "main";
-
     $this->db->select("title, content, date")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get('posts');
     if($query->result()){
@@ -34,10 +32,26 @@ class Pages extends CI_Controller
     $config['full_tag_close']   = "</div>";
 
     $this->pagination->initialize($config);
-    $this->load->view("pages/header/head", $data);
-    $this->load->view("Pages/prime", $data);
-    $this->load->view("pages/footer/footer");
+    $data['title'] = "Code 3";
+    $data['main_content'] = 'Pages/prime';
+    $this->load->view('pages/includes/template', $data);
   }
+
+  public function is_logged_in()
+    {
+        $is_logged_in = $this->session->userdata('is_logged_in');
+        if (!isset($is_logged_in) || $is_logged_in != true)
+        {
+          redirect("Checkin");
+            //$this->load->view('login_form');
+        }
+    }
+    public function logout()
+    {
+        $this->session->unset_userdata('name');
+        $this->session->sess_destroy();
+        redirect('Pages', 'refresh');
+    }
   public function van()
   {
     $data['title'] = "VanHorn Page";
@@ -88,6 +102,7 @@ class Pages extends CI_Controller
   }
   function entry()
   {
+    $this->is_logged_in();
     $this->db->select("id, title, date, status")->order_by("id", "acs");
     $query = $this->db->get("posts");
     if ($query->result())
@@ -128,7 +143,7 @@ class Pages extends CI_Controller
 
   public function post_up()
   {
-
+    $this->is_logged_in();
     $data["title"] = "Post update";
     $data['head'] = "Post update";
   $this->load->view('pages/header/head', $data);
@@ -138,7 +153,7 @@ class Pages extends CI_Controller
 
   public function cities()
   {
-    //logged in only
+      $this->is_logged_in();
       $data['head'] = "Cities entry";
       $data['title'] = 'Cities entry';
       $this->load->view('pages/header/head', $data);

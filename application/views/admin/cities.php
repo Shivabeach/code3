@@ -61,8 +61,6 @@
   <hr>
   <div id="display"></div>
   <hr>
-  <p>
-    Did the results show up?
-  </p>
+  <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
   </div>
 </div>
