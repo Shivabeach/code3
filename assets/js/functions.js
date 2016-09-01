@@ -92,21 +92,24 @@ $(function() {
         $(this).next('.ancestryContent').slideToggle('slow');
     });
 });
-
-//  $(function(){
-//     	$(".ancestryContent").hide();
-//     $(".grab").on('click', function () {
-//    $(".grab").toggle(
-//      function(e) {
-//          e.preventDefault();
-//          $(this).next(".ancestryContent").slideDown('slow');
-//          $(this).html("Hide Content");
-//  		$(this).css("opacity", ".5")},
-//     function(e) {
-//          e.preventDefault();
-//          $(this).next(".ancestryContent").hide("explode", { pieces: 16 }, 2000);
-//          $(this).html("Read More");
-//  		$(this).css("opacity", "1.0");
-//    });
-// });
-// });
+$('#pass').keyup(function(e) {
+     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+     var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+     var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+     if (false == enoughRegex.test($(this).val())) {
+             $('#passstrength').html('More Characters');
+     } else if (strongRegex.test($(this).val())) {
+             $('#passstrength').className = 'ok';
+             $('#passstrength').html('Strong!');
+     } else if (mediumRegex.test($(this).val())) {
+             $('#passstrength').className = 'alert';
+             $('#passstrength').html('Medium!');
+     } else {
+             $('#passstrength').className = 'error';
+             $('#passstrength').html('Weak!');
+     }
+     return true;
+});
+// example
+// <input type="password" name="pass" id="pass" />
+// <span id="passstrength"></span>

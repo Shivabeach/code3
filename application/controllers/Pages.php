@@ -50,7 +50,7 @@ class Pages extends CI_Controller
     {
         $this->session->unset_userdata('name');
         $this->session->sess_destroy();
-        redirect('Pages');
+        redirect('Pages', 'refresh');
     }
   public function van()
   {
