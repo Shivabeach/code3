@@ -57,7 +57,6 @@ class Checkin extends CI_Controller{
         if (!isset($is_logged_in) || $is_logged_in != true)
         {
           redirect("Checkin");
-            //$this->load->view('login_form');
         }
     }
 

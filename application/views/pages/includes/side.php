@@ -13,7 +13,7 @@ if($this->session->userdata('name') == true){
   <li><i class="icon-hand-right"></i> 375 4th or closer Cousins</li>
 </ul>
 <?php
-$text = "brad@lemonrose.net";
+$text = "mrwilson1@comcast.net";
 $string = preg_replace('([_\.0-9a-z-]+@([0-9a-z][0-9a-z-]+\.)+[a-z]{2,3})','<a href="mailto:\\1">\\1</a>', $text);
 echo $string;
 ?>
