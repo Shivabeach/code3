@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Forms extends CI_Controller
 {
-
   public function __construct()
   {
     parent::__construct();
@@ -22,7 +21,6 @@ class Forms extends CI_Controller
   function enterPosts()
   {
     $this->is_logged_in();
-    $tags = '<strong><a><ul><li><span><blockquote><table><th><tr><td><p>';
     $data = [
       'title'   => html_escape(trim($this->input->post('title'))),
       'content' => htmlspecialchars($this->input->post('content')),
@@ -56,7 +54,6 @@ class Forms extends CI_Controller
   function upPosts()//update posts
   {
     $this->is_logged_in();
-    $tags = '<strong><a><ul><li><span><blockquote><table><th><tr><td><p>';
     $data = [
       'id'        => html_escape($this->input->post('id')),
       'title'     => html_escape(trim($this->input->post('title'))),
@@ -67,7 +64,7 @@ class Forms extends CI_Controller
     ];
     $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required');
-    $this->form_validation->set_rules('content', 'content', 'required');
+    $this->form_validation->set_rules('content', 'content', 'required|trim');
     $this->form_validation->set_rules('status', 'Status', 'required');
     $this->form_validation->set_rules('last_date', 'Last Date', 'required');
     $this->form_validation->set_rules('parent', 'Parent', 'required');

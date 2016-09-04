@@ -112,10 +112,10 @@
     $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
     <h3>Page Menu</h3>
       <ul>
-        <li><a href="#100">67,000 Years</a></li>
-        <li><a href="#80">60,000 Years Ago</a></li>
-        <li><a href="#70">55,000 Years Ago</a></li>
-        <li><a href="#60">35,000 Years ago</a></li>
+        <li><a class="dnalink" href="#100">67,000 Years</a></li>
+        <li><a class="dnalink" href="#80">60,000 Years Ago</a></li>
+        <li><a class="dnalink" href="#70">55,000 Years Ago</a></li>
+        <li><a class="dnalink" href="#60">35,000 Years ago</a></li>
       </ul>
   </div>
 </div>
