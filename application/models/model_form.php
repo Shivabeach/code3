@@ -14,9 +14,9 @@ class Classname extends CI_Model{
     $parent = "VanHorn";
       $query = $this->db->select("id,title,content,date,parent")->from("posts")->where('parent', $parent)-get();
       if($query->num_rows() > 0) {
-			foreach ($query->result() as $row) {
-				$data[] = $row;
-			}
+  			foreach ($query->result() as $row) {
+  				$data[] = $row;
+  			}
 			return $data;
 		}
   }
@@ -25,14 +25,19 @@ class Classname extends CI_Model{
 		$id = $this->uri->segment(3);
 		$this->db->where('id', $id);
 		$query = $this->db->get('posts');
-		return $query->result();
+    if ( $query->num_rows() > 1)
+    {
+      return $query->result();
+    }
 	}
   function get_record()
+  {
+    $this->db->select('id, title, status');
+    $this->db->order_by('id', 'DESC');
+    $query = $this->db->get('posts');
+    if ( $query->num_rows() > 1)
     {
-        $this->db->select('id, title, status');
-        $this->db->order_by('id', 'DESC');
-        $query = $this->db->get('posts');
-        return $query->result();
+      return $query->result();
     }
-
+   }
 }

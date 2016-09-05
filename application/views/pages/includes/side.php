@@ -6,11 +6,11 @@ if($this->session->userdata('name') == true){
 }?>
 <h3>Quick Facts</h3>
 <ul>
-  <li><i class="icon-hand-right"></i> 120 Matched relatives</li>
-  <li><i class="icon-hand-right"></i> 12,400 Unmatched relatives</li>
-  <li><i class="icon-hand-right"></i> 15,233 People in the current tree</li>
-  <li><i class="icon-hand-right"></i> 1617 Photos</li>
-  <li><i class="icon-hand-right"></i> 375 4th or closer Cousins</li>
+  <li><i class="icon-hand-right"></i> 123 Matched relatives</li>
+  <li><i class="icon-hand-right"></i> 13,200 Unmatched relatives</li>
+  <li><i class="icon-hand-right"></i> 15,488 People in the current tree</li>
+  <li><i class="icon-hand-right"></i> 1778 Photos</li>
+  <li><i class="icon-hand-right"></i> 401 4th to 8th Cousins</li>
 </ul>
 <?php
 $text = "mrwilson1@comcast.net";

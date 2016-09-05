@@ -17,7 +17,7 @@ class Pages extends CI_Controller
   public function index()
   {
     $parent = "main";
-    $this->db->select("title, content, date")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $this->db->select("title, content, date, last_date")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get('posts');
     if($query->result()){
       $data["mainContent"] = $query->result();
@@ -57,7 +57,7 @@ class Pages extends CI_Controller
     $data['title'] = "VanHorn Page";
     $data['head'] = "A VanHorn History";
     $parent = "VanHorn";
-    $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $this->db->select("title, content, date, last_date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get();
     if($query->result()){
       $data["mainContent"] = $query->result();
@@ -80,7 +80,7 @@ class Pages extends CI_Controller
     $data['title'] = "Bostick Page";
     $data['head'] = "Bosticks";
     $parent = "Bostick";
-    $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $this->db->select("title, content, date, last_date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get();
     if($query->result()){
       $data["mainContent"] = $query->result();

@@ -8,7 +8,12 @@
   </div>
   <div class="flex-small">
     <?php
-    echo current_url();
+    if($this->session->userdata('name') == true){
+        echo "Hello " .  $this->session->userdata('name');
+    }else {
+      echo "no session";
+    }
+    echo "<hr>";
     $this->load->file(APPPATH . "/views/pages/includes/side1.php");
     ?>
     <div id="display"></div>

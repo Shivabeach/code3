@@ -6,7 +6,7 @@
       <div class="flex-large">
         <article class="ancestry">
           <h2 class="ancestryTitle item">Family History</h2>
-          <button class="grab pure-button">Read More</button>
+          <button class="grab">Read More</button>
           <div class="ancestryContent item">
             <p> Where we are from in the last 500 years or so!
         <blockquote>
@@ -28,18 +28,23 @@
             <?php foreach($mainContent as $row):?>
               <?php $content = htmlspecialchars_decode($row->content);?>
               <article class="ancestry">
-                <h2 class="ancestryTitle item"><?php echo $row->title;?></h2>
-                <button class="grab pure-button">Read More</button>
+                <h2 class="ancestryTitle item"><?php echo html_escape($row->title);?></h2>
+                <button class="grab">Read More</button>
                 <div class="ancestryContent item"><?php echo $this->typography->auto_typography($content);?> </div>
-                <h6 class="ancestryDate"><?php echo $row->date;?></h6>
+                <h6 class="ancestryDate"><?php echo "Creation " . html_escape($row->date), nbs(5), "Last Updated " . html_escape($row->last_date);?></h6>
             </article>
           <?php endforeach;?>
           <?php echo $this->pagination->create_links();?>
+          <div class="bookmarks">
+            <ul>
+              <li><sup>1 </sup><a href="http://www.ncbi.nlm.nih.gov/pubmed/22096215" class="external">The Expansion of mtDNA Haplogroup L3 within and out of Africa.</a></li>
+              <li></li>
+            </ul>
+          </div>
       </div>
       <div class="flex-small">
         <?php
-        echo current_url();
-        include(APPPATH . "/views/pages/includes/side.php");
+          include(APPPATH . "/views/pages/includes/side.php");
         ?>
       </div>
   </div>

@@ -30,7 +30,7 @@ echo form_input($attr2);?>
   "id"          => "content",
   "name"        => "content",
   'placeholder' => 'Content',
-  'value'       => $row->content
+  'value'       => htmlspecialchars_decode($row->content)
 ];
 
 echo form_textarea($attr2);?>
