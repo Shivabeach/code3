@@ -9,9 +9,6 @@ class Pages extends CI_Controller
     parent::__construct();
     $this->load->library('encryption');
     $this->load->library('pagination');
-    $this->load->library('parser');
-
-    //Codeigniter : Write Less Do More
   }
 
   public function index()

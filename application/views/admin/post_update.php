@@ -13,10 +13,13 @@
     }else {
       echo "no session";
     }
-    echo "<hr>";
-    $this->load->file(APPPATH . "/views/pages/includes/side1.php");
-    ?>
+    echo "<hr>";?>
     <div id="display"></div>
+    <hr>
+    <span>Chars Count: </span> <span id=feedback> </span>
+    <hr>
+    <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
+
 
   </div>
 </div>

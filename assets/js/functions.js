@@ -113,3 +113,14 @@ $('#pass').keyup(function(e) {
 // example
 // <input type="password" name="pass" id="pass" />
 // <span id="passstrength"></span>
+
+$(function() {
+  $('#content').keyup(function() {
+    var content = $(this).val().length;
+    $('#feedback').html(content);
+  });
+});
+
+$( function () {
+
+});

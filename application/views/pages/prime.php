@@ -1,6 +1,6 @@
   <body>
     <header>
-      <h1>Visuals</h1>
+      <h1>The Family's Story</h1>
     </header>
     <div class="container">
       <div class="flex-large">

@@ -37,6 +37,7 @@
     echo form_textarea($attr2);
     ?>
 
+
     <label for="date">Date</label>
     <?php $attr3 = [
       "id"    => "date",
@@ -91,6 +92,8 @@
     }?>
     <div id="display"></div>
     <hr>
+    <span>Chars Count: </span> <span id=feedback> </span>
+    <hr>
     <?php foreach($getlist as $row)
     {
         $id = "Forms/fill_form/$row->id";
@@ -103,5 +106,6 @@
     echo $this->table->generate();
     ?>
     <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
+
   </div>
 </div>
