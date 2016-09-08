@@ -87,7 +87,7 @@ $(function() {
 });
 
 $(function() {
-    $(".ancestryContent").hide();
+    $(".ancestryContent").hide(); 
     $('button.grab').on('click', function() {
         $(this).next('.ancestryContent').slideToggle('slow');
     });

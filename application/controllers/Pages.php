@@ -52,7 +52,7 @@ class Pages extends CI_Controller
   public function van()
   {
     $data['title'] = "VanHorn Page";
-    $data['head'] = "A VanHorn History";
+    $data['head'] = "VanHorn's";
     $parent = "VanHorn";
     $this->db->select("title, content, date, last_date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get();
@@ -77,7 +77,7 @@ class Pages extends CI_Controller
     $data['title'] = "Bostick Page";
     $data['head'] = "Bosticks";
     $parent = "Bostick";
-    $this->db->select("title, content, date, last_date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $this->db->select("title, content, date, last_date, slug")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get();
     if($query->result()){
       $data["mainContent"] = $query->result();
@@ -94,7 +94,7 @@ class Pages extends CI_Controller
 
     $this->pagination->initialize($config);
     $this->load->view("pages/header/head", $data);
-    $this->load->view("Pages/bos");
+    $this->load->view("pages/bos");
     $this->load->view("pages/footer/footer");
   }
   function entry()

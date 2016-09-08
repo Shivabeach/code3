@@ -37,12 +37,12 @@
           <?php echo $this->pagination->create_links();?>
           <div class="bookmarks">
             <ul>
-              <li><sup>1 </sup><a href="http://www.ncbi.nlm.nih.gov/pubmed/22096215" class="external">The Expansion of mtDNA Haplogroup L3 within and out of Africa.</a></li>
+              <li><i class="icon-external-link-sign"></i> <sup> 1 </sup><a href="http://www.ncbi.nlm.nih.gov/pubmed/22096215" class="external">The Expansion of mtDNA Haplogroup L3 within and out of Africa.</a></li>
               <li></li>
             </ul>
           </div>
       </div>
       <div class="flex-small">
-        <?php include(APPPATH . "/views/pages/includes/side.php"); ?>     
+        <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
       </div>
   </div>
