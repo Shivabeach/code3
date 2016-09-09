@@ -27,6 +27,7 @@ class Forms extends CI_Controller
       'date'    => html_escape(trim($this->input->post('date'))),
       'parent'  => html_escape(trim($this->input->post('parent'))),
       'status'  => html_escape(trim($this->input->post('status'))),
+      'slug'    => $this->input->post('slug')
     ];
     $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required|max_length[50]',
@@ -42,6 +43,7 @@ class Forms extends CI_Controller
     $this->form_validation->set_rules('date', 'Date', 'required');
     $this->form_validation->set_rules('parent', 'Parent', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
+    $this->form_validation->set_rules('slug', 'Slug', 'required|trim');
     if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
 		}else
@@ -60,14 +62,16 @@ class Forms extends CI_Controller
       'content'   => htmlspecialchars($this->input->post('content')),
       'status'    => html_escape(trim($this->input->post('status'))),
       'last_date' => html_escape(trim($this->input->post('last_date'))),
-      'parent'    => html_escape(trim($this->input->post('parent')))
+      'parent'    => html_escape(trim($this->input->post('parent'))),
+      'slug'      => htmlspecialchars($this->input->post('slug'))
     ];
-    $data = $this->security->xss_clean($data);
+    //$data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required|trim');
     $this->form_validation->set_rules('status', 'Status', 'required');
     $this->form_validation->set_rules('last_date', 'Last Date', 'required');
     $this->form_validation->set_rules('parent', 'Parent', 'required');
+    $this->form_validation->set_rules('slug', 'Slug', 'required|trim');
 
     if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();

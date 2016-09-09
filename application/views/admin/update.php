@@ -35,6 +35,16 @@ echo form_input($attr2);?>
 
 echo form_textarea($attr2);?>
 
+<label for="slug">Slug</label>
+<?php
+$attr6 = [
+  'id'          => 'slug',
+  'name'        => 'slug',
+  'placeholder' => 'Slug',
+  'value'       =>  $row->slug,
+  'class'       => 'slug1'
+];
+echo form_textarea($attr6);?>
 <label for="status">Status</label>
 <?php $attr5 = [
   ''        => 'Pick a status',

@@ -1,5 +1,5 @@
 "use strict";
-$(function() {
+(function() {
     'use strict';
 
     function showSize() {
@@ -9,7 +9,7 @@ $(function() {
     }
     $(window).on('resize', showSize);
     showSize();
-});
+})();
 
 $(function() {
     "use strict";
@@ -22,7 +22,7 @@ $(function() {
             newWnd.opener = null;
         });
 });
-$(function() {
+(function() {
     "use strict";
     $('form#ajax').on('submit', function() {
         var that = $(this),
@@ -45,7 +45,7 @@ $(function() {
         });
         return false;
     });
-});
+})();
 
 // $(function() {
 //     "use strict";
@@ -86,12 +86,13 @@ $(function() {
     $(".grab").tooltip();
 });
 
-$(function() {
-    $(".ancestryContent").hide(); 
+(function() {
+    $(".ancestryContent").hide();
     $('button.grab').on('click', function() {
         $(this).next('.ancestryContent').slideToggle('slow');
     });
-});
+})();
+
 $('#pass').keyup(function(e) {
      var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
      var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
@@ -114,13 +115,9 @@ $('#pass').keyup(function(e) {
 // <input type="password" name="pass" id="pass" />
 // <span id="passstrength"></span>
 
-$(function() {
+(function() {
   $('#content').keyup(function() {
     var content = $(this).val().length;
     $('#feedback').html(content);
   });
-});
-
-$( function () {
-
-});
+})();
