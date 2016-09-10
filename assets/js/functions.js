@@ -90,6 +90,7 @@ $(function() {
     $(".ancestryContent").hide();
     $('button.grab').on('click', function() {
         $(this).next('.ancestryContent').slideToggle('slow');
+        $(this).css('opacity', '0.5');
     });
 })();
 

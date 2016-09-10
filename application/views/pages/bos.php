@@ -1,6 +1,6 @@
 <body>
   <header>
-    <h1><?php echo "<small>The History of the </small>" . $head;?></h1>
+    <h1><?php echo "<span class='small'>The History of the </span>" . $head;?></h1>
   </header>
 <div class="container">
   <div class="flex-large">
