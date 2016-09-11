@@ -109,6 +109,9 @@
           <p>Age: 5,500 – 26,000 Years Ago</p>
           <p>Location of Origin: Europe</p>
       </div>
+        <p>
+          Haplogroup I dates to 23,000 years ago, or older. The I-M253 lineage likely has its roots in northern France. Today it is found most frequently within Viking/Scandinavian populations in northwest Europe and has since spread down into Central and Eastern Europe, where it is found at low frequencies. Haplogroup I represents one of the first peoples in Europe.
+        </p>
         <p>When ice covered much of Europe, the cold and lack of food sources forced groups containing men from this lineage into refugia. It was from these refugia on the Iberian Peninsula, to the north of the Black Sea, and elsewhere, that members of this lineage emerged around 10,000 years ago.</p>
 
         <p>Emerging from the refugia<sub>2</sub>, groups expanded across Europe and back toward West Asia in successive waves. The highest frequencies of this lineage are in Scandinavian countries. This may be due to early founders during a time of extremely small settling population groups.</p>
