@@ -1,7 +1,6 @@
 "use strict";
 (function() {
     'use strict';
-
     function showSize() {
         $('#size').html('HEIGHT : ' + $(window).height() + '<br>WIDTH : ' + $(window).width());
         $('#size2').html('HEIGHT : ' + screen.height + '<br>WIDTH : ' + screen.width);
@@ -77,22 +76,22 @@ for (var i = 0; i < document.links.length; i++) { /*this highlights the current 
         document.links[i].className = 'current';
     }
 }
-(function() {
+$(function() {
     $("#date").datepicker();
-})();
-(function() {
+});
+$(function() {
     $("#last_date").datepicker();
-})();
+});
 
-(function() {
+$(function() {
     $(".grab").tooltip();
-})();
+});
 
 (function() {
     $(".ancestryContent").hide();
     $('button.grab').on('click', function() {
         $(this).next('.ancestryContent').slideToggle('slow');
-        $(this).css('opacity', '0.5');
+        $(this).toggleClass('opa');
     });
 })();
 
@@ -124,3 +123,7 @@ $('#pass').keyup(function(e) {
     $('#feedback').html(content);
   });
 })();
+
+$(function() {
+  $('#content').wordCount();
+});

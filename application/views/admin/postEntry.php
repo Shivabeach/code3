@@ -94,6 +94,8 @@
     <hr>
     <span>Chars Count: </span> <span id=feedback> </span>
     <hr>
+    Total word Count : <span id="display_count">0</span>
+    <hr>
     <?php foreach($getlist as $row)
     {
         $id = "Forms/fill_form/$row->id";
