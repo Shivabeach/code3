@@ -76,7 +76,7 @@ application/logs/*
 system/
 application/helpers/*
 application/language/*
-application/config/*
+
 
 
 ### Dropbox ###
