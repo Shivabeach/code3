@@ -87,7 +87,7 @@ class Forms extends CI_Controller
 public function maint()
 {
     $this->is_logged_in();
-    $data = array();
+    $data = [];
     if ($query = $this->Model_form->get_record())
     {
         $data['records'] = $query;
@@ -104,7 +104,7 @@ public function maint()
 //fill the update form
 public function fill_form()
 {
-  //$this->is_logged_in();
+  $this->is_logged_in();
   $id = $this->uri->segment(3);
   $this->db->where('id', $id);
   $query = $this->db->get('posts');

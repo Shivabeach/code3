@@ -10,7 +10,11 @@ class Pages extends CI_Controller
     $this->load->library('encryption');
     $this->load->library('pagination');
   }
-
+/**
+ * [index description]
+ * @method index
+ * @return return database query [description]
+ */
   public function index()
   {
     $parent = "main";

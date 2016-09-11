@@ -73,6 +73,10 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 /vendor/
+system/
+application/helpers/*
+application/language/*
+application/config/*
 
 
 ### Dropbox ###
