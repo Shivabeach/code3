@@ -46,7 +46,7 @@
       });
     return false;
   });
-})();
+})(jQuery);
 
 // $(function() {
 //     "use strict";
@@ -93,7 +93,7 @@ $(function() {
         $(this).next('.ancestryContent').slideToggle('slow');
         $(this).toggleClass('opa');
     });
-})();
+})(jQuery);
 
 $('#pass').keyup(function(e) {
      var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
@@ -117,12 +117,12 @@ $('#pass').keyup(function(e) {
 // <input type="password" name="pass" id="pass" />
 // <span id="passstrength"></span>
 
-(function() {
+$(function() {
   $('#content').keyup(function() {
     var content = $(this).val().length;
     $('#feedback').html(content);
   });
-})();
+});
 
 $(function() {
   $('#content').wordCount();

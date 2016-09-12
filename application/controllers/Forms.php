@@ -27,23 +27,27 @@ class Forms extends CI_Controller
       'date'    => html_escape(trim($this->input->post('date'))),
       'parent'  => html_escape(trim($this->input->post('parent'))),
       'status'  => html_escape(trim($this->input->post('status'))),
-      'slug'    => $this->input->post('slug')
+      'slug'    => htmlspecialchars($this->input->post('slug'))
     ];
     $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required|max_length[50]',
     array(
-      'required' => 'necessary',
+      'required'   => 'necessary',
       'max_length' => 'Stop right there'
     ));
     $this->form_validation->set_rules('content', 'content', 'required|min_length[50]',
     array(
-      'required' => 'Missing content',
+      'required'   => 'Missing content',
       'min_length' => 'Add more characters'
     ));
     $this->form_validation->set_rules('date', 'Date', 'required');
     $this->form_validation->set_rules('parent', 'Parent', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
-    $this->form_validation->set_rules('slug', 'Slug', 'required|trim');
+    $this->form_validation->set_rules('slug', 'Slug', 'required|trim|min_length[30]',
+    array(
+      'required'   => 'Slug Me',
+      'min_length' => 'More'
+    ));
     if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
 		}else

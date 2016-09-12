@@ -36,7 +36,17 @@
 
     echo form_textarea($attr2);
     ?>
-
+    <label for="slug">Slug</label>
+    <?php
+      $attr6 = [
+        'name'        => 'slug',
+        'id'          => 'slug',
+        'placeholder' => 'Slug',
+        'value'       => set_value('slug'),
+        'class'       => 'slug1'
+      ];
+      echo form_textarea($attr6);
+    ?>
 
     <label for="date">Date</label>
     <?php $attr3 = [
