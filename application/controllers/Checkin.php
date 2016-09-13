@@ -85,9 +85,9 @@ class Checkin extends CI_Controller{
       array(
         'required'   => 'just do it',
         'min_length' => 'more',
-        'max_length' => 'bejesus already'
+        'max_length' => 'You need more characters'
       ));
-      $this->form_validation->set_rules('pass', 'password', 'required|min_length[24]|max_length[26]',
+      $this->form_validation->set_rules('pass', 'Password', 'required|min_length[24]|max_length[26]',
       array(
         'required'   => 'Think it over',
         'min_length' => 'Not yet',
@@ -120,7 +120,11 @@ class Checkin extends CI_Controller{
       ),$limit, $offset);
       //$query = $this->db->get('check');
       if ($query->num_rows() != 1){
-        die('sorry');
+        $data['head']  = "Login to admin";
+        $data['title'] = 'Login to Admin';
+        $this->load->view('pages/header/head', $data);
+        $this->load->view('pages/login/log', $data);
+        $this->load->view('pages/footer/footer');
       }else
       {
         $row    = $query->row();
@@ -134,7 +138,11 @@ class Checkin extends CI_Controller{
           $this->session->set_userdata($data);
           redirect("Pages/entry");
         }else {
-          die();
+          $data['head']  = "Login to admin";
+          $data['title'] = 'Login to Admin';
+          $this->load->view('pages/header/head', $data);
+          $this->load->view('pages/login/log', $data);
+          $this->load->view('pages/footer/footer');
         }
       }
     }

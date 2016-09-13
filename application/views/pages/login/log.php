@@ -19,10 +19,11 @@
 <p>
   <?php
   $attr4 = [
-    'style' => 'width: 50%',
-    'id' => 'name',
-    'name' => 'name',
-    'placeholder' => 'Name'
+    'style'       => 'width: 50%',
+    'id'          => 'name',
+    'name'        => 'name',
+    'placeholder' => 'Name',
+    'value'       => set_value('name')
   ];
    ?>
 <label for="name"> Name </label>
@@ -32,10 +33,11 @@
 <p>
   <?php
   $attr1 = [
-    'style' => 'width: 50%',
-    'id' => 'pass',
-    'name' => 'pass',
-    'placeholder' => 'Password'
+    'style'       => 'width: 50%',
+    'id'          => 'pass',
+    'name'        => 'pass',
+    'placeholder' => 'Password',
+    'value'       => set_value('pass')
 ];
    ?>
 <label for="pass"> password </label>
@@ -58,10 +60,11 @@
 <p>
   <?php
   $attr3 = [
-    'style' => 'width: 50%',
-    'id' => 'emails',
-    'name' => 'email',
-    'placeholder' => 'email'
+    'style'       => 'width: 50%',
+    'id'          => 'emails',
+    'name'        => 'email',
+    'placeholder' => 'email',
+    'value'       => set_value('email')
 ];
    ?>
 <label for="email"> email </label>

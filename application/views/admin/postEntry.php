@@ -90,16 +90,16 @@
     </fieldset>
   </div>
   <div class="flex-small">
+    <?php
+    if($this->session->userdata('name') == true){
+        echo "Hello " .  $this->session->userdata('name');
+    }?>
+    <hr>
     <p>
     Results
     </p>
     <hr>
-    <?php
-    if($this->session->userdata('name') == true){
-        echo "Hello " .  $this->session->userdata('name');
-    }else {
-      echo "no session";
-    }?>
+
     <div id="display"></div>
     <hr>
     <span>Chars Count: </span> <span id=feedback> </span>

@@ -55,6 +55,11 @@
 </div>
 </div>
 <div class="flex-small">
+  <?php
+  if($this->session->userdata('name') == true){
+      echo "Hello " .  $this->session->userdata('name');
+  }?>
+  <hr>
   <p>
   Results
   </p>
