@@ -11,5 +11,12 @@ if($this->session->userdata('name') == true){
   <li><i class="icon-hand-right"></i> 1784 Photos</li>
   <li><i class="icon-hand-right"></i> 410 4th to 8th Cousins</li>
 </ul>
-
+<hr>
 <div id="size"></div>
+<hr>
+<?php
+$date = new DateTime;
+$ancestor = (new DateTime)->setDate(1640,01,01)->setTime(00,00,00);
+$timeago = $date->diff($ancestor);
+echo $timeago->format('Matthys was born %y Years ago');
+?>

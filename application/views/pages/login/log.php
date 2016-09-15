@@ -42,7 +42,7 @@
    ?>
 <label for="pass"> password </label>
 <?php echo form_input($attr1);?>
-<span id="passstrength"></span>
+<!-- <span id="passstrength"></span> -->
 <p/>
 
 <!-- <p>

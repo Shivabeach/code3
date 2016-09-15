@@ -117,12 +117,12 @@ $('#pass').keyup(function(e) {
 // <input type="password" name="pass" id="pass" />
 // <span id="passstrength"></span>
 
-$(function() {
+(function() {
   $('#content').keyup(function() {
     var content = $(this).val().length;
     $('#feedback').html(content);
   });
-});
+})(jQuery);
 
 $(function() {
   $('#content').wordCount();

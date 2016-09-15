@@ -105,6 +105,7 @@ class Checkin extends CI_Controller{
         $this->load->view('pages/header/head', $data);
         $this->load->view('pages/login/log', $data);
         $this->load->view('pages/footer/footer');
+        echo validation_errors;
   		}else {
   		  $name  = html_escape($this->input->post('name'));
         $email = html_escape($this->input->post('email'));
@@ -143,6 +144,7 @@ class Checkin extends CI_Controller{
           $this->load->view('pages/header/head', $data);
           $this->load->view('pages/login/log', $data);
           $this->load->view('pages/footer/footer');
+
         }
       }
     }
