@@ -1,6 +1,6 @@
 <?php
 if($this->session->userdata('name') == true){
-    echo "Hello " .  $this->session->userdata('name'). nbs(3), anchor("Pages/entry", " Enter ");
+    echo "Hello " .  $this->session->userdata('name') . nbs(3), anchor("Pages/entry", " Enter ");
     echo "<hr>";
 }?>
 <h3>Quick Facts</h3>

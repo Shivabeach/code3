@@ -63,16 +63,16 @@ header {
   -webkit-box-flex: 3;
   -ms-flex: 3;
       flex: 3;
-  border-top: 1px dotted rgb(128, 128, 128);
+  //border-top: 1px dotted rgb(128, 128, 128);
 }
 .flex-small {
   -webkit-box-flex: 1;
   -ms-flex: 1;
       flex: 1;
   padding: 0 1rem;
-  border-top: 1px dotted gray;
+  //border-top: 1px dotted gray;
   background: @kular7;
-  border: 1px dotted @kular2;
+  //border: 1px dotted @kular2;
   p {
     margin: 5px 1em;
   }
@@ -85,6 +85,26 @@ header {
     padding: 4px 0;
   }
 }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-content: flex-end;
+  min-height: 250px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80%;
+}
+.nav-grid {
+  //border: 1px dashed silver;
+  flex: 1;
+  background-color: @kular7;
+  li {
+    display: block;
+  }
+}
+
 .item {
   max-width: 100%;
 }
@@ -124,24 +144,6 @@ header {
   font-size: 80%;
 }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-content: flex-end;
-  min-height: 250px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 80%;
-}
-.nav-grid {
-  border: 1px dashed silver;
-  flex: 1;
-  background-color: @kular7;
-  li {
-    display: block;
-  }
-}
 .box1 {
 }
 .box2 {
@@ -170,8 +172,8 @@ select {
 .bookmarks {
   width: 100%;
   min-height: 75px;
-  border-top: 1px dotted @kular4;
-  border-left: 1px dotted @kular4;
+//  border-top: 1px dotted @kular4;
+  //border-left: 1px dotted @kular4;
   a {
     font-size: 1em;
     font-family: monospace;

@@ -66,7 +66,8 @@ class Checkin extends CI_Controller{
      */
     public function logout()
     {
-        $this->session->unset_userdata('name');
+      $items = ['name', 'email'];
+        $this->session->unset_userdata($items);
         $this->session->sess_destroy();
         redirect('Pages', 'refresh');
     }

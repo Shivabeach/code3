@@ -8,6 +8,7 @@ class Forms extends CI_Controller
     parent::__construct();
     //Codeigniter : Write Less Do More
     $this->load->library('form_validation');
+    $this->load->library('session');
   }
   public function is_logged_in()
   {
@@ -69,7 +70,7 @@ class Forms extends CI_Controller
       'parent'    => html_escape(trim($this->input->post('parent'))),
       'slug'      => htmlspecialchars($this->input->post('slug'))
     ];
-    //$data = $this->security->xss_clean($data);
+    $data = $this->security->xss_clean($data);
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required|trim');
     $this->form_validation->set_rules('status', 'Status', 'required');
