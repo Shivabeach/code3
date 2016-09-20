@@ -30,7 +30,7 @@ class Forms extends CI_Controller
       'status'  => html_escape(trim($this->input->post('status'))),
       'slug'    => htmlspecialchars($this->input->post('slug'))
     ];
-    $data = $this->security->xss_clean($data);
+
     $this->form_validation->set_rules('title', 'Title', 'required|max_length[50]',
     array(
       'required'   => 'necessary',
@@ -70,7 +70,7 @@ class Forms extends CI_Controller
       'parent'    => html_escape(trim($this->input->post('parent'))),
       'slug'      => htmlspecialchars($this->input->post('slug'))
     ];
-    $data = $this->security->xss_clean($data);
+
     $this->form_validation->set_rules('title', 'Title', 'required');
     $this->form_validation->set_rules('content', 'content', 'required|trim');
     $this->form_validation->set_rules('status', 'Status', 'required');
@@ -124,26 +124,30 @@ public function fill_form()
   $this->load->view('admin/post_update', $data);
   $this->load->view('pages/footer/footer');
 }//end of file
-
+/**
+ * Adding cities to the database to show where we are from
+ * @method cities
+ * @return [insert] [description]
+ */
   public function cities()
   {
     $data = array(
-    'borncity'  => htmlspecialchars(trim($this->input->post('borncity'))),
-    'state'     => htmlspecialchars(trim($this->input->post('state'))),
-    'country'   => htmlspecialchars(trim($this->input->post('country'))),
-    'family'    => htmlspecialchars(trim($this->input->post('family'))),
-    'year'      => htmlspecialchars(trim($this->input->post('year'))),
-    'state1'    => htmlspecialchars(trim($this->input->post('state1'))),
-    'deathcity' => htmlspecialchars(trim($this->input->post('deathcity')))
+    'borncity'  => html_escape(trim($this->input->post('borncity'))),
+    'state'     => html_escape(trim($this->input->post('state'))),
+    'country'   => html_escape(trim($this->input->post('country'))),
+    'family'    => html_escape(trim($this->input->post('family'))),
+    'year'      => html_escape(trim($this->input->post('year'))),
+    'state1'    => html_escape(trim($this->input->post('state1'))),
+    'deathcity' => html_escape(trim($this->input->post('deathcity')))
     );
-    $data = $this->security->xss_clean($data);
-    $this->form_validation->set_rules('borncity', 'city of birth', 'required|trim');
-    $this->form_validation->set_rules('state', 'state', 'required|trim');
-    $this->form_validation->set_rules('country', 'country', 'required|trim');
-    $this->form_validation->set_rules('family', 'family', 'required|trim');
-    $this->form_validation->set_rules('year', 'year', 'required|trim');
-    $this->form_validation->set_rules('state1', 'Born State', 'required|trim');
-    $this->form_validation->set_rules('deathcity', 'Death City', 'trim');
+
+    $this->form_validation->set_rules('borncity', 'city of birth', 'required');
+    $this->form_validation->set_rules('state', 'state', 'requireded');
+    $this->form_validation->set_rules('country', 'country', 'required');
+    $this->form_validation->set_rules('family', 'family', 'required');
+    $this->form_validation->set_rules('year', 'year', 'required|numeric');
+    $this->form_validation->set_rules('state1', 'Born State', 'required');
+    $this->form_validation->set_rules('deathcity', 'Death City');
 
     if( $this->form_validation->run() == FALSE) {
       echo validation_errors();
@@ -152,5 +156,5 @@ public function fill_form()
       $this->db->insert('cities', $data);
       echo "grand shit";
     }
-  }
+  } //end of cities
 }//end of class

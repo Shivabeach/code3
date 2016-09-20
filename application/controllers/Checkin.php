@@ -6,8 +6,7 @@ class Checkin extends CI_Controller{
   public function __construct()
   {
     parent::__construct();
-    $this->load->model("checkmod");
-    $this->load->library('session');
+    //$this->load->model("checkmod");
   }
 
   function index()
@@ -25,11 +24,11 @@ class Checkin extends CI_Controller{
       'password2' => html_escape($this->input->post('password2')),
       'email'     => html_escape($this->input->post('email')),
       );
-      $data = $this->security->xss_clean($data);
-      $this->form_validation->set_rules('name', 'name', 'required');
+
+      $this->form_validation->set_rules('name', 'name', 'required|inique[check.name]');
       $this->form_validation->set_rules('password', 'password', 'required');
       $this->form_validation->set_rules('password2', 'password2', 'required|matches[password2]');
-      $this->form_validation->set_rules('email', 'email', 'required|valid_email');
+      $this->form_validation->set_rules('email', 'email', 'required|valid_email|unique[check.email]');
 
       if( $this->form_validation->run() == FALSE) {
   			echo validation_errors();
@@ -84,15 +83,11 @@ class Checkin extends CI_Controller{
       ];
       $this->form_validation->set_rules('name', 'name', 'required|min_length[3]|max_length[5]',
       array(
-        'required'   => 'just do it',
-        'min_length' => 'more',
-        'max_length' => 'You need more characters'
+        'required'   => 'just do it'
       ));
       $this->form_validation->set_rules('pass', 'Password', 'required|min_length[24]|max_length[26]',
       array(
-        'required'   => 'Think it over',
-        'min_length' => 'Not yet',
-        'max_length' => 'Whoa'
+        'required'   => 'Think it over'
       ));
       $this->form_validation->set_rules('email', 'email', 'required|valid_email',
       array(
@@ -117,8 +112,9 @@ class Checkin extends CI_Controller{
       $offset = 0;
       $query = $this->db->get_where('check',
       array(
-        'email' => $email,
-        'name'  => $name
+        'email'   => $email,
+        'name'    => $name,
+        'approve' => 'yes'
       ),$limit, $offset);
       //$query = $this->db->get('check');
       if ($query->num_rows() != 1){
@@ -138,14 +134,13 @@ class Checkin extends CI_Controller{
             'is_logged_in' => TRUE
           );
           $this->session->set_userdata($data);
-          redirect("Pages/entry");
+          redirect("pages/entry");
         }else {
           $data['head']  = "Login to admin";
           $data['title'] = 'Login to Admin';
           $this->load->view('pages/header/head', $data);
           $this->load->view('pages/login/log', $data);
           $this->load->view('pages/footer/footer');
-
         }
       }
     }

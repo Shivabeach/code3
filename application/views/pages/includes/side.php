@@ -20,3 +20,30 @@ $ancestor = (new DateTime)->setDate(1640,01,01)->setTime(00,00,00);
 $timeago = $date->diff($ancestor);
 echo $timeago->format('Matthys was born %y Years ago');
 ?>
+
+<?php
+if ($this->agent->is_browser())
+  {
+          $agent = $this->agent->browser().' '.$this->agent->version();
+  }
+  elseif ($this->agent->is_robot())
+  {
+          $agent = $this->agent->robot();
+  }
+  elseif ($this->agent->is_mobile())
+  {
+          $agent = $this->agent->mobile();
+  }
+  else
+  {
+          $agent = 'Unidentified User Agent';
+  }
+$ip       = $this->input->ip_address();
+$platform = $this->agent->platform();
+echo "<br>";
+echo $ip;
+echo "<br>";
+echo $platform;
+echo "<br></br>";
+echo $agent;
+ ?>

@@ -34,8 +34,8 @@ class Pages extends CI_Controller
     $config['full_tag_close']   = "</div>";
 
     $this->pagination->initialize($config);
-    $data['title'] = "Code 3";
-    $data['main_content'] = 'Pages/prime';
+    $data['title'] = "VanHorn Family";
+    $data['main_content'] = 'pages/prime';
     $this->load->view('pages/includes/template', $data);
   }
 
@@ -74,7 +74,7 @@ class Pages extends CI_Controller
 
     $this->pagination->initialize($config);
     $this->load->view("pages/header/head", $data);
-    $this->load->view("Pages/van");
+    $this->load->view("pages/van");
     $this->load->view("pages/footer/footer");
   }
   public function bos()
