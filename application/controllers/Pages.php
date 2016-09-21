@@ -10,6 +10,7 @@ class Pages extends CI_Controller
     $this->load->library('encryption');
     $this->load->library('pagination');
     $this->load->library('session');
+    $this->load->model('Test');
   }
 /**
  * [index description]
@@ -179,5 +180,13 @@ class Pages extends CI_Controller
       $this->load->view('pages/header/head', $data);
       $this->load->view('dna/bosdna', $data);
       $this->load->view('pages/footer/footer');
+  }
+
+  public function style()
+  {
+    $data['head'] = "Style page";
+    $data['title'] = "Style colors";
+    $data['main_content'] = 'style/style';
+    $this->load->view('pages/includes/template', $data);
   }
 } //end of file

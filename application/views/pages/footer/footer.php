@@ -1,5 +1,5 @@
   <footer>
-      <div class="nav-grid box1">
+      <div class="nav-grid">
         <h6 class="centered">VanHorn Family</h6>
         <ul>
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/van','VanHorn History', 'title="VanHorn"');?></li>
@@ -8,7 +8,7 @@
           <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
         </ul>
       </div>
-      <div class="nav-grid box2">
+      <div class="nav-grid">
         <h6 class="centered">Bostick Family</h6>
         <ul>
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/bos','Bostick History');?></li>
@@ -17,7 +17,7 @@
           <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
         </ul>
       </div>
-      <div class="nav-grid box3">
+      <div class="nav-grid">
         <h6 class="centered">General Links</h6>
         <ul>
           <li class="line"><i class="icon-home"></i><?php echo anchor("", "Home"); ?></li>
@@ -27,7 +27,7 @@
         </ul>
       </div>
 
-      <div class="nav-grid box5">
+      <div class="nav-grid">
         <p class="small">&copy; <?php
            $fromYear = 2008;
            $thisYear = (int)date('Y');

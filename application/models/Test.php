@@ -10,7 +10,8 @@ class Test extends CI_Model {
 
     function index()
     {
-      if(isset($this->input->ip_address)){
+      if($this->input->ip_address)
+      {
         $date     = date("Y-n-j");
         if ($this->agent->is_browser())
           {
