@@ -10,8 +10,6 @@ class Test extends CI_Model {
 
     function index()
     {
-      if($this->input->ip_address)
-      {
         $date     = date("Y-n-j");
         if ($this->agent->is_browser())
           {
@@ -51,7 +49,7 @@ class Test extends CI_Model {
           $this->db->limit(1);
           $this->db->update('visit');
         }
-      }
+
     }//end of index
 
 }

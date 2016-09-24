@@ -5,11 +5,11 @@ if($this->session->userdata('name') == true){
 }?>
 <h3>Quick Facts</h3>
 <ul>
-  <li><i class="icon-hand-right"></i> 123 Matched relatives</li>
-  <li><i class="icon-hand-right"></i> 13,400 Unmatched relatives</li>
-  <li><i class="icon-hand-right"></i> 15,511 People in the current tree</li>
-  <li><i class="icon-hand-right"></i> 1784 Photos</li>
-  <li><i class="icon-hand-right"></i> 410 4th to 8th Cousins</li>
+  <li><i class="icon-hand-right"></i> 127 Matched relatives</li>
+  <li><i class="icon-hand-right"></i> 13,650 Unmatched relatives</li>
+  <li><i class="icon-hand-right"></i> 15,562 People in the current tree</li>
+  <li><i class="icon-hand-right"></i> 1794 Photos</li>
+  <li><i class="icon-hand-right"></i> 417 4th to 8th Cousins</li>
 </ul>
 <hr>
 <div id="size"></div>
