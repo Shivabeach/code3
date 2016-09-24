@@ -2,15 +2,23 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Test extends CI_Model {
 
+  var $auto_add_visit = TRUE;
   function __construct()
     {
         parent::__construct();
         $ip = $this->input->ip_address();
+        if($this->auto_add_visit)
+       {
+           $this->add_visit();
+       }
     }
-
-    function index()
+    /**
+     * Adds new visits to the site
+     * @method add_visit
+     */
+    function add_visit()
     {
-        $date     = date("Y-n-j");
+        $date     = date("n-j-Y");
         if ($this->agent->is_browser())
           {
                   $agent = $this->agent->browser().' '.$this->agent->version();
@@ -29,28 +37,63 @@ class Test extends CI_Model {
           }
         $ip = $this->input->ip_address();
         $platform = $this->agent->platform();
-        $this->db->select('ip');
+        $is_mobile				= $this->agent->is_mobile();
+        $is_robot				= $this->agent->is_robot();
         $this->db->where('ip', $ip);
         $query = $this->db->get('visit');
         if ($query->num_rows() == 0)
         {
+          $ip = $this->input->ip_address();
           $visits = 1;
           $this->db->set('ip', $ip);
           $this->db->set('platform', $platform);
           $this->db->set('date', $date);
           $this->db->set('agent', $agent);
           $this->db->set('visits', $visits);
+          $this->db->set('city', $this->city());
+          $this->db->set('region', $this->region());
+          $this->db->set('country', $this->country());
+          $this->db->set('is_robot', $is_robot);
+          $this->db->set('is_mobile', $is_mobile);
           $this->db->insert('visit');
         }elseif($query->num_rows() >= 1)
         {
-          $this->db->set('visits', $visits + 1);
-          $this->db->set('date', $date);
+          $data = [
+            'date'     => $date,
+            'platform' => $platform,
+            'agent'    => $agent,
+            'is_robot' => $is_robot,
+            'is_mobile'=> $is_mobile
+          ];
+          $this->db->set('visits', 'visits+1', FALSE);
           $this->db->where('ip', $ip);
           $this->db->limit(1);
-          $this->db->update('visit');
+          $this->db->update('visit', $data);
         }
 
     }//end of index
+    public function city()
+    {
+      $ip = $this->input->ip_address();
+       $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
+       $city = $geo["geoplugin_city"];
+      return $city;
+    }
+
+    public function region()
+    {
+      $ip = $this->input->ip_address();
+       $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
+       $region = $geo["geoplugin_regionName"];
+       return $region;
+    }
+    public function country($country = null)
+    {
+      $ip = $this->input->ip_address();
+       $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
+      $country = $geo["geoplugin_countryName"];
+      return $country;
+    }
 
 }
 /* End of file ${TM_FILENAME:${1/(.+)/l.php/}} */
