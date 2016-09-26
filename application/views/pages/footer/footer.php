@@ -1,4 +1,6 @@
   <footer>
+    <a href="http://van-horn.us/pages/army"><!-- zeal --></a>
+    <a href="http://van-horn.us/pages/army"><img src="zeal.gif" height="1" width="1" border="0"></a>
       <div class="nav-grid">
         <h6 class="centered">VanHorn Family</h6>
         <ul>
@@ -25,13 +27,18 @@
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor("Pages/logout", "Log Out"); ?></li>
           <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
         </ul>
+        <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>
       </div>
 
-      <div class="nav-grid">
+      <div class="nav-grid box20">
         <p class="small">&copy; <?php
            $fromYear = 2008;
            $thisYear = (int)date('Y');
            echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> VanHorn Family.
+         </p>
+         <p>
+           Mail to: <a href="mailto:&#98;&#114;&#97;&#100;&#64;&#118;&#97;&#110;&#45;&#104;&#111;&#114;&#110;&#46;&#117;&#115;">&#98;&#114;&#97;&#100;&#64;&#118;&#97;&#110;&#45;&#104;&#111;&#114;&#110;&#46;&#117;&#115;</a>
+
          </p>
       </div>
 

@@ -2,7 +2,6 @@
 @import (css) url("../../bower_components/normalize-css/normalize.css");
 @import (less) url("colors.less");
 @import (css) url("typo-dist.css");
-@import (css) url("media-dist.css");
 @import (css) url("links-dist.css");
 @import (css) url("fonts-dist.css");
 @import (css) url("nav-dist.css");
@@ -39,15 +38,15 @@ body, html {
 /*
 Primary containers -------------------------------------------------------------
  */
- .container {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -ms-flex-wrap: wrap;
-       flex-wrap: wrap;
-   width: 80%;
-   margin: 0 auto;
- }
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
 
 header {
   display: -webkit-box;
@@ -63,6 +62,7 @@ header {
 header {
   width: 80%;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .flex-large {
@@ -101,7 +101,7 @@ footer {
   margin: 0 auto;
   width: 80%;
 }
-.nav-grid {
+.nav-grid, .box20 {
   flex: 1;
   background-color: @kular7;
   li {
@@ -135,7 +135,7 @@ footer {
   font-family: "tanglewood_tales_nfregular";
   text-shadow: 0 1px 2px black, -1px 0 1px black;
   letter-spacing: 2px;
-  color: #f58600; 
+  color: #f58600;
 }
 .ancestryDate {
   -ms-flex-item-align: end;
@@ -195,7 +195,7 @@ select {
 .bookmarks {
   width: 100%;
   min-height: 75px;
-//  border-top: 1px dotted @kular4;
+  //  border-top: 1px dotted @kular4;
   //border-left: 1px dotted @kular4;
   a {
     font-size: 1em;
@@ -254,4 +254,96 @@ Modal https://webdesignerhut.com/pure-css-modal-window-effect/
   /** Show lightbox when it is target */
   display: block;
   outline: none;
+}
+/*
+-----------------------------------------------------------------------Media calls
+ */
+@media all and (max-width: 1026px) {
+  body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .flex-large {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  blockquote {
+    font-size: inherit;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .flex-small {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  nav ul li {
+    /* Not used */
+    font-size: 1em;
+    display: inline;
+    width: 100px;
+    padding: 5px 0;
+    text-align: center;
+  }
+  nav ul li a {
+    width: 100px;
+    font-size: 1.1rem;
+  }
+  footer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 3;
+    width: 100% !important;
+    .box20 {
+      display: none;
+    }
+  }
+  .ancestry {
+    padding: 0 1em;
+  }
+  .ancestryDate {
+    font-size: 1em;
+  }
+  .grab {
+    background: #000000;
+    color: #ffffff;
+  }
+  .box20 {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 800px) and (min-width: 300px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+  }
+  .box20 {
+    display: none !important;
+  }
 }

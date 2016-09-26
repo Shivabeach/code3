@@ -1,12 +1,12 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Checkin extends CI_Controller{
 
   public function __construct()
   {
     parent::__construct();
-    //$this->load->model("checkmod");
+    $this->load->model("checkmod");
   }
 
   function index()
@@ -145,4 +145,36 @@ class Checkin extends CI_Controller{
       }
     }
   }
+/*
+This feeds the admin area page
+ */
+  public function admin()
+  {
+    $this->load->model("checkmod");
+    $this->is_logged_in();
+    If ($query = $this->checkmod->get_visits())
+    {
+      $data['visitor'] = $query;
+    }else {
+      echo "No Data";
+    }
+    $tmpl = array (
+      'table_open'     => '<table class="pure-table pure-table-bordered" width="100%"',
+      'cell_start'     => '<td class="small centered">',
+      'cell_end'       => '</td>',
+      'cell_alt_start' => '<td class="small centered">',
+      'table_close'    => '</table>'
+    );
+    $this->table->set_template($tmpl);
+    $this->table->set_heading('Date', 'IP', 'Visits','Agent', 'Platform', 'Country' );
+    $this->table->set_caption("Site Visits");
+    $data['head']  = "Admin";
+    $data['title'] = 'Admin Page';
+    $this->load->view('pages/header/head', $data);
+    $this->load->view('admin/admin', $data);
+    $this->load->view('pages/footer/footer');
+  }
+
+
+
 } //end of controller

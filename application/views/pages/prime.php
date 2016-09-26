@@ -30,7 +30,8 @@
               <?php $slug = htmlspecialchars_decode($row->slug);?>
               <article class="ancestry">
                 <h2 class="ancestryTitle item"><?php echo html_escape($row->title);?></h2>
-                <?php echo $slug;?>
+                <?php echo  $slug;?>
+              
                 <div class="ancestryContent item"><?php echo $this->typography->auto_typography($content);?> </div>
                 <h6 class="ancestryDate"><?php echo "Creation " . html_escape($row->date), nbs(5), "Last Updated " . html_escape($row->last_date);?></h6>
             </article>
@@ -44,8 +45,10 @@
           </div>
       </div>
       <div class="flex-small">
+        <article>
         <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
-        <p>
+        </article>
+        <article>
           <?php
           $user_ip = getenv('REMOTE_ADDR');
           $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
@@ -56,6 +59,6 @@
           echo "Region: ".$region."<br>";
           echo "Country: ".$country."<br>";
           ?>
-      </p>
+      </article>
       </div>
     </div>

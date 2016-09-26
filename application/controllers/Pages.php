@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Pages extends CI_Controller
 {
@@ -189,4 +189,13 @@ class Pages extends CI_Controller
     $data['main_content'] = 'style/style';
     $this->load->view('pages/includes/template', $data);
   }
+  public function army()
+  {
+    $this->load->view('army');
+  }
+
+
+
+
+
 } //end of file

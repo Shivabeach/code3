@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Checkmod extends CI_Model{
 
@@ -17,4 +17,13 @@ class Checkmod extends CI_Model{
     return password_hash($input, PASSWORD_BCRYPT, $crypt_options);
   }
 
-}
+  function get_visits()
+  {
+    $this->db->select('ip, agent, visits, date, platform, country, region');
+    $this->db->limit(20);
+    $this->db->order_by('date', 'desc');
+    $query = $this->db->get('visit');
+    return $query->result();
+  }
+
+} //end of file

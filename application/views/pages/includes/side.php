@@ -11,6 +11,7 @@ if($this->session->userdata('name') == true){
   <li><i class="icon-hand-right"></i> 1794 Photos</li>
   <li><i class="icon-hand-right"></i> 417 4th to 8th Cousins</li>
 </ul>
+<a href="http://van-horn.us/pages/army" style="display: none;">zeal</a> <div style="display: none;">
 <hr>
 <div id="size"></div>
 <hr>
