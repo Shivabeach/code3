@@ -13,20 +13,14 @@
       <?php
       foreach($visitor as $row)
       {
-        if($row->is_mobile == 1)
-        {
-          $row->is_mobile = "Yes";
-        }else {
-          $row->is_mobile = "No";
-        }
-          $this->table->add_row(
+        $this->table->add_row(
           $row->date,
           $row->ip,
           $row->visits,
           $row->agent,
           $row->platform,
           $row->region . "-" . $row->country
-          );
+        );
       }
       echo $this->table->generate();
        ?>

@@ -1,6 +1,5 @@
+  </div>
   <footer>
-    <a href="http://van-horn.us/pages/army"><!-- zeal --></a>
-    <a href="http://van-horn.us/pages/army"><img src="zeal.gif" height="1" width="1" border="0"></a>
       <div class="nav-grid">
         <h6 class="centered">VanHorn Family</h6>
         <ul>

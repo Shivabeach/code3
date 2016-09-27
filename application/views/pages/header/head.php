@@ -36,8 +36,9 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/dist/flex-dist.css');?>" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/hover/css/hover.css');?>" media="screen">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/tables-min.css');?>" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/forms-min.css');?>" media="screen">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
 
   </head>

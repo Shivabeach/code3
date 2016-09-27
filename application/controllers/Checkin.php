@@ -167,7 +167,7 @@ This feeds the admin area page
     );
     $this->table->set_template($tmpl);
     $this->table->set_heading('Date', 'IP', 'Visits','Agent', 'Platform', 'Country' );
-    $this->table->set_caption("Site Visits");
+    $this->table->set_caption("<h3>Site Visits</h3>");
     $data['head']  = "Admin";
     $data['title'] = 'Admin Page';
     $this->load->view('pages/header/head', $data);
