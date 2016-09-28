@@ -28,7 +28,7 @@
         ),
         array(
                 'name'    => 'Content-type',
-                'content' => 'text/html; charset=utf-8', 'type' => 'equiv'
+                'content' => 'charset="UTF-8"'
         )
     );
     echo meta($meta);

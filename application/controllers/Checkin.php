@@ -79,7 +79,8 @@ class Checkin extends CI_Controller{
       $data = [
         'name'  => trim(html_escape($this->input->post('name'))),
         'email' => trim(html_escape($this->input->post('email'))),
-        'pass'  => trim(html_escape($this->input->post('pass')))
+        'pass'  => trim(html_escape($this->input->post('pass'))),
+        'milky' => trim(html_escape($this->input->post('milky')))
       ];
       $this->form_validation->set_rules('name', 'name', 'required|min_length[3]|max_length[5]',
       array(
@@ -94,6 +95,8 @@ class Checkin extends CI_Controller{
         'required'    => 'You need it',
         'valid_email' => 'This don look so good'
       ));
+      $this->form_validation->set_rules('milky', 'Missing something?', 'required');
+
       if( $this->form_validation->run() == FALSE) {
         //do this if you are not using ajax
         $data['head']  = "Login to admin";
@@ -101,8 +104,11 @@ class Checkin extends CI_Controller{
         $this->load->view('pages/header/head', $data);
         $this->load->view('pages/login/log', $data);
         $this->load->view('pages/footer/footer');
-        echo validation_errors;
   		}else {
+        $milky = trim(html_escape($this->input->post('milky')));
+        if ($milky != "#008080") {
+          die();
+        }
   		  $name  = html_escape($this->input->post('name'));
         $email = html_escape($this->input->post('email'));
         $pass1 = html_escape($this->input->post('pass'));
@@ -166,7 +172,7 @@ This feeds the admin area page
       'table_close'    => '</table>'
     );
     $this->table->set_template($tmpl);
-    $this->table->set_heading('Date', 'IP', 'Visits','Agent', 'Platform', 'Country' );
+    $this->table->set_heading('Date', 'IP', 'Visits','Agent', 'Platform', 'Page', 'Country' );
     $this->table->set_caption("<h3>Site Visits</h3>");
     $data['head']  = "Admin";
     $data['title'] = 'Admin Page';

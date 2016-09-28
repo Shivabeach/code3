@@ -19,6 +19,7 @@
           $row->visits,
           $row->agent,
           $row->platform,
+          $row->page,
           $row->region . "-" . $row->country
         );
       }

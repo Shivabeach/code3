@@ -6,6 +6,7 @@ class Test extends CI_Model {
   function __construct()
     {
         parent::__construct();
+        $page = $_SERVER["REQUEST_URI"];
         $ip = $this->input->ip_address();
         if($this->auto_add_visit)
        {
@@ -45,6 +46,8 @@ $date     = date("n-j-Y");
         {
           $ip = $this->input->ip_address();
           $visits = 1;
+          $page = $_SERVER["REQUEST_URI"];
+          $this->db->set('page', $page);
           $this->db->set('ip', $ip);
           $this->db->set('platform', $platform);
           $this->db->set('date', $date);
@@ -58,12 +61,14 @@ $date     = date("n-j-Y");
           $this->db->insert('visit');
         }elseif($query->num_rows() >= 1)
         {
+          $page = $_SERVER["REQUEST_URI"];
           $data = [
-            'date'     => $date,
-            'platform' => $platform,
-            'agent'    => $agent,
-            'is_robot' => $is_robot,
-            'is_mobile'=> $is_mobile
+            'date'      => $date,
+            'platform'  => $platform,
+            'agent'     => $agent,
+            'is_robot'  => $is_robot,
+            'is_mobile' => $is_mobile,
+            'page'      => $page
           ];
           $this->db->set('visits', 'visits+1', FALSE);
           $this->db->where('ip', $ip);

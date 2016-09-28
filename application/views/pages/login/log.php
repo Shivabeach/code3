@@ -70,6 +70,17 @@
 <label for="email"> email </label>
 <?php echo form_input($attr3);?>
 <p/>
+<?php
+$attr10 = [
+  'id' => 'milky',
+  'name' => milky,
+  'type' => 'color'
+];
+?>
+<p>
+  <label for="Milky"> Milky White </label>
+  <?php echo form_input($attr10);?>
+</p>
 
 <div class="pure-controls">
   <?php
