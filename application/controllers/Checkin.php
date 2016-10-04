@@ -65,7 +65,7 @@ class Checkin extends CI_Controller{
      */
     public function logout()
     {
-      $items = ['name', 'email'];
+      $items = ['name', 'is_logged_in']; //was email
         $this->session->unset_userdata($items);
         $this->session->sess_destroy();
         redirect('Pages', 'refresh');
@@ -82,19 +82,9 @@ class Checkin extends CI_Controller{
         'pass'  => trim(html_escape($this->input->post('pass'))),
         'milky' => trim(html_escape($this->input->post('milky')))
       ];
-      $this->form_validation->set_rules('name', 'name', 'required|min_length[3]|max_length[5]',
-      array(
-        'required'   => 'just do it'
-      ));
-      $this->form_validation->set_rules('pass', 'Password', 'required|min_length[24]|max_length[26]',
-      array(
-        'required'   => 'Think it over'
-      ));
-      $this->form_validation->set_rules('email', 'email', 'required|valid_email',
-      array(
-        'required'    => 'You need it',
-        'valid_email' => 'This don look so good'
-      ));
+      $this->form_validation->set_rules('name', 'name', 'required|min_length[3]|max_length[5]');
+      $this->form_validation->set_rules('pass', 'Password', 'required|min_length[24]|max_length[26]');
+      $this->form_validation->set_rules('email', 'email', 'required|valid_email');
       $this->form_validation->set_rules('milky', 'Missing something?', 'required');
 
       if( $this->form_validation->run() == FALSE) {
@@ -113,7 +103,6 @@ class Checkin extends CI_Controller{
         $email = html_escape($this->input->post('email'));
         $pass1 = html_escape($this->input->post('pass'));
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-      //$this->db->select('email, name, pass')->where('email', $email);
       $limit  = 1;
       $offset = 0;
       $query = $this->db->get_where('check',

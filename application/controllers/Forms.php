@@ -24,11 +24,11 @@ class Forms extends CI_Controller
     $this->is_logged_in();
     $data = [
       'title'   => html_escape(trim($this->input->post('title'))),
-      'content' => htmlspecialchars($this->input->post('content')),
+      'content' => trim($this->input->post('content')),
       'date'    => html_escape(trim($this->input->post('date'))),
       'parent'  => html_escape(trim($this->input->post('parent'))),
       'status'  => html_escape(trim($this->input->post('status'))),
-      'slug'    => htmlspecialchars($this->input->post('slug'))
+      'slug'    => trim($this->input->post('slug'))
     ];
 
     $this->form_validation->set_rules('title', 'Title', 'required|max_length[50]',
@@ -64,11 +64,11 @@ class Forms extends CI_Controller
     $data = [
       'id'        => html_escape($this->input->post('id')),
       'title'     => html_escape(trim($this->input->post('title'))),
-      'content'   => htmlspecialchars($this->input->post('content')),
+      'content'   => trim($this->input->post('content')),
       'status'    => html_escape(trim($this->input->post('status'))),
       'last_date' => html_escape(trim($this->input->post('last_date'))),
       'parent'    => html_escape(trim($this->input->post('parent'))),
-      'slug'      => htmlspecialchars($this->input->post('slug'))
+      'slug'      => trim($this->input->post('slug'))
     ];
 
     $this->form_validation->set_rules('title', 'Title', 'required');
@@ -157,4 +157,16 @@ public function fill_form()
       echo "grand shit";
     }
   } //end of cities
+
+  public function abuseip()
+  {
+    $ip = html_escape($this->input->post('ip'));
+    $key = "gARQewrh1S8OwT227PNask5UpTMpoQSn9Ete4Ge3";
+    $days = 30;
+    $query = "https://www.abuseipdb.com/check/$ip/json?key=$key&days=$days";
+    if ( $query){
+      return $query;
+      }
+    }
+  }
 }//end of class

@@ -12,7 +12,7 @@
       <?php echo validation_errors('<li class="error">', '</li>');
 
       $attr = [
-        'id'      => 'ajax1',
+        'id'      => 'ajax3',
         "class"   => "pure-form pure-form-stacked"
       ];
       echo form_open("/checkin/legal", $attr)?>

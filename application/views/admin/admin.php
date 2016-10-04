@@ -33,13 +33,24 @@
   if($this->session->userdata('name') == true){
       echo "Hello " .  $this->session->userdata('name');
   }?>
-  <hr>
-  <p>
-  Results
-  </p>
+  <?php
+    $attr = [
+      'id' => 'ajax1',
+      'method' =>'get'
+    ];
+    echo form_open("forms/abuseip", $attr);
+    $attr1 = [
+      'id'          => 'ip',
+      'name'        => 'ip',
+      'placeholder' => 'IP'
+    ];
+    echo form_input($attr1);
+    echo form_submit("Submit", "Submit");
+  ?>
   <hr>
   <div id="display"></div>
   <hr>
   <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
-  </div>
+
+</div>
 </div>

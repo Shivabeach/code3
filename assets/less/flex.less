@@ -15,7 +15,7 @@ html {
     padding: 0;
     background-color: @kular1;
     //background-blend-mode: soft-light;
-    //background-image: url("../images/White_Paper.jpg");
+    background-image: url("../images/White_Paper.jpg");
     font-family: georgia;
     line-height: 1.618;
     -moz-osx-font-smoothing: grayscale;
@@ -25,7 +25,8 @@ html {
     transition: all 300ms ease;
     overflow: auto;
     box-sizing: border-box;
-}
+    font-size: 18px;
+  }
 
 .top {
     clear: both;
@@ -282,6 +283,19 @@ Modal https://webdesignerhut.com/pure-css-modal-window-effect/
     display: block;
     outline: none;
 }
+/*
+----------------------------------------------------------------------------tabs
+ */
+  .ui-tabs-vertical { width: 55em; padding: 0;}
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+  .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+  .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+ #tabs li {
+  margin-left: 0;
+ }
+
 /*
 -----------------------------------------------------------------------Media calls
  */

@@ -5,7 +5,7 @@
         <ul>
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/van','VanHorn History', 'title="VanHorn"');?></li>
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/vandna','VanHorn DNA', 'title="DNA"');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <a href="#">Linages</a></li>
+          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/vanlinage','VanHorn Linages');?></li>
           <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
         </ul>
       </div>
@@ -14,7 +14,7 @@
         <ul>
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/bos','Bostick History');?></li>
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/bosdna','Bostick DNA');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <a href="#">Linages</a></li>
+          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/boslinage','Bostick Linages');?></li>
           <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
         </ul>
       </div>
@@ -45,8 +45,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="<?php echo base_url('assets/js/functions.min.js');?>"></script>
+  <script src="<?php echo base_url('assets/js/functions.js');?>"></script>
   <script src="<?php echo base_url('assets/plugins/count.min.js');?>"></script>
+  <script src="<?php echo base_url('assets/plugins/vert/vertical-tabs.js');?>"></script>
 
 </body>
 </html>

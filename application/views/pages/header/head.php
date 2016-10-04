@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<?php require('/home/vanhorn2/public_html/zbblock/zbblock.php'); ?><!DOCTYPE html><html>
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
@@ -38,7 +37,6 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/tables-min.css');?>" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/forms-min.css');?>" media="screen">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.css">
-
-
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/vert/vertical-tabs.css');?>">
   </head>

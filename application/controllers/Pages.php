@@ -184,8 +184,8 @@ class Pages extends CI_Controller
 
   public function style()
   {
-    $data['head'] = "Style page";
-    $data['title'] = "Style colors";
+    $data['head']         = "Style page";
+    $data['title']        = "Style colors";
     $data['main_content'] = 'style/style';
     $this->load->view('pages/includes/template', $data);
   }
@@ -194,6 +194,21 @@ class Pages extends CI_Controller
     $this->load->view('army');
   }
 
+  public function vanlinage ()
+  {
+    $data['head']         = "VanHorn Linages";
+    $data['title']        = "VanHorn Linages";
+    $data['main_content'] = 'linage/vanlinage';
+    $this->load->view('pages/includes/template', $data);
+  }
+
+  public function boslinage ()
+  {
+    $data['head']         = "Bostick Linages";
+    $data['title']        = "Bostick Linages";
+    $data['main_content'] = 'linage/boslinage';
+    $this->load->view('pages/includes/template', $data);
+  }
 
 
 
