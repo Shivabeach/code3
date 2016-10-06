@@ -29,28 +29,34 @@
   </div>
 
 <div class="flex-small">
-  <?php
-  if($this->session->userdata('name') == true){
-      echo "Hello " .  $this->session->userdata('name');
-  }?>
-  <?php
-    $attr = [
-      'id' => 'ajax1',
-      'method' =>'get'
-    ];
-    echo form_open("forms/abuseip", $attr);
-    $attr1 = [
-      'id'          => 'ip',
-      'name'        => 'ip',
-      'placeholder' => 'IP'
-    ];
-    echo form_input($attr1);
-    echo form_submit("Submit", "Submit");
-  ?>
-  <hr>
-  <div id="display"></div>
-  <hr>
-  <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
-
+  <section class="wrapper">
+    <article>
+      <?php
+      if($this->session->userdata('name') == true){
+          echo "Hello " .  $this->session->userdata('name');
+      }?>
+    </article>
+    <article>
+      <?php
+      $attr = [
+        'id' => 'ajax1',
+        'method' =>'get'
+      ];
+      echo form_open("forms/abuseip", $attr);
+      $attr1 = [
+        'id'          => 'ip',
+        'name'        => 'ip',
+        'placeholder' => 'IP'
+      ];
+      echo form_input($attr1);
+      echo form_submit("Submit", "Submit");
+      ?>
+    </article>
+    <article>
+    <div id="display"></div>
+    </article>
+      <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
+    </article>
+  </section>
 </div>
 </div>

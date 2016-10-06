@@ -91,16 +91,23 @@ $attr10 = [
     </fieldset>
   </div>
   <div class="flex-small">
-    <?php
-    if($this->session->userdata('name') == true){
-        echo "Hello " .  $this->session->userdata('name'). nbs(3), anchor("Pages/entry", " Enter ");
-    }else {
-      echo "";
-    }?>
-    <?php
-    $this->load->file(APPPATH . "/views/pages/includes/side.php");
-    ?>
-    <div id="display"></div>
-
+    <section class="wrapper">
+      <article>
+      <?php
+      if($this->session->userdata('name') == true){
+          echo "Hello " .  $this->session->userdata('name'). nbs(3), anchor("Pages/entry", " Enter ");
+      }else {
+        echo "";
+      }?>
+    </article>
+    <article>
+      <?php
+        $this->load->file(APPPATH . "/views/pages/includes/side.php");
+      ?>
+    </article>
+    <article>
+      <div id="display"></div>
+    </article>
+  </section>
   </div>
 </div>

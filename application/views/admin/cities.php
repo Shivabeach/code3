@@ -55,17 +55,22 @@
 </div>
 </div>
 <div class="flex-small">
-  <?php
-  if($this->session->userdata('name') == true){
-      echo "Hello " .  $this->session->userdata('name');
-  }?>
-  <hr>
-  <p>
-  Results
-  </p>
-  <hr>
-  <div id="display"></div>
-  <hr>
-  <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
+    <section class="wrapper">
+      <article>
+        <?php
+        if($this->session->userdata('name') == true){
+            echo "Hello " .  $this->session->userdata('name');
+        }?>
+      </article>
+      <article>
+        Results
+        </p>
+        <hr>
+        <div id="display"></div>
+      </article>
+      <article>
+        <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
+      </article>
+    </section>  
   </div>
 </div>

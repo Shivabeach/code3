@@ -7,6 +7,10 @@
 
   </div>
   <div class="flex-small">
-    <?php include(APPPATH . "/views/pages/includes/side.php");?>
+    <section class="wrapper">
+      <article>
+        <?php include(APPPATH . "/views/pages/includes/side.php");?>
+      </article>
+    </section>  
   </div>
 </div>

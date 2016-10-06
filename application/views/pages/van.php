@@ -18,6 +18,10 @@
   </div>
   <!-- right hand side -->
   <div class="flex-small">
-    <?php $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
+    <section class="wrapper">
+      <article>
+        <?php $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
+      </article>
+    </section>
   </div>
 </div>

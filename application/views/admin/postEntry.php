@@ -90,34 +90,38 @@
     </fieldset>
   </div>
   <div class="flex-small">
-    <?php
-    if($this->session->userdata('name') == true){
-        echo "Hello " .  $this->session->userdata('name');
-    }?>
-    <hr>
-    <p>
-    Results
-    </p>
-    <hr>
-
-    <div id="display"></div>
-    <hr>
-    <span>Chars Count: </span> <span id=feedback> </span>
-    <hr>
-    Total word Count : <span id="display_count">0</span>
-    <hr>
-    <?php foreach($getlist as $row)
-    {
-        $id = "Forms/fill_form/$row->id";
-        $this->table->add_row(
-        anchor($id, $row->id),
-        $row->title,
-        $row->status
-        );
-    }
-    echo $this->table->generate();
-    ?>
-    <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
-
+    <section class="wrapper">
+      <article>
+        <?php
+        if($this->session->userdata('name') == true){
+            echo "Hello " .  $this->session->userdata('name');
+        }?>
+      </article>
+      <article>
+        Results
+        <div id="display"></div>
+      </article>
+      <article>
+        <span>Chars Count: </span> <span id=feedback> </span>
+        <br>
+        Total word Count : <span id="display_count">0</span>
+      </article>
+      <article class="small">
+        <?php foreach($getlist as $row)
+        {
+            $id = "Forms/fill_form/$row->id";
+            $this->table->add_row(
+            anchor($id, $row->id),
+            $row->title,
+            $row->status
+            );
+        }
+        echo $this->table->generate();
+        ?>
+      </article>
+      <article>
+        <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
+      </article>
+    </section>
   </div>
 </div>

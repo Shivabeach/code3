@@ -31,24 +31,12 @@ class Forms extends CI_Controller
       'slug'    => trim($this->input->post('slug'))
     ];
 
-    $this->form_validation->set_rules('title', 'Title', 'required|max_length[50]',
-    array(
-      'required'   => 'necessary',
-      'max_length' => 'Stop right there'
-    ));
-    $this->form_validation->set_rules('content', 'content', 'required|min_length[50]',
-    array(
-      'required'   => 'Missing content',
-      'min_length' => 'Add more characters'
-    ));
+    $this->form_validation->set_rules('title', 'Title', 'required|max_length[50]');
+    $this->form_validation->set_rules('content', 'content', 'required|min_length[50]');
     $this->form_validation->set_rules('date', 'Date', 'required');
     $this->form_validation->set_rules('parent', 'Parent', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
-    $this->form_validation->set_rules('slug', 'Slug', 'required|trim|min_length[30]',
-    array(
-      'required'   => 'Slug Me',
-      'min_length' => 'More'
-    ));
+    $this->form_validation->set_rules('slug', 'Slug', 'required|trim|min_length[30]');
     if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
 		}else
@@ -72,11 +60,11 @@ class Forms extends CI_Controller
     ];
 
     $this->form_validation->set_rules('title', 'Title', 'required');
-    $this->form_validation->set_rules('content', 'content', 'required|trim');
+    $this->form_validation->set_rules('content', 'content', 'required|trim|min_length[25]');
     $this->form_validation->set_rules('status', 'Status', 'required');
     $this->form_validation->set_rules('last_date', 'Last Date', 'required');
     $this->form_validation->set_rules('parent', 'Parent', 'required');
-    $this->form_validation->set_rules('slug', 'Slug', 'required|trim');
+    $this->form_validation->set_rules('slug', 'Slug', 'required|trim|min_length[25]');
 
     if( $this->form_validation->run() == FALSE) {
 			echo validation_errors();
@@ -168,5 +156,4 @@ public function fill_form()
       return $query;
       }
     }
-  }
-}//end of class
+  } //end of class

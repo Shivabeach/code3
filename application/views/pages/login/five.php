@@ -6,6 +6,8 @@
     </div>
     <!-- right hand side -->
     <div class="flex-small">
-      <?php $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
+      <section class="wrapper">
+        <?php $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
+    </section>
     </div>
   </div>

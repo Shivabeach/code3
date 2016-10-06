@@ -31,7 +31,7 @@
               <article class="ancestry">
                 <h2 class="ancestryTitle item"><?php echo html_escape($row->title);?></h2>
                 <?php echo  $slug;?>
-              
+
                 <div class="ancestryContent item"><?php echo $this->typography->auto_typography($content);?> </div>
                 <h6 class="ancestryDate"><?php echo "Creation " . html_escape($row->date), nbs(5), "Last Updated " . html_escape($row->last_date);?></h6>
             </article>
@@ -45,20 +45,23 @@
           </div>
       </div>
       <div class="flex-small">
-        <article>
-        <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
-        </article>
-        <article>
-          <?php
-          $user_ip = getenv('REMOTE_ADDR');
-          $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
-          $city = $geo["geoplugin_city"];
-          $region = $geo["geoplugin_regionName"];
-          $country = $geo["geoplugin_countryName"];
-          echo "City: ".$city."<br>";
-          echo "Region: ".$region."<br>";
-          echo "Country: ".$country."<br>";
-          ?>
-      </article>
+        <section class="wrapper">
+          <article>
+            <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
+          </article>
+          <article>
+            <?php
+            $user_ip = getenv('REMOTE_ADDR');
+            $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
+            $city = $geo["geoplugin_city"];
+            $region = $geo["geoplugin_regionName"];
+            $country = $geo["geoplugin_countryName"];
+            echo "City: ".$city."<br>";
+            echo "Region: ".$region."<br>";
+            echo "Country: ".$country."<br>";
+            ?>
+            <a class="lower" href="http://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="http://www.geoplugin.com/" target="_new">geoPlugin</a>
+          </article>
+    </section>
       </div>
     </div>

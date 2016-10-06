@@ -13,6 +13,8 @@
     <div class="box box7">Kular10</div>
   </div>
   <div class="flex-small">
-    <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
+    <section class="wrapper">
+      <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
+    </section>
   </div>
 </div>
