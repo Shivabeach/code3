@@ -56,12 +56,12 @@
 </div>
 <div class="flex-small">
     <section class="wrapper">
-      <article>
+
         <?php
         if($this->session->userdata('name') == true){
             echo "Hello " .  $this->session->userdata('name');
         }?>
-      </article>
+      
       <article>
         Results
         </p>
@@ -71,6 +71,6 @@
       <article>
         <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
       </article>
-    </section>  
+    </section>
   </div>
 </div>

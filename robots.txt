@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /includes/
-disallow: /application/
+disallow: /application/models/
 disallow: /assets/
 disallow: /system/
+disallow: /application/controllers/

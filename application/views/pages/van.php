@@ -19,9 +19,9 @@
   <!-- right hand side -->
   <div class="flex-small">
     <section class="wrapper">
-      <article>
+
         <?php $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
-      </article>
+      
     </section>
   </div>
 </div>

@@ -100,11 +100,10 @@ $attr10 = [
         echo "";
       }?>
     </article>
-    <article>
+
       <?php
         $this->load->file(APPPATH . "/views/pages/includes/side.php");
       ?>
-    </article>
     <article>
       <div id="display"></div>
     </article>

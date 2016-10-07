@@ -46,9 +46,9 @@
       </div>
       <div class="flex-small">
         <section class="wrapper">
-          <article>
+
             <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
-          </article>
+          
           <article>
             <?php
             $user_ip = getenv('REMOTE_ADDR');

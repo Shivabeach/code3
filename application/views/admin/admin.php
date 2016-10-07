@@ -30,12 +30,12 @@
 
 <div class="flex-small">
   <section class="wrapper">
-    <article>
+
       <?php
       if($this->session->userdata('name') == true){
           echo "Hello " .  $this->session->userdata('name');
       }?>
-    </article>
+    
     <article>
       <?php
       $attr = [

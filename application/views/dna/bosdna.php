@@ -108,14 +108,18 @@
 
   </div>
   <div class="flex-small">
-    <?php
-    $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
-    <h3>Page Menu</h3>
-      <ul>
-        <li><a class="dnalink" href="#100">67,000 Years</a></li>
-        <li><a class="dnalink" href="#80">60,000 Years Ago</a></li>
-        <li><a class="dnalink" href="#70">55,000 Years Ago</a></li>
-        <li><a class="dnalink" href="#60">35,000 Years ago</a></li>
-      </ul>
+    <section class="wrapper">
+      <?php
+      $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
+      <article>
+      <h3>Page Menu</h3>
+        <ul>
+          <li><a class="dnalink" href="#100">67,000 Years</a></li>
+          <li><a class="dnalink" href="#80">60,000 Years Ago</a></li>
+          <li><a class="dnalink" href="#70">55,000 Years Ago</a></li>
+          <li><a class="dnalink" href="#60">35,000 Years ago</a></li>
+        </ul>
+      </article>
+    </section>
   </div>
 </div>

@@ -8,9 +8,9 @@
   </div>
   <div class="flex-small">
     <section class="wrapper">
-      <article>
+
         <?php include(APPPATH . "/views/pages/includes/side.php");?>
-      </article>
-    </section>  
+      
+    </section>
   </div>
 </div>

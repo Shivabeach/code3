@@ -127,20 +127,23 @@
     <!-- Do not delete /div below -->
   </div>
   <div class="flex-small">
-    <?php
-    $this->load->file(APPPATH . "/views/pages/includes/side.php");
-    //include(APPPATH . "/views/pages/includes/side.php");
-    ?>
-    <h3>Page Menu</h3>
-              <ul>
-                <li><a href="#100">100,000 Years</a></li>
-                <li><a href="#80">80,000 Years Ago</a></li>
-                <li><a href="#70">70,000 Years Ago</a></li>
-                <li><a href="#60">Out of Africa</a></li>
-                <li><a href="#55">55,000 Years Ago</a></li>
-                <li><a href="#50">50,000 Years Ago</a></li>
-                <li><a href="#20">Into Europe</a></li>
-                <li><a href="#10">10,000 Years Ago</a></li>
-              </ul>
+    <section class="wrapper">
+      <?php
+      $this->load->file(APPPATH . "/views/pages/includes/side.php");
+      ?>
+      <article>
+        <h3>Page Menu</h3>
+          <ul>
+            <li><a href="#100">100,000 Years</a></li>
+            <li><a href="#80">80,000 Years Ago</a></li>
+            <li><a href="#70">70,000 Years Ago</a></li>
+            <li><a href="#60">Out of Africa</a></li>
+            <li><a href="#55">55,000 Years Ago</a></li>
+            <li><a href="#50">50,000 Years Ago</a></li>
+            <li><a href="#20">Into Europe</a></li>
+            <li><a href="#10">10,000 Years Ago</a></li>
+          </ul>
+      </article>
+    </section>
   </div>
 </div>
