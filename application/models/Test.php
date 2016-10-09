@@ -19,7 +19,7 @@ class Test extends CI_Model {
      */
     function add_visit()
     {
-$date     = date("n-j-Y");
+        $date     = time();
         if ($this->agent->is_browser())
           {
                   $agent = $this->agent->browser().' '.$this->agent->version();

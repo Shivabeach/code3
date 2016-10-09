@@ -21,7 +21,7 @@ class Checkmod extends CI_Model{
   {
     $this->db->select('ip, agent, visits, date, platform, country, region,page');
     $this->db->limit(30);
-    $this->db->order_by('date', 'asc');
+    $this->db->order_by('date', 'desc');
     $query = $this->db->get('visit');
     return $query->result();
   }

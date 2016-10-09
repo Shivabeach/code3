@@ -13,8 +13,9 @@
       <?php
       foreach($visitor as $row)
       {
+        $date = unix_to_human($row->date);
         $this->table->add_row(
-          $row->date,
+          $date,
           $row->ip,
           $row->visits,
           $row->agent,
@@ -35,7 +36,7 @@
       if($this->session->userdata('name') == true){
           echo "Hello " .  $this->session->userdata('name');
       }?>
-    
+
     <article>
       <?php
       $attr = [

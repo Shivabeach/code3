@@ -10,10 +10,12 @@ class Tracker extends CI_Model {
 
 public function track()
 {
-  $ip    = $this->input->ip_address();
-  $headers = $this->input->request_headers($xss_clean = TRUE);
+  $ip       = $this->input->ip_address();
+  $headers  = $this->input->request_headers($xss_clean = TRUE);
   $platform = $this->agent->platform();
-  $date = new DateTime();
+  date_default_timezone_set("UM5"); 
+  $datestring = ("Y-m-d H:i:s");
+  $date = time();
   if ($this->agent->is_browser())
     {
             $agent = $this->agent->browser().' '.$this->agent->version();
@@ -35,18 +37,18 @@ public function track()
     {
       $visits = 1;
       $attr = [
-        'ip' => $ip.
-        'headers' => $headers,
+        'ip'       => $ip.
+        'headers'  => $headers,
         'platform' => $platform,
-        'date' => $date,
-        'agent' => $agent,
-        'visits' => $visits
+        'date'     => $date,
+        'agent'    => $agent,
+        'visits'   => $visits
       ];
       $this->db->insert('visit', $attr);
     }else {
       $visits = 'visits' + 1;
       $attr1 = [
-        'date' => $date,
+        'date'   => $date,
         'visits' => $visits
       ];
       $this->db->where('ip', $ip)->update('visit', $attr1);
