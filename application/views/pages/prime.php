@@ -3,6 +3,9 @@
       <h1>The Family's Story</h1>
     </header>
     <div class="container">
+      <div class="flex1">
+        <?php $this->load->view("nav/navigate");?>
+      </div>
       <div class="flex-large">
         <article class="ancestry">
           <h2 class="ancestryTitle item">Family History</h2>
@@ -48,7 +51,7 @@
         <section class="wrapper">
 
             <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
-          
+
           <article>
             <?php
             $user_ip = getenv('REMOTE_ADDR');

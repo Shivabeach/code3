@@ -5,6 +5,11 @@
 @import (css) url("links-dist.css");
 @import (css) url("fonts-dist.css");
 @import (css) url("nav-dist.css");
+@sidebar: #19272D;
+@teal: #61E69D;
+@graybg: #EDEFF0;
+@article: #FAFAFA;
+@text1: #E8FEFE;
 
 body,
 html {
@@ -60,6 +65,10 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    background-color: @sidebar;
+    h1 {
+      color: @teal;
+    }
 }
 
 header {
@@ -67,12 +76,46 @@ header {
     margin: 0 auto;
     flex-wrap: wrap;
 }
+.flex1 {
+  flex: 1;
+  background-color: @sidebar;
+  color: @text1;
+  border-left: 1px dotted black;
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    }
+  li {
+    text-indent: 5px;
+    padding: 5px 0;
+    width: 100%;
+    }
+  li:hover {
+    border-bottom: 1px dotted crimson;
+    background: transparent !important;
+    }
+    a:link {
+      color: @text1;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    a:visited {
+      color: @text1;
+      font-weight: 500;
+    }
+    h4 {
+      text-indent: 15px;
+      margin: .8rem;
+  }
+}
+
 
 .flex-large {
     -webkit-box-flex: 3;
     -ms-flex: 3;
     flex: 3;
-    background: #FCFDFD;
+    background: @graybg;
 }
 
 .flex-small {
@@ -138,6 +181,8 @@ footer {
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     border-bottom: 1px dotted @kular4;
+    margin: 5rem 0;
+    background: @article;
 }
 
 .ancestry:last-of-type {
