@@ -21,6 +21,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### zbblock ###
+zbblock/*
 
 ### Bower ###
 #bower_components
