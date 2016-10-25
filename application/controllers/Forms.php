@@ -7,8 +7,7 @@ class Forms extends CI_Controller
   {
     parent::__construct();
     //Codeigniter : Write Less Do More
-    $this->load->library('form_validation');
-    $this->load->library('session');
+
   }
   public function is_logged_in()
   {
@@ -18,8 +17,14 @@ class Forms extends CI_Controller
         redirect("Checkin");
       }
   }
+  public function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = html_escape($data);
+  return $data;
+  }
 
-  function enterPosts()
+  public function enterPosts()
   {
     $this->is_logged_in();
     $data = [
@@ -46,12 +51,12 @@ class Forms extends CI_Controller
 		}
   } //end of enterposts
 
-  function upPosts()//update posts
+  public function upPosts()//update posts
   {
     $this->is_logged_in();
     $data = [
       'id'        => html_escape($this->input->post('id')),
-      'title'     => html_escape(trim($this->input->post('title'))),
+      'title'     => html_escape($this->input->post('title')),
       'content'   => trim($this->input->post('content')),
       'status'    => html_escape(trim($this->input->post('status'))),
       'last_date' => html_escape(trim($this->input->post('last_date'))),
@@ -104,12 +109,12 @@ public function fill_form()
 
   if ($query->result())
   {
-      $data['records'] = $query->result();
+      $data1['records'] = $query->result();
   }
   $data["title"] = "Post update";
   $data['head']  = "Post update";
   $this->load->view('pages/header/head', $data);
-  $this->load->view('admin/post_update', $data);
+  $this->load->view('admin/post_update', $data1);
   $this->load->view('pages/footer/footer');
 }//end of file
 /**
@@ -120,13 +125,13 @@ public function fill_form()
   public function cities()
   {
     $data = array(
-    'borncity'  => html_escape(trim($this->input->post('borncity'))),
-    'state'     => html_escape(trim($this->input->post('state'))),
-    'country'   => html_escape(trim($this->input->post('country'))),
-    'family'    => html_escape(trim($this->input->post('family'))),
-    'year'      => html_escape(trim($this->input->post('year'))),
-    'state1'    => html_escape(trim($this->input->post('state1'))),
-    'deathcity' => html_escape(trim($this->input->post('deathcity')))
+    'borncity'  => html_escape($this->input->post('borncity')),
+    'state'     => html_escape($this->input->post('state')),
+    'country'   => html_escape($this->input->post('country')),
+    'family'    => html_escape($this->input->post('family')),
+    'year'      => html_escape($this->input->post('year')),
+    'state1'    => html_escape($this->input->post('state1')),
+    'deathcity' => html_escape($this->input->post('deathcity'))
     );
 
     $this->form_validation->set_rules('borncity', 'city of birth', 'required');
@@ -154,6 +159,8 @@ public function fill_form()
     $query = "https://www.abuseipdb.com/check/$ip/json?key=$key&days=$days";
     if ( $query){
       return $query;
-      }
     }
-  } //end of class
+  }
+
+
+} //end of class

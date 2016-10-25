@@ -24,6 +24,9 @@
         </blockquote>
 
         <p>You may well ask how can there be bleed over from one area to the other. It is a good question. Remember, those of our English ancestors also had Scottish, French and Dutch ancestors themselves. We pick that up in our DNA. Our Caucasus DNA is slightly deeper and more on Mom's side than Dad's. Remember the path out of Africa passed through the middle east on their way to Europe, Mediterranean, Russia and beyond.</p>
+        <p>
+          Dad's family is much more on the side of Denmark, Germany, French, Netherlands and Sweden.
+        </p>
         <p>Our deep ancestry is shown on the VanHorn and Bostick pages.</p>
           </div>
           <h6 class="ancestryDate">2/20/2016</h6>

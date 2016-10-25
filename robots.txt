@@ -3,3 +3,6 @@ disallow: /application/models/
 disallow: /assets/
 disallow: /system/
 disallow: /application/controllers/
+
+User-agent: Baiduspider
+Disallow: /

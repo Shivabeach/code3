@@ -22,9 +22,9 @@
         <h6 class="centered">General Links</h6>
         <ul>
           <li class="line"><i class="icon-home"></i><?php echo anchor("", "Home"); ?></li>
+          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor("pages/map", "Ancestoral Map"); ?></li>
           <li class="line"><i class="icon-asterisk"></i> <?php echo anchor("checkin", "Log In"); ?></li>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor("Pages/logout", "Log Out"); ?></li>
-          <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
+
         </ul>
         <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>
       </div>
@@ -40,7 +40,7 @@
 
          </p>
       </div>
-
+      <span id="men"></span>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>

@@ -10,7 +10,14 @@
 @graybg: #EDEFF0;
 @article: #FAFAFA;
 @text1: #E8FEFE;
+@shadow: darken(@graybg, 5%);
+@indigo-slight: #EBEDF7;
+@brown-slight: #F1EEEC;
+@strong-orange: #FFB74C;
 
+* {
+  box-sizing: border-box;
+}
 body,
 html {
     color: rgb(85, 85, 85);
@@ -32,6 +39,21 @@ html {
     box-sizing: border-box;
     font-size: 18px;
   }
+  .ydna, .mdna {
+    margin: 5px 2em;
+    article {
+      background-color: @redp;
+      border-radius: 10px;
+      box-shadow: 1px 1px 2px @orangep;
+      h3 + p {
+        font-weight: bold;
+      }
+      p {
+        padding: 0 1em;
+      }
+    }
+  }
+
 
 .top {
     clear: both;
@@ -66,16 +88,17 @@ header {
     -ms-flex-pack: center;
     justify-content: center;
     background-color: @sidebar;
-    h1 {
-      color: @teal;
-    }
-}
-
-header {
     width: 80%;
     margin: 0 auto;
     flex-wrap: wrap;
+    h1 {
+      color: @teal;
+      padding-left: 1em;
+      padding-right: 1em;
+      border: 2px solid @kular1;
+    }
 }
+
 .flex1 {
   flex: 1;
   background-color: @sidebar;
@@ -111,14 +134,13 @@ header {
   }
 }
 
-
 .flex-large {
     -webkit-box-flex: 3;
     -ms-flex: 3;
     flex: 3;
     background: @graybg;
     .ui-tabs-anchor {
-      padding: .5em;
+      padding: .5em !important;
     }
 }
 
@@ -127,9 +149,7 @@ header {
     -ms-flex: 1;
     flex: 1;
     padding: 0 .5rem;
-    //border-top: 1px dotted gray;
-    background: @kular7;
-    //border: 1px dotted @kular2;
+    background: @violetp;
     p {
         margin: 5px 1em;
     }
@@ -164,8 +184,7 @@ footer {
 
 .nav-grid {
     flex: 1;
-    background-color: @kular7;
-
+    background-color: @orangep;
     li {
         display: block;
     }
@@ -187,8 +206,8 @@ footer {
     border-bottom: 1px dotted @kular4;
     margin: 2rem 0;
     background: @article;
+    box-shadow: 2px 2px 3px @shadow;
 }
-
 .ancestry:last-of-type {
     border-bottom: none;
     margin-bottom: 20px;
@@ -353,7 +372,7 @@ Modal https://webdesignerhut.com/pure-css-modal-window-effect/
  }
 
 /*
------------------------------------------------------------------------Media calls
+---------------------------------------------------------------------------------------------------------- Media calls
  */
 @media all and (max-width: 1026px) {
     body {
@@ -376,6 +395,16 @@ Modal https://webdesignerhut.com/pure-css-modal-window-effect/
         margin: 0;
         padding: 0;
         font-size: 1rem;
+    }
+    .flex1 { display:none; }
+    header {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      h1 {
+        font-size: 2em;
+      }
+
     }
 
     .flex-large {

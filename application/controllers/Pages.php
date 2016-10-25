@@ -210,7 +210,9 @@ class Pages extends CI_Controller
     $this->load->view('pages/includes/template', $data);
   }
 
-
-
-
+  public function map ()
+  {
+    $data['title'] = "Ancestoral Map";
+    $this->load->view("pages/map", $data);
+  }
 } //end of file

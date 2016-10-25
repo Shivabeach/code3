@@ -40,8 +40,8 @@
     <article>
       <?php
       $attr = [
-        'id' => 'ajax1',
-        'method' =>'get'
+        'id'     => 'ajax1',
+        'method' => 'get'
       ];
       echo form_open("forms/abuseip", $attr);
       $attr1 = [

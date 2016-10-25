@@ -10,7 +10,7 @@
     showSize();
 })();
 
-(function() {
+$(function() {
     "use strict";
     $('A[rel="external"]')
         .click(function() {
@@ -20,10 +20,10 @@
             var newWnd = window.open();
             newWnd.opener = null;
         });
-})();
+});
 // https://www.youtube.com/watch?v=GrycH6F-ksY
 // Codecourse ajax script below
-(function() {
+$(function() {
     "use strict";
     $('form#ajax').on('submit', function() {
         var that = $(this),
@@ -46,7 +46,7 @@
       });
     return false;
   });
-})();
+});
 
 $(function() {
      "use strict";
@@ -64,8 +64,7 @@ $(function() {
          $.ajax({
              url: url,
              type: type,
-             data: data,
-             
+             data: data
          });
          return false;
      });

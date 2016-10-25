@@ -8,11 +8,11 @@ if($this->session->userdata('name') == true){
 <article>
 <h3>Quick Facts</h3>
 <ul>
-  <li><i class="icon-hand-right"></i> 127 Matched relatives</li>
-  <li><i class="icon-hand-right"></i> 13,650 Unmatched relatives</li>
-  <li><i class="icon-hand-right"></i> 15,562 People in the current tree</li>
-  <li><i class="icon-hand-right"></i> 1794 Photos</li>
-  <li><i class="icon-hand-right"></i> 417 4th to 8th Cousins</li>
+  <li><i class="icon-hand-right"></i> 132 Matched relatives</li>
+  <li><i class="icon-hand-right"></i> 14,150 Unmatched relatives</li>
+  <li><i class="icon-hand-right"></i> 15,597 People in the current tree</li>
+  <li><i class="icon-hand-right"></i> 1799 Photos</li>
+  <li><i class="icon-hand-right"></i> 426 4th to 8th Cousins</li>
 </ul>
 </article>
 <a href="http://van-horn.us/pages/army" style="display: none;">zeal</a> <div style="display: none;">

@@ -3,6 +3,9 @@
     <h1><?php echo "<span class='small'>The History of the </span>" . $head;?></h1>
   </header>
 <div class="container">
+  <div class="flex1">
+    <?php $this->load->view("nav/navigate");?>
+  </div>
   <div class="flex-large">
     <?php foreach($mainContent as $row):?>
         <?php $content = htmlspecialchars_decode($row->content);?>
@@ -20,7 +23,7 @@
     <section class="wrapper">
 
         <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
-      
+
   </section>
   </div>
 </div>

@@ -97,6 +97,7 @@ class Checkin extends CI_Controller{
   		}else {
         $milky = trim(html_escape($this->input->post('milky')));
         if ($milky != "#008080") {
+          echo "You sure messed that one up";
           die();
         }
   		  $name  = html_escape($this->input->post('name'));
@@ -129,7 +130,7 @@ class Checkin extends CI_Controller{
             'is_logged_in' => TRUE
           );
           $this->session->set_userdata($data);
-          redirect("pages/entry");
+          redirect("checkin/admin");
         }else {
           $data['head']  = "Login to admin";
           $data['title'] = 'Login to Admin';

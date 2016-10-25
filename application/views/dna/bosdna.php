@@ -1,19 +1,24 @@
-<body>
+<body id="mydna">
   <header>
     <h1><?php echo $head;?></h1>
   </header>
 <div class="container">
   <div class="flex-large">
+    <section class="mdna">
     <h1 class="page-title">Bostick/Reed <abbr title="Mitochrondial DNA">mDNA</h1>
     <article class="dnahead">
          <p>This is the mitochrondial DNA passed down from Moms mother, to Mom, and then on to the Val and Susie. Susie's daughter has this, as well as Kelli's daughter. Randy and I also have this DNA</p>
+
+         <p>
+           Branch indicates the changes in the DNA at time goes on. Mom, Val and Sue are branch J, with the deeper branch being J2b1h. This branch or haplogroup has been in existance for about 9,281 years, the parent group J has been in existance for 35,000 years. The reason it is called a branch, is that all female DNA comes from one woman and her daughters. Picture her as the base of the DNA tree, and all women that have lived since are located somewhere on branches from that tree.
+         </p>
     </article>
 
     <article id="100">
     <div class="dnablock">
       <h3 id="top">Age: 67,000 Years Ago</h3>
-        <p class="mid-size">Branch: L3<br>
-        Location of Origin: East Africa</p>
+        <p>Branch: L3</p>
+        <p>Location of Origin: East Africa</p>
     </div>
 
           <p>This woman’s descendants would eventually account for both out-of-Africa maternal lineages, significant population migrations in Africa, and even take part in the Atlantic Slave Trade related dispersals from Africa.</p>
@@ -42,8 +47,8 @@
         <h3>
         60,000 Years Ago
       </h3>
-          <p class="mid-size">Branch: N<br>
-          Location of Origin: East Africa Or Asia</p>
+          <p>Branch: N</p>
+          <p>Location of Origin: East Africa Or Asia</p>
     </div>
 
           <p>Your next ancestor is the woman whose descendants formed haplogroup N. Haplogroup N comprises one of two groups that were created by the descendants of L3.</p>
@@ -67,8 +72,8 @@
         <h3>
           About 55,000 Years Ago
         </h3>
-        <p class="mid-size">Branch: R<br>
-          Location of Origin: West Asia</p>
+        <p>Branch: R</p>
+        <p>Location of Origin: West Asia</p>
     </div>
 
           <p>After several thousand years in the Near East, individuals belonging to a new group called haplogroup R began to move out and explore the surrounding areas. Some moved south, migrating back into northern Africa. Others went west across Anatolia (present-day Turkey) and north across the Caucasus Mountains of Georgia and southern Russia. Still others headed east into the Middle East, and on to Central Asia. All of these individuals had one thing in common: they shared a female ancestor from the N clan, a recent descendant of the migration out of Africa.</p>
@@ -87,8 +92,8 @@
         <h3>
           35,000 Years Ago
         </h3>
-        <p class="mid-size">Branch: J<br>
-          Location of Origin: West Asia</p>
+        <p> Branch: J</p>
+        <p> Location of Origin: West Asia</p>
     </div>
           <p>Haplogroup J has a very wide distribution, and is present as far east as the Indus Valley bordering India and Pakistan, and as far south as the Arabian Peninsula. It is also common in eastern and northern Europe. Although your haplogroup was present during the early and middle Upper Paleolithic, J is largely considered one of the main genetic signatures of the Neolithic expansions.</p>
 
@@ -105,12 +110,15 @@
 
           <p>Francesco Petrarca, the father of Humanism, and Richard III, King of England, were members of this lineage.</p>
     </article>
-
+    </section>
   </div>
   <div class="flex-small">
     <section class="wrapper">
+      <article><a href="#men">Menu</a></article>
+      <article>
       <?php
       $this->load->file(APPPATH . "/views/pages/includes/side.php");?>
+    </article>
       <article>
       <h3>Page Menu</h3>
         <ul>
@@ -119,6 +127,18 @@
           <li><a class="dnalink" href="#70">55,000 Years Ago</a></li>
           <li><a class="dnalink" href="#60">35,000 Years ago</a></li>
         </ul>
+      </article>
+      <article>
+        <h3>Reading Sources</h3>
+        <ul>
+          <li><a rel="external" href="https://www.amazon.com/Seven-Daughters-Eve-Science-Ancestry/dp/0393323145">The 7 Daughters of Eve</a></li>
+          <li><a rel="external" href="http://haplogroup.org/">Haplogroup mDNA</a></li>
+        </ul>
+      </article>
+      <article>
+        <p>
+          In human genetics, a human mitochondrial DNA haplogroup is a haplogroup defined by differences in human mitochondrial DNA. Haplogroups are used to represent the major branch points on the mitochondrial phylogenetic tree. Moms Haplogroup is J2b1h
+        </p>
       </article>
     </section>
   </div>

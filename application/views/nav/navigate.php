@@ -39,7 +39,7 @@
                 <?php echo anchor("checkin", "Log In"); ?>
             </li>
             <li><i class="icon-asterisk"></i>
-                <?php echo anchor("pages/logout", "Log Out"); ?>
+                <?php echo anchor("pages/map", "Ancestral Map"); ?>
             </li>
             <li><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
         </ul>

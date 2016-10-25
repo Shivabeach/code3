@@ -2,6 +2,9 @@
       <h1><?php echo $head;?></h1>
     </header>
   <div class="container">
+    <div class="flex1">
+      <?php $this->load->view("nav/navigate");?>
+    </div>
     <div class="flex-large">
       <article id="tabs">
       <ul>
@@ -15,7 +18,7 @@
         <li><a href="#tabs-8">George Frye</a></li>
         <li><a href="#tabs-9">Thomas Eames</a></li>
         <li><a href="#tabs-10">Richard Osborne</a></li>
-
+        <li><a href="#tabs-11">Cornelius Wyckoff</a></li>
       </ul>
       <article id="tabs-1">
         <h3>Matthys Corneliussen </h3>
@@ -56,6 +59,10 @@
       <article id="tabs-10">
         <h3>Richard Osborne</h3>
         <?php include("osborne.html");?>
+      </article>
+      <article id="tabs-11">
+        <h3>Cornelius Wyckoff</h3>
+        <?php include("whyckoff.html");?>
       </article>
 
     </article> <!-- end of tabs -->

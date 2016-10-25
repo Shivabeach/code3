@@ -36,6 +36,7 @@
     'style'       => 'width: 50%',
     'id'          => 'pass',
     'name'        => 'pass',
+    'type'        => 'password',
     'placeholder' => 'Password',
     'value'       => set_value('pass')
 ];
@@ -63,7 +64,8 @@
     'style'       => 'width: 50%',
     'id'          => 'emails',
     'name'        => 'email',
-    'placeholder' => 'email',
+    'type'        => 'email',
+    'placeholder' => 'Email',
     'value'       => set_value('email')
 ];
    ?>
@@ -73,7 +75,7 @@
 <?php
 $attr10 = [
   'id' => 'milky',
-  'name' => milky,
+  'name' => 'milky',
   'type' => 'color'
 ];
 ?>

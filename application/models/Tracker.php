@@ -13,9 +13,9 @@ public function track()
   $ip       = $this->input->ip_address();
   $headers  = $this->input->request_headers($xss_clean = TRUE);
   $platform = $this->agent->platform();
-  date_default_timezone_set("UM5"); 
+  date_default_timezone_set("America/Detroit");
   $datestring = ("Y-m-d H:i:s");
-  $date = time();
+  $date       = time();
   if ($this->agent->is_browser())
     {
             $agent = $this->agent->browser().' '.$this->agent->version();

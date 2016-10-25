@@ -52,7 +52,6 @@
     <?php $attr3 = [
       "id"    => "date",
       "name"  => "date",
-      "type"  => "date",
       "class" => "datestamp",
       "class" => "pure-form pure-input-1-2",
       'value' => set_value('date')
@@ -109,7 +108,7 @@
       <article class="small">
         <?php foreach($getlist as $row)
         {
-            $id = "Forms/fill_form/$row->id";
+            $id = "forms/fill_form/$row->id";
             $this->table->add_row(
             anchor($id, $row->id),
             $row->title,
