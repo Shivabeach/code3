@@ -19,6 +19,10 @@
         <li><a href="#tabs-9">Thomas Eames</a></li>
         <li><a href="#tabs-10">Richard Osborne</a></li>
         <li><a href="#tabs-11">Cornelius Wyckoff</a></li>
+        <li><a href="#tabs-12">Thomas Ferguson</a></li>
+        <li><a href="#tabs-13">William Smith</a></li>
+
+
       </ul>
       <article id="tabs-1">
         <h3>Matthys Corneliussen </h3>
@@ -63,6 +67,14 @@
       <article id="tabs-11">
         <h3>Cornelius Wyckoff</h3>
         <?php include("whyckoff.html");?>
+      </article>
+      <article id="tabs-12">
+        <h3>Thomas Ferguson </h3>
+        <?php include("furguson.html");?>
+      </article>
+      <article id="tabs-13">
+        <h3>William Smith </h3>
+        <?php include("smith.html");?>
       </article>
 
     </article> <!-- end of tabs -->

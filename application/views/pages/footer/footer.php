@@ -48,6 +48,8 @@
   <script src="<?php echo base_url('assets/js/functions.js');?>"></script>
   <script src="<?php echo base_url('assets/plugins/count.min.js');?>"></script>
   <script src="<?php echo base_url('assets/plugins/vert/vertical-tabs.js');?>"></script>
-
+<?php //echo $this->benchmark->elapsed_time('code_start', 'code_end');?>
+<!--<br> -->
+<?php //echo $this->benchmark->elapsed_time();?>
 </body>
 </html>

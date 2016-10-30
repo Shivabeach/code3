@@ -1,4 +1,4 @@
-<?php require('/home/vanhorn2/public_html/zbblock/zbblock.php'); ?><!DOCTYPE html><html>
+<?php require('/home/vanhorn2/public_html/zbblock/zbblock.php'); ?><!DOCTYPE html><html lang="en">
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
@@ -24,15 +24,11 @@
         array(
                 'name'    => 'generator',
                 'content' => 'Atom'
-        ),
-        array(
-                'name'    => 'Content-type',
-                'content' => 'charset="UTF-8"'
         )
     );
     echo meta($meta);
     ?>
-    <link rel="stylesheet" href="<?php echo base_url('assets/dist/flex-dist.css');?>" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="<?php echo base_url('assets/dist/flex-dist.css');?>" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/hover/css/hover.css');?>" media="screen">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/tables-min.css');?>" media="screen">

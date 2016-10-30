@@ -15,15 +15,15 @@ if($this->session->userdata('name') == true){
   <li><i class="icon-hand-right"></i> 426 4th to 8th Cousins</li>
 </ul>
 </article>
-<a href="http://van-horn.us/pages/army" style="display: none;">zeal</a> <div style="display: none;">
-<article>
+<a href="http://van-horn.us/pages/army" style="display: none;">zeal</a>
+<!-- <article>
 <div id="size"></div>
-</article>
+</article> -->
 <article>
 <?php
 $date = new DateTime;
 $ancestor = (new DateTime)->setDate(1640,01,01)->setTime(00,00,00);
 $timeago = $date->diff($ancestor);
-echo $timeago->format('Matthys was born %y Years ago');
+echo $timeago->format('<h6>Matthys was born %y Years ago</h6>');
 ?>
 </article>

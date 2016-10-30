@@ -1,4 +1,7 @@
   <body>
+    <?php
+      $this->benchmark->mark('code_start');
+     ?>
     <header>
       <h1>The Family's Story</h1>
     </header>
@@ -55,7 +58,7 @@
 
             <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
 
-          <article>
+          <!-- <article>
             <?php
             $user_ip = getenv('REMOTE_ADDR');
             $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
@@ -67,7 +70,10 @@
             echo "Country: ".$country."<br>";
             ?>
             <a class="lower" href="http://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="http://www.geoplugin.com/" target="_new">geoPlugin</a>
-          </article>
+          </article> -->
     </section>
       </div>
     </div>
+    <?php
+      $this->benchmark->mark('code_end');
+     ?>

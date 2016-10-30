@@ -4,6 +4,7 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
     <meta charset="utf-8">
     <title><?php echo $title;?></title>
+    <link rel="stylesheet" href="<?php echo base_url('assets/dist/flex-dist.css');?>" media="screen">
     <style>
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -23,6 +24,7 @@
 </head>
 
 <body>
+  
     <div id="map"></div>
     <script>
         function initMap() {
@@ -60,50 +62,50 @@
             lat: 41.0359303,
             lng: -74.878225
         }, {
-            lat: -33.727111,
-            lng: 150.371124
+            lat: 43.4144665,
+            lng: -83.1857787
         }, {
-            lat: -33.848588,
-            lng: 151.209834
+            lat: 42.9855835,
+            lng: -83.2938322
         }, {
-            lat: -33.851702,
-            lng: 151.216968
+            lat: 42.9414173,
+            lng: -83.2891092
         }, {
-            lat: -34.671264,
-            lng: 150.863657
+            lat: 43.4911322,
+            lng: -83.396897
         }, {
-            lat: -35.304724,
-            lng: 148.662905
+            lat: 43.0514161,
+            lng: -83.3188341
         }, {
-            lat: -36.817685,
-            lng: 175.699196
+            lat: 53.235657,
+            lng: -2.5111779999999726
         }, {
-            lat: -36.828611,
-            lng: 175.790222
+            lat: 53.214008,
+            lng: -2.4911409999999705
         }, {
-            lat: -37.750000,
-            lng: 145.116667
+            lat: 53.258663,
+            lng: -2.1192869999999857
         }, {
-            lat: -37.759859,
-            lng: 145.128708
+            lat: 53.160142,
+            lng: -2.669436000000019
         }, {
-            lat: -37.765015,
-            lng: 145.133858
+            lat: 41.1845415,
+            lng: -73.1331651
         }, {
-            lat: -37.770104,
-            lng: 145.143299
+            lat: 41.5770391,
+            lng: -73.4084542
         }, {
-            lat: -37.773700,
-            lng: 145.145187
+            lat: 44.8019921,
+            lng: -72.9456936
         }, {
-            lat: -37.774785,
-            lng: 145.137978
+            lat: 43.1895028,
+            lng: -78.392246
         }, {
-            lat: -37.819616,
-            lng: 144.968119
+            lat: 43.2464477,
+            lng: -78.193632
         }, {
-            lat: -38.330766,
-            lng: 144.695692
+            lat: 42.9544722,
+            lng: -83.403279
         }, {
             lat: -39.927193,
             lng: 175.053218
