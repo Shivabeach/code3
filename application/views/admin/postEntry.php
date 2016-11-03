@@ -119,6 +119,12 @@
         ?>
       </article>
       <article>
+        <p>
+          <pre>< button class="grab">Read More< /button></pre>
+        </p>
+
+      </article>
+      <article>
         <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
       </article>
     </section>

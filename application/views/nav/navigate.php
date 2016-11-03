@@ -2,7 +2,7 @@
     <article>
         <h4 class="centered highlight">VanHorn Family</h4>
         <ul>
-            <li><i class="icon-asterisk"></i>
+            <li><i class="material-icons md-light md-24">link</i>
                 <?php echo anchor('pages/van','VanHorn History', 'title="VanHorn"');?>
             </li>
             <li><i class="icon-asterisk"></i>
