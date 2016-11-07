@@ -1,5 +1,6 @@
 // out: ../dist/typo-dist.css, sourcemap: true, compress: true, autoprefixer
 @import (less) url("colors.less");
+@import (less) url("../../node_modules/open-color/open-color.less");
 h1 {
   font-size: 3.3rem;
   /*40px 50rem*/
@@ -27,7 +28,7 @@ h3 {
 
 h4 {
   font-size: 1.55rem;
-  margin: 1.5em 0;
+  margin: .8em 0;
   line-height: 1.7;
   font-weight: 700;
 }
@@ -40,7 +41,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1.25rem;
+  font-size: 1.10rem;
   margin: 1.6em 0;
   line-height: 1.6;
   font-weight: 500;
@@ -87,6 +88,8 @@ sub {
 }
 
 img {
+  max-height: 100%;
+  max-width: 100%;
   border: 0;
 }
 
@@ -95,7 +98,27 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 40px;
+  background-color: #1098ad;
+  height: auto;
+  margin: 0;
+  padding: 5px;
+  width: 374px;
+}
+.introbox {
+  clear: right;
+  float: left;
+  height: auto;
+  margin: 0 10px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 370px;
+  }
+
+  figcaption {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
 }
 
 hr {

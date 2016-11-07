@@ -6,7 +6,7 @@ if($this->session->userdata('name') == true){
 }?>
 </article>
 <article>
-<h3>Quick Facts</h3>
+<h4 class="centered">Quick Facts</h4>
 <ul>
   <li><i class="icon-hand-right"></i> 132 Matched relatives</li>
   <li><i class="icon-hand-right"></i> 14,150 Unmatched relatives</li>
@@ -24,6 +24,6 @@ if($this->session->userdata('name') == true){
 $date = new DateTime;
 $ancestor = (new DateTime)->setDate(1640,01,01)->setTime(00,00,00);
 $timeago = $date->diff($ancestor);
-echo $timeago->format('<h6>Matthys was born %y Years ago</h6>');
+echo $timeago->format('<h6 class="centered">Matthys lived %y Years ago</h6>');
 ?>
 </article>

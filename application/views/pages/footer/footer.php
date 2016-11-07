@@ -3,27 +3,27 @@
       <div class="nav-grid">
         <h6 class="centered">VanHorn Family</h6>
         <ul>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/van','VanHorn History', 'title="VanHorn"');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/vandna','VanHorn DNA', 'title="DNA"');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/vanlinage','VanHorn Linages');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor('Pages/van','VanHorn History', 'title="VanHorn"');?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor('Pages/vandna','VanHorn DNA', 'title="DNA"');?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor('Pages/vanlinage','VanHorn Linages');?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <a href="#">Stories</a></li>
         </ul>
       </div>
       <div class="nav-grid">
         <h6 class="centered">Bostick Family</h6>
         <ul>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/bos','Bostick History');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/bosdna','Bostick DNA');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor('Pages/boslinage','Bostick Linages');?></li>
-          <li class="line"><i class="icon-asterisk"></i> <a href="#">Stories</a></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor('Pages/bos','Bostick History');?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor('Pages/bosdna','Bostick DNA');?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor('Pages/boslinage','Bostick Linages');?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <a href="#">Stories</a></li>
         </ul>
       </div>
       <div class="nav-grid">
         <h6 class="centered">General Links</h6>
         <ul>
-          <li class="line"><i class="icon-home"></i><?php echo anchor("", "Home"); ?></li>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor("pages/map", "Ancestoral Map"); ?></li>
-          <li class="line"><i class="icon-asterisk"></i> <?php echo anchor("checkin", "Log In"); ?></li>
+          <li class="line"><i class="material-icons md-dark">home</i> <?php echo anchor("", "Home"); ?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor("pages/map", "Ancestoral Map"); ?></li>
+          <li class="line"><i class="material-icons md-dark">link</i> <?php echo anchor("checkin", "Log In"); ?></li>
 
         </ul>
         <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>

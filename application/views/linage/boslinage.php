@@ -23,7 +23,7 @@
     <article id="tabs-2">
       <h3>The Bosticks</h3>
         <?php include("bostick.html");?>
-    </article>    
+    </article>
     <article id="tabs-3">
       <h3>William Dulluttur Stark</h3>
       <?php include("WilliamStark.html");?>
