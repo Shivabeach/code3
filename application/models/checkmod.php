@@ -20,7 +20,7 @@ class Checkmod extends CI_Model{
   function get_visits()
   {
     $this->db->select('ip, agent, visits, date, platform, country, region,page');
-    $this->db->limit(30);
+    $this->db->limit(20);
     $this->db->order_by('date', 'desc');
     $query = $this->db->get('visit');
     return $query->result();
