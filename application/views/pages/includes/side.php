@@ -27,3 +27,11 @@ $timeago = $date->diff($ancestor);
 echo $timeago->format('<h6 class="centered">Matthys lived %y Years ago</h6>');
 ?>
 </article>
+<article>
+  <h6>Our first Ancestors in America</h6>
+  <ul>
+    <li>William Read</li>
+    <li>Birth 1605 • Canterbury, Kent, England</li>
+    <li>Death 13 JUN 1669 • Weymouth, Norfolk, Massachusetts, United States</li>
+  </ul>
+</article>

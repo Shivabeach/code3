@@ -13,6 +13,8 @@ class Test extends CI_Model {
            $this->add_visit();
        }
     }
+
+
     /**
      * Adds new visits to the site
      * @method add_visit
@@ -37,6 +39,7 @@ class Test extends CI_Model {
                   $agent = 'Unidentified';
           }
         $ip = $this->input->ip_address();
+        $addr = gethostbyaddr($ip);
         $platform = $this->agent->platform();
         $is_mobile				= $this->agent->is_mobile();
         $is_robot				= $this->agent->is_robot();
@@ -58,6 +61,7 @@ class Test extends CI_Model {
           $this->db->set('country', $this->country());
           $this->db->set('is_robot', $is_robot);
           $this->db->set('is_mobile', $is_mobile);
+          $this->db->set('addr', $addr);
           $this->db->insert('visit');
         }elseif($query->num_rows() >= 1)
         {
@@ -68,7 +72,8 @@ class Test extends CI_Model {
             'agent'     => $agent,
             'is_robot'  => $is_robot,
             'is_mobile' => $is_mobile,
-            'page'      => $page
+            'page'      => $page,
+            'addr'      => $addr
           ];
           $this->db->set('visits', 'visits+1', FALSE);
           $this->db->where('ip', $ip);

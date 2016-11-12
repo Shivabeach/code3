@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  
+
     <div id="map"></div>
     <script>
         function initMap() {

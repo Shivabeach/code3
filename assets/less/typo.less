@@ -1,4 +1,4 @@
-// out: ../dist/typo-dist.css, sourcemap: true, compress: true, autoprefixer
+// out: ../dist/typo-dist.css, sourcemap: true, compress: true
 @import (less) url("colors.less");
 @import (less) url("../../node_modules/open-color/open-color.less");
 h1 {
@@ -63,7 +63,7 @@ dfn {
 }
 
 mark {
-  background: @vintage4;
+  background: @grapep;
   color: #000000;
   font-family: "bornregular";
 }
@@ -206,7 +206,6 @@ blockquote {
 
 li {
   list-style: none;
-  color: @kular4;
   padding: 5px 0;
 }
 
@@ -231,14 +230,14 @@ li {
 }
 
 .grab:hover {
-  background-color: darken(@kular1, 5%);
-  box-shadow: 1px 1px 4px @kular4;
+  background-color: @oc-green-3;
+  box-shadow: 1px 1px 4px @sidebar;
   border-radius: 10px;
 }
 
 .current {
-  background-color: @vintage4;
-  color: #000;
+  background-color: @oc-cyan-2;
+  color: @oc-green-9;
 }
 
 input[type="text"] {
@@ -272,15 +271,3 @@ input[type="text"] {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

@@ -26,7 +26,6 @@ html {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: @kular1;
     //background-blend-mode: soft-light;
     background-image: url("../images/White_Paper.jpg");
     font-family: georgia;
@@ -98,7 +97,7 @@ header {
       color: @teal;
       padding-left: 1em;
       padding-right: 1em;
-      border: 2px solid @kular1;
+      border: 2px solid @orangep;
       font-feature-settings: "swsh";
     }
 }
@@ -129,6 +128,7 @@ header {
       font-size: .8em;
     }
     a:visited {
+      text-decoration: none;
       color: @oc-green-4;
       font-weight: 500;
     }
@@ -222,7 +222,7 @@ footer {
     display: flex;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
-    border-bottom: 1px dotted @kular4;
+    border-bottom: 1px dotted @shadow;
     margin: 2rem 0;
     background: @article;
     box-shadow: 2px 2px 3px @shadow;
@@ -313,8 +313,6 @@ select {
 .bookmarks {
     width: 100%;
     min-height: 75px;
-    //  border-top: 1px dotted @kular4;
-    //border-left: 1px dotted @kular4;
     a {
         font-size: 1em;
         font-family: monospace;
@@ -416,6 +414,7 @@ Modal https://webdesignerhut.com/pure-css-modal-window-effect/
         font-size: 1rem;
     }
     .flex1 { display:none; }
+
     header {
       width: 100%;
       margin: 0;
@@ -498,6 +497,10 @@ Modal https://webdesignerhut.com/pure-css-modal-window-effect/
         padding: 0;
         width: 100%;
         display: flex;
+    }
+    header {
+      width: 100%;
+      margin: 0;
     }
 
     .box20 {

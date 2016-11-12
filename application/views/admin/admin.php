@@ -10,16 +10,21 @@
         This displays the last 20 visitors to the site
       </p>
       <!-- table here -->
+      <!-- var regex = /\w+.(com|co\.kr|be)/ig; -->
       <?php
       foreach($visitor as $row)
       {
+        $subject = $row->addr;
+        $pattern = '/\w+.(com|net|co\.kr|be|uk|de)/';
+        preg_match("/\w+.(com|net|co\.kr|be|uk)/", $subject, $matches);
+        $addr = $matches[0];
         $date = unix_to_human($row->date);
         $this->table->add_row(
           $date,
           $row->ip,
           $row->visits,
           $row->agent,
-          $row->platform,
+          $addr,
           $row->page,
           $row->region . "-" . $row->country
         );

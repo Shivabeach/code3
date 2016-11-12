@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <?php
     $meta = array(
         array(
@@ -30,6 +31,7 @@
     ?>
     <link rel="stylesheet" href="<?php echo base_url('assets/dist/flex-dist.css');?>" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/hover/css/hover.css');?>" media="screen">
+    <script src="https://use.fontawesome.com/20227c755d.js"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/tables-min.css');?>" media="screen">
     <link rel="stylesheet" href="<?php echo base_url('bower_components/pure/forms-min.css');?>" media="screen">

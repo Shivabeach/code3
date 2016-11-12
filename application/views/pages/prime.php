@@ -56,7 +56,7 @@
       <div class="flex-small">
         <section class="wrapper">
 
-            <?php include(APPPATH . "/views/pages/includes/side.php"); ?>
+            <?php include(APPPATH . "/views/pages/includes/side.php");  ?>
 
           <!-- <article>
             <?php
@@ -71,6 +71,7 @@
             ?>
             <a class="lower" href="http://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="http://www.geoplugin.com/" target="_new">geoPlugin</a>
           </article> -->
+
     </section>
       </div>
     </div>
