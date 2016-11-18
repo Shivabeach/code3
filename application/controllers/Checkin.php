@@ -155,7 +155,7 @@ This feeds the admin area page
       echo "No Data";
     }
     $tmpl = array (
-      'table_open'     => '<table class="pure-table pure-table-bordered" width="100%"',
+      'table_open'     => '<table class="pure-table pure-table-bordered pure-table-striped" width="100%"',
       'cell_start'     => '<td class="small centered">',
       'cell_end'       => '</td>',
       'cell_alt_start' => '<td class="small centered">',

@@ -16,7 +16,7 @@
       {
         $subject = $row->addr;
         $pattern = '/\w+.(com|net|co\.kr|be|uk|de)/';
-        preg_match("/\w+.(com|net|co\.kr|be|uk)/", $subject, $matches);
+        preg_match("/(?:.[a-z].[a-z].)\w+.(com|net|co\.kr|be|de|ua)/", $subject, $matches);
         $addr = $matches[0];
         $date = unix_to_human($row->date);
         $this->table->add_row(
@@ -26,7 +26,7 @@
           $row->agent,
           $addr,
           $row->page,
-          $row->region . "-" . $row->country
+          $row->region . " " . $row->country
         );
       }
       echo $this->table->generate();

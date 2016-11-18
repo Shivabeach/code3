@@ -24,14 +24,33 @@ if($this->session->userdata('name') == true){
 $date = new DateTime;
 $ancestor = (new DateTime)->setDate(1640,01,01)->setTime(00,00,00);
 $timeago = $date->diff($ancestor);
-echo $timeago->format('<h6 class="centered">Matthys lived %y Years ago</h6>');
 ?>
 </article>
 <article>
-  <h6>Our first Ancestors in America</h6>
-  <ul>
-    <li>William Read</li>
-    <li>Birth 1605 • Canterbury, Kent, England</li>
-    <li>Death 13 JUN 1669 • Weymouth, Norfolk, Massachusetts, United States</li>
-  </ul>
+  <h6>Our first Ancestors of the 4 families in America</h6>
+  <p class="small">William Read<br>
+    Birth 1605 • Canterbury, Kent, England<br>
+    Death 13 JUN 1669 • Weymouth, Norfolk, Massachusetts, United States <br>
+    8th great grandfather
+  </p>
+  <hr>
+  <p class="small">Matthys Corneliussen(VanHorn)<br>
+    Birth 1640 • Jutland Denmark<br/>
+    Death 1703 • Monmouth County, New Jersey, USA<br>
+    7th great grandfather <br>
+    <?php echo $timeago->format('Matthys lived %y Years ago');?>
+  </p>
+  <hr>
+  <p class="small">Christian Clay <br>
+      Birth 1725 • Berlin, Germany <br>
+      Death 1820 • New Jersey <br>
+      4th great grandfather
+  </p>
+  <hr>
+  <p class="small">John Bostwick <br>
+    Birth 18/10/1638 • Tarporley, Cheshire, England <br>
+    Death 11 DEC 1688 • Stratford, Fairfield, Connecticut, USA <br>
+    8th great grandfather <br>
+    2nd settler of New Milford Connecticut
+  </p>
 </article>

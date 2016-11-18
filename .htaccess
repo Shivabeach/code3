@@ -158,7 +158,7 @@ Redirect 301 /wp-config.php http://www.fbi.gov/
 
 RewriteEngine on
 # Options +FollowSymlinks
-RewriteCond %{HTTP_REFERER} your-server\.de [NC,OR]
+RewriteCond %{HTTP_REFERER} clients.your-server\.de [NC,OR]
 RewriteCond %{HTTP_REFERER} lipperhey\.com [NC]
 RewriteRule .* - [F]
 
@@ -178,3 +178,6 @@ deny from 176.9.116.135
 deny from 176.9.124.164
 deny from 38.99.82.191
 deny from 109.120.190.28
+deny from 38.100.21.64
+deny from 5.9.137.227
+deny from clients.your-server.de

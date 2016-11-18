@@ -40,7 +40,9 @@
             <li><i class="fa fa-link" aria-hidden="true"></i>
                 <?php echo anchor("pages/map", "Ancestral Map"); ?>
             </li>
-            <li><i class="fa fa-link" aria-hidden="true"></i><a href="#">Stories</a></li>
+            <li><i class="fa fa-link" aria-hidden="true"></i>
+                <?php echo anchor("pages/notes", "Family Notes"); ?>
+              </li>
         </ul>
         <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>
     </article>

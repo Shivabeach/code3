@@ -1,4 +1,4 @@
-  </div>
+  
   <footer>
       <div class="nav-grid">
         <h6 class="centered">VanHorn Family</h6>
@@ -35,6 +35,8 @@
  <?php echo anchor("pages/map", "Ancestoral Map"); ?></li>
           <li class="line"><i class="fa fa-link" aria-hidden="true"></i>
  <?php echo anchor("checkin", "Log In"); ?></li>
+          <li class="line"><i class="fa fa-link" aria-hidden="true"></i>
+            <?php echo anchor("pages/notes", "Family Notes"); ?></li>
 
         </ul>
         <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>

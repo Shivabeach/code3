@@ -25,7 +25,6 @@
             <li>2% comes from the Caucasus areas. That would be Turkey, Iran, Iraq, Turkmenistan, and Afghanistan.</li>
           </ul>
         </blockquote>
-
         <p>You may well ask how can there be bleed over from one area to the other. It is a good question. Remember, those of our English ancestors also had Scottish, French and Dutch ancestors themselves. We pick that up in our DNA. Our Caucasus DNA is slightly deeper and more on Mom's side than Dad's. Remember the path out of Africa passed through the middle east on their way to Europe, Mediterranean, Russia and beyond.</p>
         <p>
           Dad's family is much more on the side of Denmark, Germany, French, Netherlands and Sweden.
@@ -46,18 +45,11 @@
             </article>
           <?php endforeach;?>
           <?php echo $this->pagination->create_links();?>
-          <div class="bookmarks">
-            <ul>
-              <li> <sup> 1 </sup><a href="http://www.ncbi.nlm.nih.gov/pubmed/22096215" rel="external">The Expansion of mtDNA Haplogroup L3 within and out of Africa.</a></li>
-              <li></li>
-            </ul>
-          </div>
+
       </div>
       <div class="flex-small">
         <section class="wrapper">
-
             <?php include(APPPATH . "/views/pages/includes/side.php");  ?>
-
           <!-- <article>
             <?php
             $user_ip = getenv('REMOTE_ADDR');
@@ -71,8 +63,8 @@
             ?>
             <a class="lower" href="http://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="http://www.geoplugin.com/" target="_new">geoPlugin</a>
           </article> -->
-
-    </section>
+        </section>
+        
       </div>
     </div>
     <?php

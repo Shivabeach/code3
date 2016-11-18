@@ -41,8 +41,8 @@ class Test extends CI_Model {
         $ip = $this->input->ip_address();
         $addr = gethostbyaddr($ip);
         $platform = $this->agent->platform();
-        $is_mobile				= $this->agent->is_mobile();
-        $is_robot				= $this->agent->is_robot();
+        $is_mobile	= $this->agent->is_mobile();
+        $is_robot		= $this->agent->is_robot();
         $this->db->where('ip', $ip);
         $query = $this->db->get('visit');
         if ($query->num_rows() == 0)

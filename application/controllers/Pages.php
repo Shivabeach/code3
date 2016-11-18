@@ -215,4 +215,12 @@ class Pages extends CI_Controller
     $data['title'] = "Ancestoral Map";
     $this->load->view("pages/map", $data);
   }
+
+  public function notes ()
+  {
+    $data['head']         = "Loose Ends";
+    $data['title']        = "Family Notes";
+    $data['main_content'] = 'pages/notes';
+    $this->load->view('pages/includes/template', $data);
+  }
 } //end of file
