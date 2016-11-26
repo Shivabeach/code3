@@ -16,7 +16,7 @@
       {
         $subject = $row->addr;
         $pattern = '/\w+.(com|net|co\.kr|be|uk|de|edu|us)/';
-        preg_match("/(?:.[a-z]+.[a-z]+.)\w+.(com|net|co\.kr|be|de|ua|ru)/", $subject, $matches);
+        preg_match("/(?:.[a-z]+.[a-z]+.)\w+.(com|net|co\.kr|be|de|ua|ru|br|uk|cn|link)/", $subject, $matches);
         $addr = $matches[0];
         $date = unix_to_human($row->date);
         $this->table->add_row(

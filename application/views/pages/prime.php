@@ -14,7 +14,7 @@
           <h2 class="ancestryTitle item">Family History</h2>
           <button class="grab">Read More</button>
           <div class="ancestryContent item">
-            <p> Where we are from in the last 500 years or so!
+            <p> Where we are from in the last 500 years or so.
         <blockquote>
           <ul>
             <li>65% of our ancestry comes from Great Britain, with outliers from Scotland, France and the Netherlands</li>
@@ -29,7 +29,7 @@
         <p>
           Dad's family is much more on the side of Denmark, Germany, French, Netherlands and Sweden.
         </p>
-        <p>Our deep ancestry is shown on the VanHorn and Bostick pages.</p>
+        <p>Our deep ancestry is shown on the <?php echo $van;?> and <?php echo $bos;?> pages.</p>
           </div>
           <h6 class="ancestryDate">2/20/2016</h6>
         </article>
@@ -64,7 +64,7 @@
             <a class="lower" href="http://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="http://www.geoplugin.com/" target="_new">geoPlugin</a>
           </article> -->
         </section>
-        
+
       </div>
     </div>
     <?php

@@ -1,4 +1,4 @@
-  
+
   <footer>
       <div class="nav-grid">
         <h6 class="centered">VanHorn Family</h6>
@@ -50,8 +50,8 @@
          </p>
          <p>
            Mail to: <a href="mailto:&#98;&#114;&#97;&#100;&#64;&#118;&#97;&#110;&#45;&#104;&#111;&#114;&#110;&#46;&#117;&#115;">&#98;&#114;&#97;&#100;&#64;&#118;&#97;&#110;&#45;&#104;&#111;&#114;&#110;&#46;&#117;&#115;</a>
-
          </p>
+         <p>Page loaded in {elapsed_time} seconds</p>
       </div>
       <span id="men"></span>
   </footer>
