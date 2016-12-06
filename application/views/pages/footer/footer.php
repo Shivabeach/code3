@@ -37,7 +37,9 @@
  <?php echo anchor("checkin", "Log In"); ?></li>
           <li class="line"><i class="fa fa-link" aria-hidden="true"></i>
             <?php echo anchor("pages/notes", "Family Notes"); ?></li>
-
+          <li><i class="fa fa-link" aria-hidden="true"></i>
+            <?php echo anchor("pages/relatives", "Family Connections"); ?>
+          </li>
         </ul>
         <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>
       </div>
@@ -55,6 +57,7 @@
       </div>
       <span id="men"></span>
   </footer>
+  <!-- <script src="<?php echo base_url('bower_components/jquery/dist/jquery.min.js');?>"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>

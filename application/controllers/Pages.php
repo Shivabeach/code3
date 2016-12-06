@@ -5,7 +5,7 @@ class Pages extends CI_Controller
 {
 
   public function __construct()
-  { 
+  {
     parent::__construct();
     $this->load->library('encryption');
     $this->load->library('pagination');
@@ -106,7 +106,7 @@ class Pages extends CI_Controller
   function entry()
   {
     $this->is_logged_in();
-    $this->db->select("id, title, date, status")->order_by("id", "acs");
+    $this->db->select("id, title, parent, date, status")->order_by("id", "acs");
     $query = $this->db->get("posts");
     if ($query->result())
     {
@@ -120,7 +120,7 @@ class Pages extends CI_Controller
       'table_close'    => '</table>'
     );
     $this->table->set_template($tmpl);
-    $this->table->set_heading('ID', 'Title', 'Status');
+    $this->table->set_heading('ID', 'Title','Family', 'Status');
     $this->table->set_caption("Post Updates");
     $data['title'] = "Post Entry";
     $data['head'] = "Post Entry";
@@ -221,6 +221,13 @@ class Pages extends CI_Controller
     $data['head']         = "Loose Ends";
     $data['title']        = "Family Notes";
     $data['main_content'] = 'pages/notes';
+    $this->load->view('pages/includes/template', $data);
+  }
+  public function relatives()
+  {
+    $data['head']         = "Relative Stats";
+    $data['title']        = "Relatives";
+    $data['main_content'] = 'pages/relatives';
     $this->load->view('pages/includes/template', $data);
   }
 } //end of file

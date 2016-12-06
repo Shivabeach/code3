@@ -5,7 +5,7 @@
 @import (css) url("typo-dist.css");
 @import (css) url("links-dist.css");
 @import (css) url("fonts-dist.css");
-@import (css) url("nav-dist.css");
+
 @sidebar: #19272D;
 @teal: #61E69D;
 @graybg: #EDEFF0;
@@ -225,7 +225,7 @@ footer {
     flex-flow: column wrap;
     border-bottom: 1px dotted @shadow;
     margin: 2rem 0;
-    background: @oc-blue-0;
+    background: @articleblue;
     box-shadow: 2px 2px 3px @shadow;
 }
 .ancestry:last-of-type {
@@ -509,3 +509,23 @@ Modal https://webdesignerhut.com/pure-css-modal-window-effect/
         display: none !important;
     }
 }
+/*
+------------------------------------------Nav . less added here
+ */
+ nav li a {
+   display: inline-block;
+   width: 160px;
+ }
+ nav li {
+   overflow: hidden;
+   padding: 10px 0;
+   width: 160px;
+   list-style: none;
+ }
+ nav li a {
+   width: 160px;
+   display: inline-block;
+ }
+ ul.line li {
+   display: inline;
+ }

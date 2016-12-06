@@ -112,6 +112,7 @@
             $this->table->add_row(
             anchor($id, $row->id),
             $row->title,
+            $row->parent,
             $row->status
             );
         }
