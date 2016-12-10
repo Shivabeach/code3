@@ -8,8 +8,8 @@
     <div class="flex-large">
       <article id="tabs">
       <ul>
-        <li><a href="#tabs-1">The Reeds</a></li>
-        <li><a href="#tabs-2">The Bosticks</a></li>
+        <li><a href="#tabs-1">VanHorn States</a></li>
+        <li><a href="#tabs-2">Bosticks States</a></li>
         <li><a href="#tabs-3">William Stark</a></li>
         <li><a href="#tabs-4">Ephraim Wheeler</a></li>
         <li><a href="#tabs-5">Robert Pease</a></li>

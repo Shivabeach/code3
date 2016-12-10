@@ -35,7 +35,7 @@ class Pages extends CI_Controller
     $config['full_tag_close']   = "</div>";
 
     $this->pagination->initialize($config);
-    $data['title'] = "VanHorn Family";
+    $data['title']        = "VanHorn Family";
     $data['main_content'] = 'pages/prime';
     $this->load->view('pages/includes/template', $data);
   }
@@ -58,20 +58,20 @@ class Pages extends CI_Controller
   public function van()
   {
     $data['title'] = "VanHorn Page";
-    $data['head'] = "VanHorn's";
-    $parent = "VanHorn";
+    $data['head']  = "VanHorn's";
+    $parent        = "VanHorn";
     $this->db->select("title, content, date, last_date, slug")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get();
     if($query->result()){
-      $data["mainContent"] = $query->result();
+      $data["mainContent"]    = $query->result();
     }
-    $config['base_url'] = base_url() . 'Pages/van';
-    $config['total_rows'] = $this->db->count_all_results('posts');
-    $config['per_page'] = 5;
-    $config['num_links'] = 10;
-    $config['uri_segment'] = 3;
-    $config['full_tag_open']    = "<div class='pagination'>";
-    $config['full_tag_close']   = "</div>";
+    $config['base_url']       = base_url() . 'Pages/van';
+    $config['total_rows']     = $this->db->count_all_results('posts');
+    $config['per_page']       = 5;
+    $config['num_links']      = 10;
+    $config['uri_segment']    = 3;
+    $config['full_tag_open']  = "<div class='pagination'>";
+    $config['full_tag_close'] = "</div>";
 
     $this->pagination->initialize($config);
     $this->load->view("pages/header/head", $data);
@@ -81,7 +81,7 @@ class Pages extends CI_Controller
   public function bos()
   {
     $data['title'] = "Bostick Page";
-    $data['head'] = "Bosticks";
+    $data['head']  = "Bosticks";
     $parent = "Bostick";
     $this->db->select("title, content, date, last_date, slug")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get();
@@ -90,13 +90,13 @@ class Pages extends CI_Controller
     }else {
       echo "";
     }
-    $config['base_url'] = base_url() . 'Pages/bos';
-    $config['total_rows'] = $this->db->count_all_results('posts');
-    $config['per_page'] = 5;
-    $config['num_links'] = 10;
-    $config['uri_segment'] = 3;
-    $config['full_tag_open']    = "<div class='pagination'>";
-    $config['full_tag_close']   = "</div>";
+    $config['base_url']       = base_url() . 'Pages/bos';
+    $config['total_rows']     = $this->db->count_all_results('posts');
+    $config['per_page']       = 5;
+    $config['num_links']      = 10;
+    $config['uri_segment']    = 3;
+    $config['full_tag_open']  = "<div class='pagination'>";
+    $config['full_tag_close'] = "</div>";
 
     $this->pagination->initialize($config);
     $this->load->view("pages/header/head", $data);
@@ -123,7 +123,7 @@ class Pages extends CI_Controller
     $this->table->set_heading('ID', 'Title','Family', 'Status');
     $this->table->set_caption("Post Updates");
     $data['title'] = "Post Entry";
-    $data['head'] = "Post Entry";
+    $data['head']  = "Post Entry";
     $this->load->view("pages/header/head", $data);
     $this->load->view("admin/postEntry");
     $this->load->view("pages/footer/footer");
@@ -132,8 +132,8 @@ class Pages extends CI_Controller
   public function sources()
   {
     $data['title'] = "VanHorn Page";
-    $data['head'] = "A VanHorn History";
-    $parent = "VanHorn";
+    $data['head']  = "A VanHorn History";
+    $parent        = "VanHorn";
     $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
     $query = $this->db->get();
     if($query->result()){
@@ -148,7 +148,7 @@ class Pages extends CI_Controller
   {
     $this->is_logged_in();
     $data["title"] = "Post update";
-    $data['head'] = "Post update";
+    $data['head']  = "Post update";
   $this->load->view('pages/header/head', $data);
   $this->load->view('admin/post_update', $data);
   $this->load->view('pages/footer/footer');
@@ -157,7 +157,7 @@ class Pages extends CI_Controller
   public function cities()
   {
       $this->is_logged_in();
-      $data['head'] = "Cities entry";
+      $data['head']  = "Cities entry";
       $data['title'] = 'Cities entry';
       $this->load->view('pages/header/head', $data);
       $this->load->view('admin/cities', $data);
@@ -166,7 +166,7 @@ class Pages extends CI_Controller
 
   public function vandna()
   {
-      $data['head'] = "Our Male DNA";
+      $data['head']  = "Our Male DNA";
       $data['title'] = 'VanHorn DNA';
       $this->load->view('pages/header/head', $data);
       $this->load->view('dna/vandna', $data);
@@ -175,7 +175,7 @@ class Pages extends CI_Controller
 
   public function bosdna()
   {
-      $data['head'] = "Our Female DNA";
+      $data['head']  = "Our Female DNA";
       $data['title'] = 'Bostick / Reed DNA';
       $this->load->view('pages/header/head', $data);
       $this->load->view('dna/bosdna', $data);
@@ -225,6 +225,47 @@ class Pages extends CI_Controller
   }
   public function relatives()
   {
+    $tmpl = array (
+      'table_open'     => '<table class="pure-table pure-table-bordered pure-table-striped" width="100%"',
+      'cell_start'     => '<td class="small centered">',
+      'cell_end'       => '</td>',
+      'cell_alt_start' => '<td class="small centered">',
+      'table_close'    => '</table>'
+    );
+
+    $this->db->select('State, Total');
+    $this->db->order_by('id', 'asc');
+    $query = $this->db->get('vanc');
+    $data['van'] = $query->result();
+
+    $this->db->select('State, Total');
+    $this->db->order_by('id', 'asc');
+    $query = $this->db->get('bosc');
+    $data['bos'] = $query->result();
+
+    $family = "VanHorn";
+    $this->db->select('family');
+    $this->db->select('relationship');
+    $this->db->select('COUNT(relationship) AS Total');
+    $this->db->where("family", $family);
+    $this->db->group_by('relationship');
+    $this->db->order_by('Total', 'desc');
+    $query = $this->db->get('primary');
+    $data['vangrand'] = $query->result();
+
+    $family = "Bostick";
+    $this->db->select('family');
+    $this->db->select('relationship');
+    $this->db->select('COUNT(relationship) AS Total');
+    $this->db->where("family", $family);
+    $this->db->group_by('relationship');
+    $this->db->order_by('Total', 'desc');
+    $query = $this->db->get('primary');
+    $data['bosgrand'] = $query->result();
+
+
+    $this->table->set_template($tmpl);
+
     $data['head']         = "Relative Stats";
     $data['title']        = "Relatives";
     $data['main_content'] = 'pages/relatives';

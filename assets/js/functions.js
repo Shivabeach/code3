@@ -52,13 +52,13 @@ $(function() {
      "use strict";
      $('form#ajax1').on('submit', function() {
          var that = $(this),
-             url = that.attr('action'),
+             url  = that.attr('action'),
              type = that.attr('method'),
              data = {};
          that.find('[name]').each(function(index, value) {
-             var that = $(this),
-                 name = that.attr('name'),
-                 value = that.val();
+             var that   = $(this),
+                 name   = that.attr('name'),
+                 value  = that.val();
              data[name] = value;
          });
          $.ajax({
@@ -87,6 +87,7 @@ $(function() {
 });
 
 (function() {
+  "use strict";
     $(".ancestryContent").hide();
     $('button.grab').on('click', function() {
         $(this).next('.ancestryContent').slideToggle('slow');

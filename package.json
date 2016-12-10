@@ -4,7 +4,6 @@
   "description": "This is a website that I am designing for my ancestry.",
   "main": "index.js",
   "dependencies": {
-    "lesshat": "^4.1.0",
     "csscomb": "^3.1.8"
   },
   "devDependencies": {},
