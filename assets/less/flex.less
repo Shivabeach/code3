@@ -6,10 +6,6 @@
 @import (css) url("links-dist.css");
 @import (css) url("fonts-dist.css");
 
-.grad {
-    background: linear-gradient(@violetp,@bluep,@ltgreen);
-  }
-
 @sidebar: #19272d;
 @teal: #61e69d;
 @graybg: #edeff0;
@@ -80,7 +76,7 @@ Primary containers -------------------------------------------------------------
       flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
-  .grad;
+  background: linear-gradient(@violetp,@bluep,@orangep);
 }
 
 header {
@@ -108,7 +104,7 @@ header {
 
 .flex1 {
   flex: 1;
-
+  background: transparent;
   color: @oc-green-6;
   border-left: 1px dotted black;
   ul {
@@ -149,7 +145,7 @@ header {
   -webkit-box-flex: 3;
   -ms-flex: 3;
       flex: 3;
-
+  background: transparent;
   padding: 0.5em !important;
   .ui-tabs-anchor {
   }
@@ -167,7 +163,7 @@ header {
   -ms-flex: 1;
       flex: 1;
   padding: 0 0.5rem;
-
+  background: transparent;
   p {
     margin: 5px 1em;
   }
@@ -229,7 +225,7 @@ footer {
       flex-flow: column wrap;
   border-bottom: 1px dotted @shadow;
   margin: 2rem 0;
-  background: @articleblue;
+  background: transparent;
   box-shadow: 2px 2px 3px @shadow;
 }
 .ancestry:last-of-type {
