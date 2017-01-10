@@ -25,8 +25,7 @@ body, html {
   height: 100vh;
   margin: 0;
   padding: 0;
-  //background-blend-mode: soft-light;
-  background-image: url("../images/White_Paper.jpg");
+  background-blend-mode: soft-light;
   font-family: georgia;
   line-height: 1.618;
   -moz-osx-font-smoothing: grayscale;
@@ -37,6 +36,7 @@ body, html {
   overflow: auto;
   box-sizing: border-box;
   font-size: 18px;
+  background: linear-gradient(@violetp,@bluep,@orangep);
 }
 .ydna, .mdna {
   margin: 5px 2em;
@@ -76,7 +76,7 @@ Primary containers -------------------------------------------------------------
       flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
-  background: linear-gradient(@violetp,@bluep,@orangep);
+  background: transparent;
 }
 
 header {
@@ -204,7 +204,6 @@ footer {
 
 .nav-grid {
   flex: 1;
-  background-color: @orangep;
   li {
     display: block;
   }

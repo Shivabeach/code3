@@ -21,8 +21,7 @@
         <li><a href="#tabs-11">Cornelius Wyckoff</a></li>
         <li><a href="#tabs-12">Thomas Ferguson</a></li>
         <li><a href="#tabs-13">William Smith</a></li>
-
-
+        <li><a href="#tabs-14">Gerrit Couwenhoven</a></li>
       </ul>
       <article id="tabs-1">
         <h3>Matthys Corneliussen </h3>
@@ -76,6 +75,12 @@
         <h3>William Smith </h3>
         <?php include("smith.html");?>
       </article>
+      <article id="tabs-14">
+        <h3>Gerrit Couwenhoven </h3>
+        <?php include("gerrit.html");?>
+      </article>
+
+      Gerrit Jansz Van Couwenhoven
 
     </article> <!-- end of tabs -->
     </div> <!--end of left flex -->
