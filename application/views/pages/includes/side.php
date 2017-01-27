@@ -27,7 +27,7 @@ $timeago = $date->diff($ancestor);
 ?>
 </article>
 <article>
-  <h6>Our first Ancestors of the 4 families in America</h6>
+  <h4 class="not-bold">Our first Ancestors of the 4 families in America</h4>
   <p class="small">William Read<br>
     Birth 1605 • Canterbury, Kent, England<br>
     Death 13 JUN 1669 • Weymouth, Norfolk, Massachusetts, United States <br>

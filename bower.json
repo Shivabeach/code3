@@ -7,7 +7,9 @@
   "main": "Pages/prime",
   "keywords": [
     "bower",
-    "codeigniter"
+    "codeigniter",
+    "ancestry",
+    "DNA"
   ],
   "license": "MIT",
   "homepage": "localhost/code3",
@@ -23,9 +25,5 @@
     "jquery-ui": "^1.11.4",
     "jquery-validation": "jquery.validation#^1.15.0",
     "normalize-css": "normalize.css#^4.1.1",
-    "hover": "^2.0.2",
-    "font-awesome": "^4.6.3",
-    "pure": "^0.6.0",
-    "sanitize-css": "^4.1.0"
   }
 }
