@@ -1,6 +1,6 @@
 <body id="ydna">
-  <header>
-    <h1><?php echo $head;?></h1>
+  <header class="m-main">
+    <h1 class="heading"><?php echo $head;?></h1>
   </header>
 <div class="container" id="top">
   <div class="flex-large">

@@ -224,51 +224,58 @@ class Pages extends CI_Controller
     $this->load->view('pages/includes/template', $data);
   }
   public function relatives()
-  {
-    $tmpl = array (
-      'table_open'     => '<table class="pure-table pure-table-bordered pure-table-striped" width="100%"',
-      'cell_start'     => '<td class="small centered">',
-      'cell_end'       => '</td>',
-      'cell_alt_start' => '<td class="small centered">',
-      'table_close'    => '</table>'
-    );
+    {
+      $tmpl = array (
+        'table_open'     => '<table class="pure-table pure-table-bordered pure-table-striped" width="100%"',
+        'cell_start'     => '<td class="small centered">',
+        'cell_end'       => '</td>',
+        'cell_alt_start' => '<td class="small centered">',
+        'table_close'    => '</table>'
+      );
+      $van = "VanHorn";
+      $this->db->select('country');
+      $this->db->select('COUNT(country) AS Total');
+      $this->db->where('family', $van);
+      $this->db->order_by('Total', 'desc');
+      $this->db->group_by('country');
+      $query = $this->db->get('primary');
+      $data['van'] = $query->result();
 
-    $this->db->select('State, Total');
-    $this->db->order_by('id', 'asc');
-    $query = $this->db->get('vanc');
-    $data['van'] = $query->result();
+      $bost = "Bostick";
+      $this->db->select('country');
+      $this->db->select('COUNT(country) AS Total');
+      $this->db->where('family', $bost);
+      $this->db->order_by('Total', 'desc');
+      $this->db->group_by('country');
+      $query = $this->db->get('primary');
+      $data['bos'] = $query->result();
 
-    $this->db->select('State, Total');
-    $this->db->order_by('id', 'asc');
-    $query = $this->db->get('bosc');
-    $data['bos'] = $query->result();
+      $family = "VanHorn";
+      $this->db->select('family');
+      $this->db->select('relationship');
+      $this->db->select('COUNT(relationship) AS Total');
+      $this->db->where("family", $family);
+      $this->db->group_by('relationship');
+      $this->db->order_by('Total', 'desc');
+      $query = $this->db->get('primary');
+      $data['vangrand'] = $query->result();
 
-    $family = "VanHorn";
-    $this->db->select('family');
-    $this->db->select('relationship');
-    $this->db->select('COUNT(relationship) AS Total');
-    $this->db->where("family", $family);
-    $this->db->group_by('relationship');
-    $this->db->order_by('Total', 'desc');
-    $query = $this->db->get('primary');
-    $data['vangrand'] = $query->result();
-
-    $family = "Bostick";
-    $this->db->select('family');
-    $this->db->select('relationship');
-    $this->db->select('COUNT(relationship) AS Total');
-    $this->db->where("family", $family);
-    $this->db->group_by('relationship');
-    $this->db->order_by('Total', 'desc');
-    $query = $this->db->get('primary');
-    $data['bosgrand'] = $query->result();
+      $family = "Bostick";
+      $this->db->select('family');
+      $this->db->select('relationship');
+      $this->db->select('COUNT(relationship) AS Total');
+      $this->db->where("family", $family);
+      $this->db->group_by('relationship');
+      $this->db->order_by('Total', 'desc');
+      $query = $this->db->get('primary');
+      $data['bosgrand'] = $query->result();
 
 
-    $this->table->set_template($tmpl);
+      $this->table->set_template($tmpl);
 
-    $data['head']         = "Relative Stats";
-    $data['title']        = "Relatives";
-    $data['main_content'] = 'pages/relatives';
-    $this->load->view('pages/includes/template', $data);
-  }
+      $data['head']         = "Relative Stats";
+      $data['title']        = "Relatives";
+      $data['main_content'] = 'pages/relatives';
+      $this->load->view('pages/includes/template', $data);
+    }
 } //end of file

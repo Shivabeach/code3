@@ -1,6 +1,6 @@
-<body>
-  <header>
-    <h1><?php echo "<span class='small'>The History of the</span>" . $head;?></h1>
+<body id="van">
+  <header class="m-main">
+    <h1 class="heading"><?php echo $head;?></h1>
   </header>
 <div class="container">
   <div class="flex1">
@@ -10,12 +10,16 @@
     <?php foreach($mainContent as $row):?>
       <?php $content = htmlspecialchars_decode($row->content);?>
       <?php $slug    = htmlspecialchars_decode($row->slug);?>
-      <article class="ancestry">
-        <h2 class="ancestryTitle item"><?php echo $row->title;?></h2>
-        <?php echo $slug; ?>
-        <div class="ancestryContent item"><?php echo $this->typography->auto_typography($content);?> </div>
-        <h6 class="ancestryDate"><?php echo "Creation " . html_escape($row->date), nbs(5), "Last Updated " . html_escape($row->last_date);?></h6>
-      </article>
+      <div class="ancestry--container">
+        <article class="ancestry">
+          <h3 class="ancestry--ancestryTitle item"><?php echo $row->title;?></h3>
+          <?php echo $slug; ?>
+          <button class="grab">Read More</button>
+          <div class="ancestry--ancestryContent item"><?php echo $this->typography->auto_typography($content);?>
+          <h6 class="ancestry--ancestryDate"><?php echo "Creation " . html_escape($row->date), nbs(5), "Last Updated " . html_escape($row->last_date);?></h6>
+          </div>
+        </article>
+      </div>
     <?php endforeach;?>
       <?php echo $this->pagination->create_links();?>
   </div>

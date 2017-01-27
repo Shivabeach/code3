@@ -1,9 +1,6 @@
-<body>
-  <?php
-    $this->benchmark->mark('code_start');
-   ?>
-  <header>
-    <h1> <?php echo $head ;?></h></h1>
+<body id="notes">  
+  <header class="m-main">
+    <h1 class="heading"> <?php echo $head ;?></h></h1>
   </header>
   <div class="container">
     <div class="flex1">
@@ -45,6 +42,3 @@
       </section>
     </div>
   </div>
-  <?php
-    $this->benchmark->mark('code_end');
-   ?>

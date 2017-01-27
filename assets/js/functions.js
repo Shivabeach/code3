@@ -88,10 +88,9 @@ $(function() {
 
 (function() {
   "use strict";
-    $(".ancestryContent").hide();
+    $(".ancestry--ancestryContent").hide();
     $('button.grab').on('click', function() {
-        $(this).next('.ancestryContent').slideToggle('slow');
-        $(this).toggleClass('opa');
+        $(this).next('div.ancestry--ancestryContent').toggle('slow');
     });
 })();
 
