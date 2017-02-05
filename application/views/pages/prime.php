@@ -1,15 +1,16 @@
 <body id="prime">
   <header class="m-main">
-    <h1 class="heading">The Family's Story</h1>
+    <h1 class=".m-main--head">The Family</h1>
   </header>
     <div class="container">
       <div class="flex1">
         <?php $this->load->view("nav/navigate");?>
       </div>
       <div class="flex-large">
+      <div class="ancestry--container">
         <article class="ancestry">
           <h3 class="ancestry--ancestryTitle item">Family History</h3>
-          <button class="grab">Read More</button>
+          <button class="grab">Read</button>
           <div class="ancestry--ancestryContent">
             <p> Where we are from in the last 500 years or so.
             <blockquote>
@@ -31,11 +32,12 @@
             <h6 class="ancestry--ancestryDate">2/20/2016</h6>
         </div>
         </article>
-
+        </div>
         <?php foreach($mainContent as $row):?>
           <?php $content = htmlspecialchars_decode($row->content);?>
           <?php $slug = htmlspecialchars_decode($row->slug);?>
-        <article class="ancestry">
+          <div class="ancestry--container">
+          <article class="ancestry">
             <header>
               <h3 class="ancestry--ancestryTitle"><?php echo html_escape($row->title);?></h3>
             </header>
@@ -48,10 +50,12 @@
             </div>
               <h6 class="ancestry--ancestryDate"><?php echo "Creation " . html_escape($row->date), nbs(5), "Last Updated " . html_escape($row->last_date);?></h6>
         </article>
+        </div>
       <?php endforeach;?>
           <?php echo $this->pagination->create_links();?>
-
+      
       </div>
+      
       <div class="flex-small">
         <section class="wrapper">
             <?php include(APPPATH . "/views/pages/includes/side.php");  ?>

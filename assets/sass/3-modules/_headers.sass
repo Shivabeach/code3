@@ -4,29 +4,31 @@
 	display: -webkit-box
 	display: -ms-flexbox
 	display: flex
-	-webkit-box-align: center
-	-ms-flex-align: center
-	align-items: center
-	-webkit-box-pack: center
-	-ms-flex-pack: center
-	justify-content: center
 	width: 80%
 	margin: 0 auto
 	-ms-flex-wrap: wrap
 	flex-wrap: wrap
 	height: 15em
 
+	+center(center, center)
+
 	+tablet
-		height: 8em
+		height: 10em
+		+center(center, flex-end)
 
 	+mobile
-		height: 5em
+		height: 10em
+		+center(center, flex-end)
 
 	&--head
 		font-family: $font-stack-consolas
 
 		+tablet
 			font-size: $base-font-size * 3
+		h1
+			margin-bottom: 0		
 
 		+mobile
 			font-size: $base-font-size * 3
+			h1
+				margin-bottom: 0			

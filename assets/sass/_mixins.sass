@@ -4,8 +4,6 @@
 	justify-content: $value
 	align-items: $value2
 
-
-
 //media queries
 
 =desktop
@@ -14,10 +12,15 @@
 
 =tablet
 	@media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+		h1
+			margin-bottom: 0
 		@content
+
 
 =mobile
 	@media screen and (max-width: $tablet - 1px)
+		h1
+			margin-bottom: 0
 		@content
 
 =butt($border)
@@ -28,3 +31,9 @@
 =retina
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 		@content
+
+=border($pixel, $type, $color, $rad)
+	border-width: $pixel
+	border-style: $type
+	border-color: $color
+	border-radius: $rad

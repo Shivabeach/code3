@@ -19,22 +19,24 @@ class Pages extends CI_Controller
  */
   public function index()
   {
-    $parent = "main";
-    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get('posts');
-    if($query->result()){
-      $data["mainContent"] = $query->result();
-    }
-    $config['base_url']         = base_url() . '/Pages/';
+    $config['base_url']         = base_url() . '/pages/index/';
     $config['total_rows']       = $this->db->count_all_results('posts');
-    $config['per_page']         = 5;
-    $config['num_links']        = 10;
+    $config['per_page']         = 4;
+    $config['num_links']        = 4;
     $config['uri_segment']      = 3;
     $config['use_page_numbers'] = TRUE;
     $config['full_tag_open']    = "<div class='pagination'>";
     $config['full_tag_close']   = "</div>";
+    $config['first_link']       = 'First';
+    $config['last_link']        = 'Last';
 
     $this->pagination->initialize($config);
+    $parent = "main";
+    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
+    if($query->result()){
+      $data["mainContent"] = $query->result();
+    }
     $data['title']        = "VanHorn Family";
     $data['main_content'] = 'pages/prime';
     $this->load->view('pages/includes/template', $data);
@@ -57,52 +59,58 @@ class Pages extends CI_Controller
     }
   public function van()
   {
-    $data['title'] = "VanHorn Page";
-    $data['head']  = "VanHorn's";
+    
+    $config['base_url']       = base_url() . 'pages/van';
+    $config['total_rows']     = $this->db->count_all_results('posts');
+    $config['per_page']       = 4;
+    $config['num_links']      = 4;
+    $config['uri_segment']    = 3;
+    $config['full_tag_open']  = "<div class='pagination'>";
+    $config['full_tag_close'] = "</div>";
+    $config['first_link']     = "First";
+    $config['last_link']      = "Last";
+
+    $this->pagination->initialize($config);
+    
     $parent        = "VanHorn";
-    $this->db->select("title, content, date, last_date, slug")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get();
+    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
     if($query->result()){
       $data["mainContent"]    = $query->result();
     }
-    $config['base_url']       = base_url() . 'Pages/van';
-    $config['total_rows']     = $this->db->count_all_results('posts');
-    $config['per_page']       = 5;
-    $config['num_links']      = 10;
-    $config['uri_segment']    = 3;
-    $config['full_tag_open']  = "<div class='pagination'>";
-    $config['full_tag_close'] = "</div>";
-
-    $this->pagination->initialize($config);
+    $data['title'] = "VanHorn Page";
+    $data['head']  = "VanHorn's";
     $this->load->view("pages/header/head", $data);
-    $this->load->view("pages/van");
+    $this->load->view("pages/van", $data);
     $this->load->view("pages/footer/footer");
+    
   }
   public function bos()
   {
-    $data['title'] = "Bostick Page";
-    $data['head']  = "Bosticks";
-    $parent = "Bostick";
-    $this->db->select("title, content, date, last_date, slug")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get();
-    if($query->result()){
-      $data["mainContent"] = $query->result();
-    }else {
-      echo "";
-    }
     $config['base_url']       = base_url() . 'Pages/bos';
     $config['total_rows']     = $this->db->count_all_results('posts');
-    $config['per_page']       = 5;
+    $config['per_page']       = 4;
     $config['num_links']      = 10;
     $config['uri_segment']    = 3;
     $config['full_tag_open']  = "<div class='pagination'>";
     $config['full_tag_close'] = "</div>";
+    $config['first_link']     = "First";
+    $config['last_link']      = "Last";
 
     $this->pagination->initialize($config);
+    $data['title'] = "Bostick Page";
+    $data['head']  = "Bosticks";
+    $parent = "Bostick";
+    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
+    if($query->result()){
+      $data["mainContent"] = $query->result();
+    }
     $this->load->view("pages/header/head", $data);
-    $this->load->view("pages/bos");
+    $this->load->view("pages/bos", $data);
     $this->load->view("pages/footer/footer");
   }
+
   function entry()
   {
     $this->is_logged_in();

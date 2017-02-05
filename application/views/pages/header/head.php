@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     );
     echo meta($meta);
     ?>
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css');?>" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/main-dist.css');?>" media="screen">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/plugins/vert/vertical-tabs.css');?>">
   </head>
