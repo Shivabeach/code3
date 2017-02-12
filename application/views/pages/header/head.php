@@ -1,6 +1,4 @@
-<?php require('/home/vanhorn2/public_html/zbblock/zbblock.php'); ?><?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html><html lang="en">
+<?php require('/home/vanhorn2/public_html/zbblock/zbblock.php');?><!DOCTYPE html><html lang="en"><?php defined('BASEPATH') OR exit('No direct script access allowed');?>
   <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
@@ -34,4 +32,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main-dist.css');?>" media="screen">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/plugins/vert/vertical-tabs.css');?>">
+    <?php include base_url("phpmussel/phpmussel.php"); ?>
   </head>

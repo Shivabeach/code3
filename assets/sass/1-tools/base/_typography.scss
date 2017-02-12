@@ -27,26 +27,29 @@ hr {
   border-top: 0;
   margin: $base-spacing 0;
 }
+
 /* Typography bitters */
 h1 {
   font-size: modular-scale(3);
-  font-family: Lovato;
+  font-family: 'england_hand_dbregular';
 }
-
 h2 {
   font-size: modular-scale(2);
 }
+
 h3 {
   font-size: modular-scale(1);
 }
+
 h4 {
   font-size: modular-scale(0);
-  font-family: "Fira Sans Reg"
+  font-family: "Fira Sans Reg";
 }
 
 h5 {
   font-size: modular-scale(-1);
 }
+
 h6 {
   font-size: .7em;
 }

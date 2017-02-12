@@ -35,7 +35,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
 
 fieldset {
   background-color: transparent;
-  border: 0;
+  border: 1px dotted blue;
   margin: 0;
   padding: 0; }
 
@@ -193,7 +193,7 @@ hr {
 /* Typography bitters */
 h1 {
   font-size: 4.2358em;
-  font-family: Lovato; }
+  font-family: 'england_hand_dbregular'; }
 
 h2 {
   font-size: 2.61792em; }
@@ -232,6 +232,11 @@ body, html {
   font-size: 1em;
   background: -webkit-linear-gradient(#CDE4CA, #fff3bf, #ffe8cc);
   background: linear-gradient(#CDE4CA, #fff3bf, #ffe8cc); }
+
+body[id="post-entry"] .flex-large {
+  padding: 0; }
+body[id="post-entry"] .flex-small {
+  padding: 0; }
 
 /* basic links */
 a {
@@ -338,6 +343,7 @@ a {
   font-family: Lovato;
   src: url(../fonts/Lovato-Light.otf); }
 /* 3-Modules */
+/* main top header */
 .m-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,9 +440,30 @@ a {
     color: red;
     text-align: center; }
   .m-nav-grid--center {
-    padding-left: 4em; }
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .m-nav-grid--listpad {
     padding: 3px; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .m-nav-grid--listpad {
+        font-size: 0.85rem; }
+        .m-nav-grid--listpad h1 {
+          margin-bottom: 0; } }
+    @media screen and (max-width: 767px) {
+      .m-nav-grid--listpad {
+        font-size: 0.85rem; }
+        .m-nav-grid--listpad h1 {
+          margin-bottom: 0; } }
 
 /* 3-modules ancestry */
 .ancestry {
@@ -496,13 +523,23 @@ article:not(.ancestry) {
     padding: 5px 10px; }
 
 .pagination {
-  letter-spacing: 4px;
   font-family: "tanglewood_tales_nfregular";
   font-size: 1.1em; }
   .pagination a {
-    text-align: center; }
+    text-align: center;
+    padding: 0 8px; }
   .pagination strong {
-    background-color: #edeff0; }
+    background-color: #61e69d;
+    padding: 0 8px;
+    text-align: center; }
+
+.m-addin {
+  width: 100%; }
+  .m-addin--data-display {
+    text-align: center;
+    font-size: 0.85em; }
+  .m-addin--head {
+    text-align: center; }
 
 /* 4-Layout */
 .container {

@@ -84,3 +84,32 @@
 [04-Nov-2016 21:00:27 CST6CDT] PHP Fatal error:  Call to a member function setTime() on boolean in /home/vanhorn2/public_html/application/views/pages/includes/side.php on line 25
 [04-Nov-2016 21:01:29 CST6CDT] PHP Fatal error:  Call to a member function setTime() on boolean in /home/vanhorn2/public_html/application/views/pages/includes/side.php on line 25
 [09-Nov-2016 12:32:38 CST6CDT] PHP Parse error:  syntax error, unexpected '$hostname' (T_VARIABLE) in /home/vanhorn2/public_html/application/views/pages/prime.php on line 77
+[04-Dec-2016 18:30:59 CST6CDT] PHP Parse error:  syntax error, unexpected 'box' (T_STRING) in /home/vanhorn2/public_html/application/views/pages/relatives.php on line 17
+[06-Dec-2016 17:45:02 CST6CDT] PHP Parse error:  syntax error, unexpected '`' in /home/vanhorn2/public_html/application/controllers/Pages.php on line 250
+[06-Dec-2016 17:45:26 CST6CDT] PHP Parse error:  syntax error, unexpected '$This' (T_VARIABLE) in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:45:30 CST6CDT] PHP Parse error:  syntax error, unexpected '$This' (T_VARIABLE) in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:46:18 CST6CDT] PHP Parse error:  syntax error, unexpected 'family' (T_STRING) in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:46:47 CST6CDT] PHP Parse error:  syntax error, unexpected '=' in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:46:53 CST6CDT] PHP Parse error:  syntax error, unexpected '=' in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:47:52 CST6CDT] PHP Parse error:  syntax error, unexpected '=' in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:47:57 CST6CDT] PHP Parse error:  syntax error, unexpected '=' in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:49:01 CST6CDT] PHP Fatal error:  Call to a member function where() on null in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:49:51 CST6CDT] PHP Fatal error:  Call to a member function where() on null in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:51:13 CST6CDT] PHP Fatal error:  Call to a member function where() on null in /home/vanhorn2/public_html/application/controllers/Pages.php on line 253
+[06-Dec-2016 17:52:51 CST6CDT] PHP Fatal error:  Call to a member function where() on null in /home/vanhorn2/public_html/application/controllers/Pages.php on line 254
+[06-Dec-2016 17:55:16 CST6CDT] PHP Fatal error:  Call to a member function where() on null in /home/vanhorn2/public_html/application/controllers/Pages.php on line 254
+[05-Feb-2017 11:10:12 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/vanhorn2/public_html/application/controllers/Pages.php on line 139
+[05-Feb-2017 11:10:17 CST6CDT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/vanhorn2/public_html/application/controllers/Pages.php on line 139
+[05-Feb-2017 16:33:56 CST6CDT] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/vanhorn2/public_html/read.php on line 9
+[05-Feb-2017 16:34:00 CST6CDT] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/vanhorn2/public_html/read.php on line 9
+[05-Feb-2017 16:34:08 CST6CDT] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/vanhorn2/public_html/read.php on line 9
+[05-Feb-2017 16:34:13 CST6CDT] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/vanhorn2/public_html/read.php on line 9
+[05-Feb-2017 17:18:29 CST6CDT] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/vanhorn2/public_html/read.php on line 9
+[05-Feb-2017 17:18:34 CST6CDT] PHP Deprecated:  preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead in /home/vanhorn2/public_html/read.php on line 9
+[06-Feb-2017 15:37:38 CST6CDT] PHP Fatal error:  require(): Failed opening required '/vanhorn2/public_html/phpmussel/phpmussel.php' (include_path='.:/usr/local/php56/pear') in /home/vanhorn2/public_html/application/views/pages/header/head.php on line 1
+[06-Feb-2017 15:39:39 CST6CDT] PHP Fatal error:  require(): Failed opening required '/vanhorn2/public_html/phpmussel/phpmussel.php' (include_path='.:/usr/local/php56/pear') in /home/vanhorn2/public_html/application/views/pages/header/head.php on line 37
+[06-Feb-2017 15:43:47 CST6CDT] PHP Fatal error:  require(): Failed opening required '../phpmussel/phpmussel.php' (include_path='.:/usr/local/php56/pear') in /home/vanhorn2/public_html/application/views/pages/header/head.php on line 37
+[06-Feb-2017 15:46:51 CST6CDT] PHP Fatal error:  require(): Failed opening required '../phpmussel/phpmussel.php' (include_path='.:/usr/local/php56/pear') in /home/vanhorn2/public_html/application/views/pages/header/head.php on line 37
+[06-Feb-2017 15:48:42 CST6CDT] PHP Fatal error:  require(): Failed opening required '../../phpmussel/phpmussel.php' (include_path='.:/usr/local/php56/pear') in /home/vanhorn2/public_html/application/views/pages/header/head.php on line 37
+[06-Feb-2017 15:53:43 CST6CDT] PHP Fatal error:  require(): Failed opening required 'http://van-horn.us/phpmussel/phpmussel.php' (include_path='.:/usr/local/php56/pear') in /home/vanhorn2/public_html/application/views/pages/header/head.php on line 37
+[06-Feb-2017 15:55:17 CST6CDT] PHP Fatal error:  require(): Failed opening required 'http://van-horn.us/phpmussel/phpmussel.php' (include_path='.:/usr/local/php56/pear') in /home/vanhorn2/public_html/application/views/pages/header/head.php on line 37

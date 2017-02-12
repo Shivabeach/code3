@@ -37,3 +37,15 @@
 	border-style: $type
 	border-color: $color
 	border-radius: $rad
+
+
+@function set-notification-text-color($color) 
+	@if (lightness($color) > 50) 
+		@return #000000 // Lighter backgorund, return dark color
+	@else 
+		@return #ffffff // Darker background, return light color
+	
+// example
+//.notification-confirm 
+//	background: $notification-confirm
+//	color: set-notification-text-color($notification-confirm)

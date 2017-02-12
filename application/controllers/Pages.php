@@ -24,7 +24,6 @@ class Pages extends CI_Controller
     $config['per_page']         = 4;
     $config['num_links']        = 4;
     $config['uri_segment']      = 3;
-    $config['use_page_numbers'] = TRUE;
     $config['full_tag_open']    = "<div class='pagination'>";
     $config['full_tag_close']   = "</div>";
     $config['first_link']       = 'First';
@@ -121,11 +120,13 @@ class Pages extends CI_Controller
       $data['getlist'] = $query->result();
     }
     $tmpl = array (
-      'table_open'     => '<table class="pure-table pure-table-horizontal" width="100%"',
-      'cell_start'     => '<td class="small">',
-      'cell_end'       => '</td>',
-      'cell_alt_start' => '<td class="small">',
-      'table_close'    => '</table>'
+      'table_open'         => '<table class="m-addin"',
+      'heading_cell_start' => '<th class="m-addin--head">',
+      'heading_cell_end'   => '</th>',
+      'cell_start'         => '<td class="m-addin--data-display">',
+      'cell_end'           => '</td>',
+      'cell_alt_start'     => '<td class="m-addin--data-display">',
+      'table_close'        => '</table>'
     );
     $this->table->set_template($tmpl);
     $this->table->set_heading('ID', 'Title','Family', 'Status');
