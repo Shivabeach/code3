@@ -117,8 +117,7 @@ html,
 body {
   height: 100%; }
 
-ul,
-ol {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0; }
@@ -131,6 +130,13 @@ dt {
 
 dd {
   margin: 0; }
+
+ol {
+  margin: 0;
+  padding: 0; }
+  ol li {
+    font-family: "Fira Mono";
+    margin-left: 3em; }
 
 figure {
   margin: 1em 40px; }
@@ -181,7 +187,7 @@ h6 {
   margin: 0 0 0.75em; }
 
 p {
-  margin: 0 0 0.75em; }
+  margin: 0.75em 0; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -369,9 +375,7 @@ a {
       justify-content: center;
       -webkit-align-items: flex-end;
       -ms-flex-align: end;
-      align-items: flex-end; }
-      .m-main h1 {
-        margin-bottom: 0; } }
+      align-items: flex-end; } }
   @media screen and (max-width: 767px) {
     .m-main {
       height: 10em;
@@ -380,9 +384,7 @@ a {
       justify-content: center;
       -webkit-align-items: flex-end;
       -ms-flex-align: end;
-      align-items: flex-end; }
-      .m-main h1 {
-        margin-bottom: 0; } }
+      align-items: flex-end; } }
   .m-main--head {
     font-family: "Consolas", "monaco", monospace; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -390,13 +392,9 @@ a {
         font-size: 3em; }
         .m-main--head h1 {
           margin-bottom: 0; } }
-    .m-main--head h1 {
-      margin-bottom: 0; }
     @media screen and (max-width: 767px) {
       .m-main--head {
-        font-size: 3em; }
-        .m-main--head h1 {
-          margin-bottom: 0; }
+        font-size: 2em; }
         .m-main--head h1 {
           margin-bottom: 0; } }
 
@@ -456,14 +454,10 @@ a {
     padding: 3px; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .m-nav-grid--listpad {
-        font-size: 0.85rem; }
-        .m-nav-grid--listpad h1 {
-          margin-bottom: 0; } }
+        font-size: 0.85rem; } }
     @media screen and (max-width: 767px) {
       .m-nav-grid--listpad {
-        font-size: 0.85rem; }
-        .m-nav-grid--listpad h1 {
-          margin-bottom: 0; } }
+        font-size: 0.85rem; } }
 
 /* 3-modules ancestry */
 .ancestry {
@@ -520,7 +514,7 @@ article:not(.ancestry) {
     font-family: "bornregular";
     font-weight: 600; }
   .m-listContainer--ddstyle {
-    padding: 5px 10px; }
+    padding: 0.5em 1em; }
 
 .pagination {
   font-family: "tanglewood_tales_nfregular";
@@ -537,7 +531,8 @@ article:not(.ancestry) {
   width: 100%; }
   .m-addin--data-display {
     text-align: center;
-    font-size: 0.85em; }
+    font-size: 0.85em;
+    padding: 0.25em 0; }
   .m-addin--head {
     text-align: center; }
 
@@ -558,16 +553,12 @@ article:not(.ancestry) {
     .container {
       background: inherit;
       margin: 10px;
-      width: 100%; }
-      .container h1 {
-        margin-bottom: 0; } }
+      width: 100%; } }
   @media screen and (max-width: 767px) {
     .container {
       background: inherit;
       margin-top: 2em;
-      width: 100%; }
-      .container h1 {
-        margin-bottom: 0; } }
+      width: 100%; } }
 
 .flex1 {
   -webkit-flex: 1;
@@ -577,14 +568,10 @@ article:not(.ancestry) {
   padding: 0.5rem; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .flex1 {
-      display: none; }
-      .flex1 h1 {
-        margin-bottom: 0; } }
+      display: none; } }
   @media screen and (max-width: 767px) {
     .flex1 {
-      display: none; }
-      .flex1 h1 {
-        margin-bottom: 0; } }
+      display: none; } }
 
 .flex-large {
   -webkit-box-flex: 3;
@@ -614,8 +601,6 @@ article:not(.ancestry) {
 /* 5-pages */
 /* Media queries for DNA pages */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  #mydna h1, #ydna h1, #boslinage h1, #vanlinage h1, #notes h1, #logs h1, #prime h1, #van h1, #relates h1, #topdog h1, #bos h1 {
-    margin-bottom: 0; }
   #mydna body, #ydna body, #boslinage body, #vanlinage body, #notes body, #logs body, #prime body, #van body, #relates body, #topdog body, #bos body {
     padding: 0;
     margin: 0; }
@@ -626,15 +611,11 @@ article:not(.ancestry) {
     display: none; } }
 @media screen and (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) and (max-width: 1023px) {
   #mydna .page-title, #mydna .heading, #ydna .page-title, #ydna .heading, #boslinage .page-title, #boslinage .heading, #vanlinage .page-title, #vanlinage .heading, #notes .page-title, #notes .heading, #logs .page-title, #logs .heading, #prime .page-title, #prime .heading, #van .page-title, #van .heading, #relates .page-title, #relates .heading, #topdog .page-title, #topdog .heading, #bos .page-title, #bos .heading {
-    font-size: 3em; }
-    #mydna .page-title h1, #mydna .heading h1, #ydna .page-title h1, #ydna .heading h1, #boslinage .page-title h1, #boslinage .heading h1, #vanlinage .page-title h1, #vanlinage .heading h1, #notes .page-title h1, #notes .heading h1, #logs .page-title h1, #logs .heading h1, #prime .page-title h1, #prime .heading h1, #van .page-title h1, #van .heading h1, #relates .page-title h1, #relates .heading h1, #topdog .page-title h1, #topdog .heading h1, #bos .page-title h1, #bos .heading h1 {
-      margin-bottom: 0; } }
+    font-size: 3em; } }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #mydna .box20, #ydna .box20, #boslinage .box20, #vanlinage .box20, #notes .box20, #logs .box20, #prime .box20, #van .box20, #relates .box20, #topdog .box20, #bos .box20 {
     display: none; } }
 @media screen and (max-width: 767px) {
-  #mydna h1, #ydna h1, #boslinage h1, #vanlinage h1, #notes h1, #logs h1, #prime h1, #van h1, #relates h1, #topdog h1, #bos h1 {
-    margin-bottom: 0; }
   #mydna body, #ydna body, #boslinage body, #vanlinage body, #notes body, #logs body, #prime body, #van body, #relates body, #topdog body, #bos body {
     padding: 0;
     margin: 0; }
@@ -645,9 +626,7 @@ article:not(.ancestry) {
     display: none; } }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   #mydna .page-title, #mydna .heading, #ydna .page-title, #ydna .heading, #boslinage .page-title, #boslinage .heading, #vanlinage .page-title, #vanlinage .heading, #notes .page-title, #notes .heading, #logs .page-title, #logs .heading, #prime .page-title, #prime .heading, #van .page-title, #van .heading, #relates .page-title, #relates .heading, #topdog .page-title, #topdog .heading, #bos .page-title, #bos .heading {
-    font-size: 3em; }
-    #mydna .page-title h1, #mydna .heading h1, #ydna .page-title h1, #ydna .heading h1, #boslinage .page-title h1, #boslinage .heading h1, #vanlinage .page-title h1, #vanlinage .heading h1, #notes .page-title h1, #notes .heading h1, #logs .page-title h1, #logs .heading h1, #prime .page-title h1, #prime .heading h1, #van .page-title h1, #van .heading h1, #relates .page-title h1, #relates .heading h1, #topdog .page-title h1, #topdog .heading h1, #bos .page-title h1, #bos .heading h1 {
-      margin-bottom: 0; } }
+    font-size: 3em; } }
 @media screen and (max-width: 767px) {
   #mydna .box20, #ydna .box20, #boslinage .box20, #vanlinage .box20, #notes .box20, #logs .box20, #prime .box20, #van .box20, #relates .box20, #topdog .box20, #bos .box20 {
     display: none; } }

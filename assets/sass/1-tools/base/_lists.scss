@@ -1,5 +1,4 @@
-ul,
-ol {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -15,4 +14,13 @@ dt {
 
 dd {
   margin: 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  li {
+    font-family: "Fira Mono";
+    margin-left: 3em;
+  }
 }

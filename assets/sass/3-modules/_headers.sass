@@ -1,6 +1,7 @@
 @charset "UTF-8"
+
 /* main top header */
-.m-main 
+.m-main
 	display: -webkit-box
 	display: -ms-flexbox
 	display: flex
@@ -14,21 +15,27 @@
 
 	+tablet
 		height: 10em
+
 		+center(center, flex-end)
+
 
 	+mobile
 		height: 10em
+
 		+center(center, flex-end)
+
 
 	&--head
 		font-family: $font-stack-consolas
 
 		+tablet
 			font-size: $base-font-size * 3
-		h1
-			margin-bottom: 0		
+
+			h1
+				margin-bottom: 0
 
 		+mobile
-			font-size: $base-font-size * 3
+			font-size: $base-font-size * 2
+
 			h1
-				margin-bottom: 0			
+				margin-bottom: 0

@@ -113,7 +113,7 @@ class Pages extends CI_Controller
   function entry()
   {
     $this->is_logged_in();
-    $this->db->select("id, title, parent, date, status")->order_by("id", "acs");
+    $this->db->select("id, title, parent, date, status")->order_by("id", "asc");
     $query = $this->db->get("posts");
     if ($query->result())
     {

@@ -81,7 +81,7 @@ class Forms extends CI_Controller
 			echo "grand shit";
 		}
   } //end of enterposts
-
+ 
 public function maint()
 {
     $this->is_logged_in();
