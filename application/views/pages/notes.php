@@ -31,6 +31,8 @@
           <dt class="m-listContainer--dtstyle">Graduates</dt>
             <dd class="m-listContainer--ddstyle">Sir William Browne - Graduate of Cambridge University Approx. 1580</dd>
             <dd class="m-listContainer--ddstyle">Anthony Stoddard(1559 - 1637) - Oxford University</dd>
+            <dd class="m-listContainer--ddstyle">Daniel Greenleaf Sr. graduated Harvard 1699. Became a doctor then a minister. 2nd cousin 9x removed
+            </dd>
           <dt class="m-listContainer--dtstyle">Military</dt>
             <dd class="m-listContainer--ddstyle">Sergeant Thomas Reed d.1719</dd>
           
@@ -42,7 +44,9 @@
               Thomas Stoddard(1744 - 1814. Private. Revolutionary War Cayuga Co NY 41 1775</dd>
             <dd class="m-listContainer--ddstyle">
               Elisha Stoddard(1750 - 1788. Corporal. Continental Troops, Connecticut. French and Indian War</dd>
-
+              <dd class="m-listContainer--ddstyle">Wolston Brockway.French and Indian War, 1755-62. 2nd Regiment Connecticut. Bellows Company.8th great-grandfather.</dd>
+            <dd class="m-listContainer--ddstyle">Harlan J   Sholes 1942 - 12/15/1945  WW2. Aviation Cadet. Michigan Army Sergeant Air Corps</dd>
+              
         </dl>
       </article>
     </div>

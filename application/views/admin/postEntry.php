@@ -8,8 +8,7 @@
       <?php echo validation_errors(); ?>
     <?php
     $attr1 = [
-      "id"    => "ajax",
-      "class" => "pure-form pure-form-stacked"
+      "id"    => "ajax"
     ];
     echo form_open("Forms/enterPosts", $attr1);
     ?>
@@ -82,8 +81,8 @@
 
     <div class="pure-controls">
       <?php
-      echo '<button type="submit" class="pure-button pure-button-active">Submit</button>';
-      echo '<button type="reset" class="pure-button pure-button-active">Reset</button>';
+      echo '<button type="submit">Submit</button>';
+      echo '<button type="reset">Reset</button>';
       echo form_close();?>
     </div>
     </fieldset>
@@ -103,23 +102,9 @@
       <article>
         <span>Chars Count: </span> <span id=feedback> </span>
         <br>
-        Total word Count : <span id="display_count">0</span>
+        Total Word Count : <span id="display_count">0</span>
       </article>
-      <article>
-        <?php foreach($getlist as $row)
-        {
-            $id = "forms/fill_form/$row->id";
-            $this->table->add_row(
-            anchor($id, $row->id),
-            $row->title,
-            $row->parent,
-            $row->status
-            );
-        }
-        echo $this->table->generate();
-        ?>
-      </article>
-      
+            
       <article>
         <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
       </article>

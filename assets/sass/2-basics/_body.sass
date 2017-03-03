@@ -7,7 +7,6 @@
 
 body, html
 	color: $base-font-color
-	min-height: 100vh
 	margin: 0
 	padding: 0
 	background-blend-mode: soft-light
@@ -15,8 +14,7 @@ body, html
 	-moz-osx-font-smoothing: grayscale
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
-	-webkit-transition: all 300ms ease
-	transition: all 300ms ease
+	transition: $base-transition
 	overflow: auto
 	font-size: $base-font-size
 	background: -webkit-linear-gradient($ltgreen, $yellow1, $orange1)
@@ -28,4 +26,3 @@ body[id="post-entry"]
 
 	.flex-small
 		padding: 0
-

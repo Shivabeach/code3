@@ -113,24 +113,6 @@ class Pages extends CI_Controller
   function entry()
   {
     $this->is_logged_in();
-    $this->db->select("id, title, parent, date, status")->order_by("id", "asc");
-    $query = $this->db->get("posts");
-    if ($query->result())
-    {
-      $data['getlist'] = $query->result();
-    }
-    $tmpl = array (
-      'table_open'         => '<table class="m-addin"',
-      'heading_cell_start' => '<th class="m-addin--head">',
-      'heading_cell_end'   => '</th>',
-      'cell_start'         => '<td class="m-addin--data-display">',
-      'cell_end'           => '</td>',
-      'cell_alt_start'     => '<td class="m-addin--data-display">',
-      'table_close'        => '</table>'
-    );
-    $this->table->set_template($tmpl);
-    $this->table->set_heading('ID', 'Title','Family', 'Status');
-    $this->table->set_caption("Post Updates");
     $data['title'] = "Post Entry";
     $data['head']  = "Post Entry";
     $this->load->view("pages/header/head", $data);
@@ -286,5 +268,43 @@ class Pages extends CI_Controller
       $data['title']        = "Relatives";
       $data['main_content'] = 'pages/relatives';
       $this->load->view('pages/includes/template', $data);
+    }
+
+    public function family()
+    {
+      $this->is_logged_in();
+      $data['head']  = "Family Entry";
+      $data['title'] = 'Family entry';
+      $data['main_content'] = 'admin/family';
+      $this->load->view('pages/includes/template', $data);
+    }
+
+
+    public function lists()
+    {
+      $this->is_logged_in();
+    $this->db->select("id, title, parent, date, status")->order_by("id", "asc");
+    $query = $this->db->get("posts");
+    if ($query->result())
+    {
+      $data['getlist'] = $query->result();
+    }
+    $tmpl = array (
+      'table_open'         => '<table class="m-addin"',
+      'heading_cell_start' => '<th class="m-addin--head">',
+      'heading_cell_end'   => '</th>',
+      'cell_start'         => '<td class="m-addin--data-display">',
+      'cell_end'           => '</td>',
+      'cell_alt_start'     => '<td class="m-addin--data-display">',
+      'table_close'        => '</table>'
+    );
+    $this->table->set_template($tmpl);
+    $this->table->set_heading('ID', 'Title', 'Date', 'Family', 'Status');
+    $this->table->set_caption("Post Updates");
+    $data['title'] = "Post Listing";
+    $data['head']  = "Post listing";
+    $this->load->view("pages/header/head", $data);
+    $this->load->view("admin/admin2");
+    $this->load->view("pages/footer/footer");
     }
 } //end of file

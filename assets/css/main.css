@@ -53,7 +53,6 @@ input,
 select,
 textarea {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em; }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
@@ -62,6 +61,7 @@ textarea {
   appearance: none;
   background-color: #fff;
   border: 1px solid #ddd;
+  font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
@@ -103,7 +103,7 @@ textarea {
 
 select {
   margin-bottom: 0.75em;
-  width: 100%; }
+  width: 20%; }
 
 html {
   box-sizing: border-box; }
@@ -224,7 +224,6 @@ h6 {
 
 body, html {
   color: #333;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-blend-mode: soft-light;
@@ -232,8 +231,7 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
+  transition: all 150ms ease;
   overflow: auto;
   font-size: 1em;
   background: -webkit-linear-gradient(#CDE4CA, #fff3bf, #ffe8cc);
@@ -459,6 +457,9 @@ a {
       .m-nav-grid--listpad {
         font-size: 0.85rem; } }
 
+.box20 {
+  color: #ffedc6; }
+
 /* 3-modules ancestry */
 .ancestry {
   margin: 2em 1em; }
@@ -594,9 +595,18 @@ article:not(.ancestry) {
   background: transparent; }
 
 #bottom {
+  background: #403B31;
   width: 80%;
   margin: 0 auto;
-  min-height: 13em; }
+  min-height: 13em;
+  padding: 10px; }
+  #bottom h4 {
+    font-size: 1.5em; }
+  #bottom a {
+    color: #ffedc6; }
+  #bottom a:hover {
+    background-color: #6781B2;
+    color: #fff1d1; }
 
 /* 5-pages */
 /* Media queries for DNA pages */

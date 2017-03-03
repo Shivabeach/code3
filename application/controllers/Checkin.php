@@ -174,6 +174,4 @@ This feeds the admin area page
     $this->load->view('pages/footer/footer');
   }
 
-
-
 } //end of controller
