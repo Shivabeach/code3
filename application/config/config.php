@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://van-horn.us';
+$config['base_url'] = 'https://van-horn.us';
 
 /*
 |--------------------------------------------------------------------------
@@ -382,8 +382,8 @@ $config['sess_regenerate_destroy'] = FALSE;
 $config['cookie_prefix']	= 'pre';
 $config['cookie_domain']	= '';
 $config['cookie_path']		= '/';
-$config['cookie_secure']	= FALSE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_secure']	= TRUE;
+$config['cookie_httponly'] 	= TRUE;
 
 /*
 |--------------------------------------------------------------------------

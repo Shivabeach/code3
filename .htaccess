@@ -50,6 +50,9 @@ RewriteRule "(^|/)\." - [F]
  </IfModule>
 
 Redirect 301 /wp-config.php http://www.fbi.gov/
+#
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+#
 
  # ------------------------------------------------------------------------------
 # | Compression                                                                |

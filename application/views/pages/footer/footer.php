@@ -58,13 +58,10 @@
       <span id="men"></span>
       </article>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="<?php echo base_url('assets/js/functions.js');?>"></script>
   <script src="<?php echo base_url('assets/plugins/count.min.js');?>"></script>
   <script src="<?php echo base_url('assets/plugins/vert/vertical-tabs.js');?>"></script>
-<?php //echo $this->benchmark->elapsed_time('code_start', 'code_end');?>
-<!--<br> -->
-<?php //echo $this->benchmark->elapsed_time();?>
 </body>
 </html>

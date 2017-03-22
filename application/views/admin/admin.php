@@ -63,6 +63,7 @@
     </article>
       <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
     </article>
+    <article><?php echo $_SERVER['SERVER_SOFTWARE'];?></article>
   </section>
 </div>
 </div>

@@ -64,11 +64,11 @@ class Forms extends CI_Controller
       'slug'      => trim($this->input->post('slug'))
     ];
 
-    $this->form_validation->set_rules('title', 'Title', 'required');
+    $this->form_validation->set_rules('title', 'Title', 'required|alpha_numeric_spaces');
     $this->form_validation->set_rules('content', 'content', 'required|trim|min_length[25]');
-    $this->form_validation->set_rules('status', 'Status', 'required');
+    $this->form_validation->set_rules('status', 'Status', 'required|alpha|max_length[10]');
     $this->form_validation->set_rules('last_date', 'Last Date', 'required');
-    $this->form_validation->set_rules('parent', 'Parent', 'required');
+    $this->form_validation->set_rules('parent', 'Parent', 'required|alpha|max_length[8]');
     $this->form_validation->set_rules('slug', 'Slug', 'required|trim|min_length[25]');
 
     if( $this->form_validation->run() == FALSE) {
