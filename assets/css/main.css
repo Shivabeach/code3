@@ -6,7 +6,6 @@ button, [type='button'], [type='reset'], [type='submit'] {
   appearance: none;
   background-color: #1565c0;
   border: 0;
-  border-radius: 3px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -174,7 +173,6 @@ th {
 body {
   color: #333;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.1em;
   line-height: 1.5; }
 
 h1,
@@ -188,7 +186,7 @@ h6 {
   margin: 0 0 0.75em; }
 
 p {
-  margin: 0.75em 0; }
+  margin: calc(1em + 0.5vw) 0; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -234,7 +232,7 @@ body, html {
   text-rendering: optimizeLegibility;
   transition: all 150ms ease;
   overflow: auto;
-  font-size: 1.1em;
+  font-size: calc(18px + 0.25vw);
   background: -webkit-linear-gradient(#CDE4CA, #fff3bf, #ffe8cc);
   background: linear-gradient(#CDE4CA, #fff3bf, #ffe8cc); }
 
@@ -368,7 +366,8 @@ a {
       -ms-flex-align: end;
       align-items: flex-end; } }
   .m-main--head {
-    font-family: "Consolas", "monaco", monospace; }
+    font-family: "Consolas", "monaco", monospace;
+    margin: 0; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .m-main--head {
         font-size: 3.3em; }
@@ -413,12 +412,19 @@ a {
   justify-content: flex-end; }
 
 .m-nav-grid {
-  -webkit-flex: 1 1 0;
-  -ms-flex: 1 1 0px;
-  flex: 1 1 0; }
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
   .m-nav-grid--title {
     color: red;
-    text-align: center; }
+    text-align: center;
+    text-shadow: 1px 1px 1px #D2E6C9; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .m-nav-grid--title {
+        text-align: left; } }
+    @media screen and (max-width: 767px) {
+      .m-nav-grid--title {
+        text-align: left; } }
   .m-nav-grid--center {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -426,23 +432,20 @@ a {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    padding-left: 30%; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .m-nav-grid--center {
+        font-size: 0.85rem;
+        padding-left: 5px; } }
+    @media screen and (max-width: 767px) {
+      .m-nav-grid--center {
+        font-size: 0.85rem;
+        padding-left: 5px; } }
   .m-nav-grid--listpad {
     padding: 3px; }
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
-      .m-nav-grid--listpad {
-        font-size: 0.85rem; } }
-    @media screen and (max-width: 767px) {
-      .m-nav-grid--listpad {
-        font-size: 0.85rem; } }
 
 .box20 {
-  color: #ffedc6; }
+  color: #ffe3e3; }
 
 /* 3-modules ancestry */
 .ancestry {
@@ -464,9 +467,6 @@ a {
   .ancestry--ancestryDate {
     font-weight: 200;
     float: right; }
-
-button:hover, [type="submit"] {
-  border-radius: 15px; }
 
 .small {
   font-size: 0.75em;
@@ -535,6 +535,10 @@ article:not(.ancestry) {
   .downer:nth-child(4n) {
     margin-right: 0; }
 
+.submit, .reset {
+  padding: 5px;
+  border-radius: 10px; }
+
 /* 4-Layout */
 .container {
   display: -webkit-box;
@@ -602,11 +606,25 @@ article:not(.ancestry) {
   min-height: 13em; }
   #bottom h4 {
     font-size: 1.5em; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      #bottom h4 {
+        font-size: 1.3em; } }
+    @media screen and (max-width: 767px) {
+      #bottom h4 {
+        font-size: 1.3em; } }
   #bottom a {
     color: #ffedc6; }
   #bottom a:hover {
     background-color: #6781B2;
     color: #fff8e8; }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    #bottom {
+      width: 100%;
+      margin: 0; } }
+  @media screen and (max-width: 767px) {
+    #bottom {
+      width: 100%;
+      margin: 0; } }
 
 /* 5-pages */
 /* Media queries for DNA pages */

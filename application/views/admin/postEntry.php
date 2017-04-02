@@ -81,8 +81,8 @@
 
     <div class="pure-controls">
       <?php
-      echo '<button type="submit">Submit</button>';
-      echo '<button type="reset">Reset</button>';
+      echo '<button type="submit" class="submit">Submit</button>';
+      echo '<button type="reset" class="reset">Reset</button>';
       echo form_close();?>
     </div>
     </fieldset>

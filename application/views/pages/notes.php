@@ -1,6 +1,6 @@
 <body id="notes">  
   <header class="m-main">
-    <h1 class="heading"> <?php echo $head ;?></h></h1>
+    <h1 class="m-main--head"> <?php echo $head ;?></h></h1>
   </header>
   <div class="container">
     <div class="flex1">
@@ -24,16 +24,28 @@
             <p>Lucy Thompson is our great Grandmother, the mother of Mom's father Andrew Bostick. We knew she was born 29/04/1842 in New York. She passed away on April 8th, 1893 in Millington after having 10 children. </p>
             <p>I had no history of her until I was researching some census documents and came across her fathers name. I entered that into Ancestry and that got me her mothers name. Her father was Sherman Bradley Thompson, and her mother was Sarah Ann (Unknown). Her grandfather was John Thompson 1778 - 1850. Her mother and father both come from Windham Vermont. Her Thompson grandfather was from New Hampshire. Lucy's Grandmother was Lavina W Pierce. She was from Vermont. Lavina's father(Lucys Great Grandfather) was Sherman Pierce, born 1770 in Connecticutt, and died in 1854.</p>
             </dd>
+
+          <dt class="m-listContainer--dtstyle">Henry Michael Clay</dt>
+            <dd class="m-listContainer--ddstyle">Henry’s cremated remains were never taken after his death and are still available at the Oregon State Hospital to be claimed by anyone who is related. More information is available at http://www.oregon.gov/oha/amh/osh/pages/cremains.aspx A book by David Maisel and a documentary by Ondi Timoner & Robert James, both entitled "Library of Dust" also provide more information. 2nd Great Uncle VanHorn side. Died 1948 </dd>
           <dt class="m-listContainer--dtstyle">Jonathon Cummings Sholes</dt>
             <dd class="m-listContainer--ddstyle">
               <p>Our 2nd Great Uncle who died at Gettysburg, was commanded by none other than the youngest general in the army, George Armstrong Custer.</p>
            </dd>
-          <dt class="m-listContainer--dtstyle">Alonzo Prestage</dt>
+          <dt class="m-lis tContainer--dtstyle">Alonzo Prestage</dt>
              <dd class="m-listContainer--ddstyle">Alonzo Prestage was baptized a member of the Reorganized Church of Jesus Christ of Latter Day Saints on 16 May 1887 at Deerfield, Lapier, Michigan, by J. A. Carpenter. He was ordained a deacon on 5 August 1888 by Andrew Barr. He attended the Five Lakes, Michigan Branch.</dd>
 
+          <dt class="m-listContainer--dtstyle">Petrus(Peter) Westfall</dt>
+            <dd class="m-listContainer--ddstyle"> 
+            <p>Petrus(Peter) was born to Nicholas Westfall and Sara Van Auken. He wed Arriantje Rosenkranz in the Minisink Church New Jersey on August 25, 1754. They lived in Montague and had one child:</p>
+
+            <p>Abraham on November 18, 1755</p>
+
+            <p>Peter was killed by Indians during the French and Indian War in July 1756. Peter's child Abraham lived to become a captain in the New York militia during the Revolutionary War. He moved to Washington County, Pennsylvania in 1797, then Columbiana County, Ohio in 1817. Abraham died in Carroll County, Ohio on September 5, 1829.</p>
+
+            <p>Petrus is buried in an unmarked grave at the Minisink Church, which was established by the Kingston Reformed Dutch Church in 1741. It is now part of the Delaware River Water National Park and only a few grave stones remain.</p>  </dd>
 
           <dt class="m-listContainer--dtstyle">Graduates</dt>
-            <dd class="m-listContainer--ddstyle">Sir William Browne - Graduate of Cambridge University Approx. 1580</dd>
+            <dd class="m-listContainer--ddstyle">Sir William Browne - .Graduate of Cambridge University Approx. 1580</dd>
             <dd class="m-listContainer--ddstyle">Anthony Stoddard(1559 - 1637) - Oxford University</dd>
             <dd class="m-listContainer--ddstyle">Daniel Greenleaf Sr. graduated Harvard 1699. Became a doctor then a minister. 2nd cousin 9x removed
             </dd>

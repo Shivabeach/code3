@@ -1,6 +1,6 @@
 <body id="prime">
   <header class="m-main">
-    <h1 class=".m-main--head">The Family</h1>
+    <h1 class="m-main--head">The Family</h1>
   </header>
     <div class="container">
       <div class="flex1">

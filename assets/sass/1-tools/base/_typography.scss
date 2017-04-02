@@ -1,7 +1,6 @@
 body {
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
   line-height: $base-line-height;
 }
 
@@ -17,7 +16,7 @@ h6 {
 }
 
 p {
-  margin: $small-spacing 0;
+  margin: calc(1em + 0.5vw) 0;
 }
 
 hr {
