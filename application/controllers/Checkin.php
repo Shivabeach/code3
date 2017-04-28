@@ -1,7 +1,7 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Checkin extends CI_Controller{
+class Checkin extends CI_Controller {
 
   public function __construct()
   {
@@ -130,7 +130,7 @@ class Checkin extends CI_Controller{
             'is_logged_in' => TRUE
           );
           $this->session->set_userdata($data);
-          redirect("checkin/admin");
+          redirect("Checkin/admin");
         }else {
           $data['head']  = "Login to admin";
           $data['title'] = 'Login to Admin';
@@ -155,14 +155,13 @@ This feeds the admin area page
       echo "No Data";
     }
     $tmpl = array (
-      'table_open'     => '<table class="m-addin"',
-      'heading_cell_start'    => '<th class="m-addin--head">',
-      'heading_cell_end'      => '</th>',
-
-      'cell_start'     => '<td class="m-addin--data-display">',
-      'cell_end'       => '</td>',
-      'cell_alt_start' => '<td class="m-addin--data-display">',
-      'table_close'    => '</table>'
+      'table_open'         => '<table class="m-addin"',
+      'heading_cell_start' => '<th class="m-addin--head">',
+      'heading_cell_end'   => '</th>',
+      'cell_start'         => '<td class="m-addin--data-display">',
+      'cell_end'           => '</td>',
+      'cell_alt_start'     => '<td class="m-addin--data-display">',
+      'table_close'        => '</table>'
     );
     $this->table->set_template($tmpl);
     $this->table->set_heading('Date', 'IP', 'Visits','Agent', 'Host', 'Page', 'Country' );

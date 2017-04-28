@@ -233,8 +233,8 @@ body, html {
   transition: all 150ms ease;
   overflow: auto;
   font-size: calc(18px + 0.25vw);
-  background: -webkit-linear-gradient(#CDE4CA, #fff3bf, #ffe8cc);
-  background: linear-gradient(#CDE4CA, #fff3bf, #ffe8cc); }
+  background: -webkit-linear-gradient(#ebae90, #f7ad97, #fbc093);
+  background: linear-gradient(#ebae90, #f7ad97, #fbc093); }
 
 body[id="post-entry"] .flex-large {
   padding: 0; }
@@ -243,12 +243,13 @@ body[id="post-entry"] .flex-small {
 
 /* basic links */
 a {
-  color: #527652;
+  color: #6E2A16;
   text-decoration: none;
   transition: 150ms, ease;
-  font-family: "Arsenal", sans-serif; }
+  font-family: "Arsenal", sans-serif;
+  font-size: 1.2em; }
   a:visited {
-    color: #965D55; }
+    color: #111; }
   a:hover {
     color: #7C787B;
     text-decoration: underline;
@@ -256,6 +257,10 @@ a {
     font-style: italic; }
   a:active {
     color: #88AF86; }
+
+.current {
+  background: #FF754C;
+  color: #111; }
 
 .b-nav-list {
   width: 100%;
@@ -366,18 +371,15 @@ a {
       -ms-flex-align: end;
       align-items: flex-end; } }
   .m-main--head {
-    font-family: "Consolas", "monaco", monospace;
     margin: 0; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .m-main--head {
-        font-size: 3.3em; }
-        .m-main--head h1 {
-          margin-bottom: 0; } }
+        font-size: 3.3em;
+        margin-bottom: 0; } }
     @media screen and (max-width: 767px) {
       .m-main--head {
-        font-size: 2.2em; }
-        .m-main--head h1 {
-          margin-bottom: 0; } }
+        font-size: 2.2em;
+        margin-bottom: 0; } }
 
 .nav-grid, .box1, .box2 {
   -webkit-box-flex: 1;
@@ -415,6 +417,8 @@ a {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1; }
+  .m-nav-grid .small {
+    color: #ffedc6; }
   .m-nav-grid--title {
     color: red;
     text-align: center;
@@ -569,8 +573,13 @@ article:not(.ancestry) {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background: transparent;
-  padding: 0.5rem; }
+  background: #9A8F7B;
+  padding: 0.5rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-color: #4D3D3B;
+  border-top-style: solid;
+  border-width: 4px; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .flex1 {
       display: none; } }
