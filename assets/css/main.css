@@ -346,6 +346,8 @@ a {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 15em;
+  background: linear-gradient(#c8947a, #ebae90);
+  box-shadow: 1px 1px 2px #EBAE90;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -371,7 +373,8 @@ a {
       -ms-flex-align: end;
       align-items: flex-end; } }
   .m-main--head {
-    margin: 0; }
+    margin: 0;
+    font-family: "england_hand_dbregular"; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .m-main--head {
         font-size: 3.3em;

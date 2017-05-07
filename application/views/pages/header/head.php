@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="VanHorn-Bostick Family" />
+    <meta property="og:description" content="Ancestry of 2 familys" />
     <?php
     $meta = array(
         array(

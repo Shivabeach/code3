@@ -32,6 +32,24 @@ RewriteRule "(^|/)\." - [F]
     #Options -Indexes
 </IfModule>
 
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
+
+#
+
+    # Apache < 2.3
+
+    <IfModule !mod_authz_core.c>
+       Order allow,deny
+        Deny from all
+       Satisfy All
+   </IfModule>
+
+    # Apache ≥ 2.3
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>
+
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
 </IfModule>
@@ -80,12 +98,6 @@ RewriteRule "(^|/)\." - [F]
         AddOutputFilterByType DEFLATE text/x-component
         AddOutputFilterByType DEFLATE top: ext/xml
     </IfModule>
-</IfModule>
-
-<IfModule mod_headers.c>
-
-    Header set Cache-Control "no-transform"
-
 </IfModule>
 
 <IfModule mod_expires.c>
