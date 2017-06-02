@@ -8,7 +8,7 @@
       </div>
       <div class="flex-large">
         <div class="ancestry">
-          <p>The timeline of the Bostick family starting with its original known founders</p>
+          <p>The timeline of the Bostick family. I have started this in the year 1340. The reason being the timeline would be very long, and the records going back past 1200 are questionable. Many of the records of individuals are conflicted depending on the sources.</p>
         </div>
         <section class="timeline">
           <ul>
@@ -29,7 +29,7 @@
             </li>
             <li>
               <div>
-                <time>1412</time>Sir Adam De Bostock 1412–1459 Birth 22 FEB 1412 • Bostock, Cheshire, England. He was frequently mentioned in documents of his time, in particular on 5 separate occasions. According to the Visitation of Berkshire he was slain at Blore Heath in 1459. became one of the captains of King Richard II elite bodyguard of archers.
+                <time>1412</time>Sir Adam De Bostock 1412–1475 Birth 22 FEB 1412 • Bostock, Cheshire, England. He was frequently mentioned in documents of his time, in particular on 5 separate occasions. According to the Visitation of Berkshire he was slain at Blore Heath in 1459. became one of the captains of King Richard II elite bodyguard of archers.
               </div>
             </li>
             <li>
@@ -54,7 +54,7 @@
             </li>
             <li>
               <div>
-                <time>1977</time>William Arthur Bostwick 1603–1680 Birth 22 DEC 1603 • Tarporley, Cheshire, England. 1st Bostick in America, Stratford Connecticut.
+                <time>1603</time>William Arthur Bostwick 1603–1680 Birth 22 DEC 1603 • Tarporley, Cheshire, England. 1st Bostick in America, Stratford Connecticut.
               </div>
             </li>
             <li>
