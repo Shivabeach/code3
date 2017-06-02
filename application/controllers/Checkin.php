@@ -2,11 +2,11 @@
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Checkin extends CI_Controller {
-
+  
   public function __construct()
   {
     parent::__construct();
-    $this->load->model("checkmod");
+    $this->load->model("checkmod");    
   }
 
   function index()
@@ -76,6 +76,7 @@ class Checkin extends CI_Controller {
      */
     public function legal()
     {
+      $time = date("l jS \of F Y h:i:s A");
       $data = [
         'name'  => trim(html_escape($this->input->post('name'))),
         'email' => trim(html_escape($this->input->post('email'))),
@@ -97,7 +98,13 @@ class Checkin extends CI_Controller {
   		}else {
         $milky = trim(html_escape($this->input->post('milky')));
         if ($milky != "#008080") {
-          echo "You sure messed that one up";
+          echo "You sure messed that one up" . $time;
+          $message = "Wrong or missing color:  " . $time;
+          $this->email->from('brad@van-horn.us', 'Brad');
+          $this->email->to('mrwilson1@comcast.net');
+          $this->email->subject('Failed Login');
+          $this->email->message($message);
+          $this->email->send();
           die();
         }
   		  $name  = html_escape($this->input->post('name'));
@@ -114,11 +121,18 @@ class Checkin extends CI_Controller {
       ),$limit, $offset);
       //$query = $this->db->get('check');
       if ($query->num_rows() != 1){
-        $data['head']  = "Login to admin";
-        $data['title'] = 'Login to Admin';
-        $this->load->view('pages/header/head', $data);
-        $this->load->view('pages/login/log', $data);
-        $this->load->view('pages/footer/footer');
+        $message = "Someone has just tried to log in 9-9-3:  " . $time;
+        $this->email->from('brad@van-horn.us', 'Brad');
+        $this->email->to('mrwilson1@comcast.net');
+        $this->email->subject('Failed Login');
+        $this->email->message($message);
+        $this->email->send();
+        die("Sorry");
+        // $data['head']  = "Login to admin";
+        // $data['title'] = 'Login to Admin';
+        // $this->load->view('pages/header/head', $data);
+        // $this->load->view('pages/login/log', $data);
+        // $this->load->view('pages/footer/footer');
       }else
       {
         $row    = $query->row();
@@ -130,13 +144,20 @@ class Checkin extends CI_Controller {
             'is_logged_in' => TRUE
           );
           $this->session->set_userdata($data);
+          $message = "Someone has just logged in:  " . $time;
+          $this->email->from('brad@van-horn.us', 'Brad');
+          $this->email->to('mrwilson1@comcast.net');
+          $this->email->subject('Login');
+          $this->email->message($message);
+          $this->email->send();
           redirect("Checkin/admin");
         }else {
-          $data['head']  = "Login to admin";
-          $data['title'] = 'Login to Admin';
-          $this->load->view('pages/header/head', $data);
-          $this->load->view('pages/login/log', $data);
-          $this->load->view('pages/footer/footer');
+          die();
+          // $data['head']  = "Login to admin";
+          // $data['title'] = 'Login to Admin';
+          // $this->load->view('pages/header/head', $data);
+          // $this->load->view('pages/login/log', $data);
+          // $this->load->view('pages/footer/footer');
         }
       }
     }

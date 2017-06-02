@@ -307,4 +307,19 @@ class Pages extends CI_Controller
     $this->load->view("admin/admin2");
     $this->load->view("pages/footer/footer");
     }
+
+    public function vtime() {
+      $data['head'] = "VanHorn Timeline";
+      $data['title'] = "VanHorn Timeline";
+      $data['main_content'] = "pages/vantimeline";
+      $this->load->view('pages/includes/template', $data);
+    }
+
+    public function btime() {
+      $data['head'] = "Bostick Timeline";
+      $data['title'] = "Bostick Timeline";
+      $data['main_content'] = "pages/bostimeline";
+      $this->load->view('pages/includes/template', $data);
+    }
+
 } //end of file

@@ -83,7 +83,6 @@ $attr10 = [
   <label for="Milky"> Milky White </label>
   <?php echo form_input($attr10);?>
 </p>
-
 <div>
   <?php
   echo '<button type="submit">Submit</button>';

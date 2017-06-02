@@ -47,10 +47,9 @@ $timeago = $date->diff($ancestor);
       4th great grandfather
       </p>
       <hr>
-      <p class="small">John Bostwick <br>
-      Birth 18/10/1638 • Tarporley, Cheshire, England <br>
-      Death 11 DEC 1688 • Stratford, Fairfield, Connecticut, USA <br>
-      8th great grandfather <br>
-      2nd settler of New Milford Connecticut
+      <p class="small">(William) Arthur Bostwick <br>
+      Birth 22 DEC 1603 • Tarporley, Cheshire, England <br>
+      Death 10 DEC 1680 • Stratford, Fairfield, Connecticut, USA <br>  
+      9th great grandfather
       </p>
 </article>

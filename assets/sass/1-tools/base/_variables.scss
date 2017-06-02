@@ -1,16 +1,19 @@
 
 $mobile: 568px;
 $tablet: 768px;
+$timeline: 1000px;
 $desktop: 1024px;
 
 // base fonts are from bourbon font-stacks
 $base-font-family: $font-stack-helvetica;
 $heading-font-family: $font-stack-consolas;
 
-
-$base-font-size: 1.1em;
+$base-font-size: 18;
 $small-base-font: 1em;
 
+@function em($px, $base: $base-font-size){
+  @return #{$px / $base}em;
+}
 
 $base-line-height: 1.5;
 $heading-line-height: 1.2;

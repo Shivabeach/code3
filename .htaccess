@@ -11,6 +11,11 @@ RewriteCond %{SCRIPT_FILENAME} -d [OR]
 RewriteCond %{SCRIPT_FILENAME} -f
 RewriteRule "(^|/)\." - [F]
 
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+# added the above. remove if it doesnt work
+
 <FilesMatch ".*">
     Require ip 192.88.134.0/23
     Require ip 185.93.228.0/22

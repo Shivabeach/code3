@@ -46,6 +46,7 @@ zbblock/*
 
 # sftp configuration file
 sftp-config.json
+sftp-config.min.json
 
 # Package control specific files
 Package Control.last-run
@@ -129,5 +130,5 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# Prepros config
+### Prepros config ###
 prepros-6.config
