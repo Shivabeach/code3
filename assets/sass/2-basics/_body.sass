@@ -1,24 +1,34 @@
-@charset 'UTF-8'
+@charset "UTF-8"
 
-// 2-basics body
+/* 2-basics body */
 
 *
-  box-sizing:	border-box
+	box-sizing: border-box
+
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section
+	display: block
+
 
 body, html
-	color: $base-font-color
+	overflow: auto
 	margin: 0
+	min-height: 100vh
 	padding: 0
 	background-blend-mode: soft-light
-	line-height: $base-line-height
 	-moz-osx-font-smoothing: grayscale
 	-webkit-font-smoothing: antialiased
+	line-height: $base-line-height
 	text-rendering: optimizeLegibility
-	transition: $base-transition
-	overflow: auto
+	-webkit-transition: all 300ms ease
+	transition: all 300ms ease
 	font-size: calc(18px + 0.25vw)
-	background: -webkit-linear-gradient($alt5, $alt4, $alt6)
-	background: linear-gradient($alt5, $alt4, $alt6)
+	color: $base-font-color
+	vertical-align: baseline
+
+	+grad-many($roti,$rob-roy, $chalky, $roti)
+
 
 body[id="post-entry"]
 	.flex-large

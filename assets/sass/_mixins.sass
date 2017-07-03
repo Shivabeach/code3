@@ -1,5 +1,5 @@
 @charset 'UTF-8'
-
+ 
 =center($value, $value2)
 	align-items: $value2
 	justify-content: $value
@@ -66,3 +66,6 @@
 =timeline
 	@media screen and (max-width: $timeline)
 		@content
+
+=grad-many($color1, $color2, $color3, $color4)
+	background: linear-gradient($color1, $color2, $color3, $color4)

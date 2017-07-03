@@ -8,20 +8,20 @@
 	-ms-flex-wrap: wrap
 	flex-wrap: wrap
 	width: 80%
-	margin: 0 auto
-	background: transparent
+	+margin(0 auto)
 	min-height: 100%
+	background: transparent
 
 	+tablet
-		background: inherit
 		margin: 10px
 		width: 100%
+		background: inherit
 		font-size: $small-base-font
 
 	+mobile
-		background: inherit
-		margin-top: 2em 
 		width: 100%
+		background: inherit
+		margin-top: 2em
 		font-size: $small-base-font
 
 //example media call
@@ -35,7 +35,6 @@
 	+border-color($sidebar3 null null null)
 	+border-style(solid null null null)
 	+border-width(4px)
-	
 	+tablet
 		display: none
 
@@ -44,19 +43,30 @@
 
 //layout center flex
 .flex-large
-	-webkit-box-flex: 3
-	-ms-flex: 3
 	flex: 3
 	background: transparent
 	padding: 0.5rem
+
+	+tablet
+		width: 100%
+		padding: 0
+
+	+mobile
+		width: 100%
+		padding: 0
 
 	&--wrapper
 		display: flex
 
 //right side flex
 .flex-small
-	-webkit-box-flex: 1
-	-ms-flex: 1
 	flex: 1
 	padding: 0 0.5rem
 	background: transparent
+
+	+tablet
+		display: none
+
+	+mobile
+		display: none
+

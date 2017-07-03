@@ -35,7 +35,7 @@
           <li class="m-nav-grid--listpad"><?php echo anchor("checkin", "Log In"); ?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor("pages/notes", "Family Notes"); ?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor("pages/relatives", "Family Connections"); ?>
-          </li>
+          <li class="m-nav-grid--listpad"><?php echo anchor("pages/reading", "Reading Sources");?></li>
         </ul>
         <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>
       </div>
