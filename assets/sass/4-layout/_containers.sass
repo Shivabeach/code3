@@ -8,7 +8,9 @@
 	-ms-flex-wrap: wrap
 	flex-wrap: wrap
 	width: 80%
+
 	+margin(0 auto)
+
 	min-height: 100%
 	background: transparent
 
@@ -17,6 +19,7 @@
 		width: 100%
 		background: inherit
 		font-size: $small-base-font
+
 
 	+mobile
 		width: 100%
@@ -30,13 +33,15 @@
 .flex1
 	flex: 1
 	background: $sidebar2
-	padding: .5rem
+	padding: 0.5rem
+
 	+border-top-radius(10px)
 	+border-color($sidebar3 null null null)
 	+border-style(solid null null null)
 	+border-width(4px)
 	+tablet
 		display: none
+
 
 	+mobile
 		display: none
@@ -51,9 +56,11 @@
 		width: 100%
 		padding: 0
 
+
 	+mobile
 		width: 100%
 		padding: 0
+
 
 	&--wrapper
 		display: flex
@@ -67,6 +74,6 @@
 	+tablet
 		display: none
 
+
 	+mobile
 		display: none
-
