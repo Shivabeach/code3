@@ -9,7 +9,9 @@
       <div class="flex-large">
       <div class="ancestry--container">
         <article class="ancestry">
+        <header>
           <h3 class="ancestry--ancestryTitle item">Family History</h3>
+        </header>  
           <div class="slug">
             <p>A short description of our DNA that covers the last 500 years</p>
           </div>
