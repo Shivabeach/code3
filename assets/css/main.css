@@ -798,19 +798,12 @@ time {
     display: flex; }
 
 .flex-small {
-  display: none;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0 0.5rem;
   background: transparent; }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .flex-small {
-      display: none; } }
-  @media screen and (max-width: 767px) {
-    .flex-small {
-      display: none; } }
 
 #bottom {
   background: #403b31;

@@ -101,11 +101,4 @@
         </dl>
       </article>
     </div>
-    <div class="flex-small">
-      <section class="wrapper">
-          <?php include(APPPATH . "/views/pages/includes/side.php");  ?>
-
-
-      </section>
-    </div>
   </div>

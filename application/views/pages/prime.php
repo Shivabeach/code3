@@ -61,25 +61,25 @@
       
       </div>
       
-      <div class="flex-small">
+      <!-- <div class="flex-small">
         <section class="wrapper">
-            <?php include(APPPATH . "/views/pages/includes/side.php");  ?>
+            <?php //include(APPPATH . "/views/pages/includes/side.php");  ?>
           <!-- <article>
             <?php
-            $user_ip = getenv('REMOTE_ADDR');
-            $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
-            $city = $geo["geoplugin_city"];
-            $region = $geo["geoplugin_regionName"];
-            $country = $geo["geoplugin_countryName"];
-            echo "City: ".$city."<br>";
-            echo "Region: ".$region."<br>";
-            echo "Country: ".$country."<br>";
+            //$user_ip = getenv('REMOTE_ADDR');
+            // $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$user_ip"));
+            // $city = $geo["geoplugin_city"];
+            // $region = $geo["geoplugin_regionName"];
+            // $country = $geo["geoplugin_countryName"];
+            // echo "City: ".$city."<br>";
+            // echo "Region: ".$region."<br>";
+            // echo "Country: ".$country."<br>";
             ?>
             <a class="lower" href="http://www.geoplugin.com/geolocation/" target="_new">IP Geolocation</a> by <a href="http://www.geoplugin.com/" target="_new">geoPlugin</a>
           </article> -->
         </section>
 
-      </div>
+      </div> -->
     </div>
     <?php
       $this->benchmark->mark('code_end');
