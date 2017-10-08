@@ -2,19 +2,32 @@
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Test extends CI_Model {
 
-  var $auto_add_visit = TRUE;
+  var $auto_add_visit = false;
   function __construct()
     {
         parent::__construct();
         $page = $_SERVER["REQUEST_URI"];
-        $ip = $this->input->ip_address();
+        //$ip = $this->input->ip_address();
         if($this->auto_add_visit)
        {
            $this->add_visit();
        }
     }
 
-
+    if (!empty($_SERVER["HTTP_CLIENT_IP"]))
+    {
+      //check for ip from share internet
+      $ip = $_SERVER["HTTP_CLIENT_IP"];
+    }
+    elseif (!empty($_SERVER["HTTP_X_FORWARDED_FOR"]))
+    {
+      // Check for the Proxy User
+      $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+    }
+    else
+    {
+      $ip = $_SERVER["REMOTE_ADDR"];
+    }
     /**
      * Adds new visits to the site
      * @method add_visit
@@ -26,19 +39,11 @@ class Test extends CI_Model {
           {
                   $agent = $this->agent->browser().' '.$this->agent->version();
           }
-          elseif ($this->agent->is_robot())
-          {
-                  $agent = $this->agent->robot();
-          }
-          elseif ($this->agent->is_mobile())
-          {
-                  $agent = $this->agent->mobile();
-          }
           else
           {
                   $agent = 'Unidentified';
           }
-        $ip = $this->input->ip_address();
+        //$ip = $this->input->ip_address();
         $addr = gethostbyaddr($ip);
         $platform = $this->agent->platform();
         $is_mobile	= $this->agent->is_mobile();
@@ -47,7 +52,7 @@ class Test extends CI_Model {
         $query = $this->db->get('visit');
         if ($query->num_rows() == 0)
         {
-          $ip = $this->input->ip_address();
+          //$ip = $this->input->ip_address();
           $visits = 1;
           $page = $_SERVER["REQUEST_URI"];
           $this->db->set('page', $page);
@@ -84,7 +89,7 @@ class Test extends CI_Model {
     }//end of index
     public function city()
     {
-      $ip = $this->input->ip_address();
+      //$ip = $this->input->ip_address();
        $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
        $city = $geo["geoplugin_city"];
       return $city;
@@ -92,14 +97,14 @@ class Test extends CI_Model {
 
     public function region()
     {
-      $ip = $this->input->ip_address();
+      //$ip = $this->input->ip_address();
        $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
        $region = $geo["geoplugin_regionName"];
        return $region;
     }
     public function country($country = null)
     {
-      $ip = $this->input->ip_address();
+      //$ip = $this->input->ip_address();
        $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
       $country = $geo["geoplugin_countryName"];
       return $country;

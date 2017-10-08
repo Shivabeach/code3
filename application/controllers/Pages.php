@@ -8,9 +8,7 @@ class Pages extends CI_Controller
   {
     parent::__construct();
     $this->load->library('encryption');
-    $this->load->library('pagination');
-    $this->load->library('session');
-    $this->load->model('Test');
+    $this->load->model("fmodel");
   }
 /**
  * [index description]
@@ -32,7 +30,7 @@ class Pages extends CI_Controller
     $this->pagination->initialize($config);
     $parent = "main";
     $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3), true);
     if($query->result()){
       $data["mainContent"] = $query->result();
     }
@@ -58,7 +56,7 @@ class Pages extends CI_Controller
     }
   public function van()
   {
-    
+
     $config['base_url']       = base_url() . 'pages/van';
     $config['total_rows']     = $this->db->count_all_results('posts');
     $config['per_page']       = 4;
@@ -70,10 +68,10 @@ class Pages extends CI_Controller
     $config['last_link']      = "Last";
 
     $this->pagination->initialize($config);
-    
+
     $parent        = "VanHorn";
     $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3), true);
     if($query->result()){
       $data["mainContent"]    = $query->result();
     }
@@ -82,7 +80,7 @@ class Pages extends CI_Controller
     $this->load->view("pages/header/head", $data);
     $this->load->view("pages/van", $data);
     $this->load->view("pages/footer/footer");
-    
+
   }
   public function bos()
   {
@@ -101,7 +99,7 @@ class Pages extends CI_Controller
     $data['head']  = "Bosticks";
     $parent = "Bostick";
     $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3), true);
     if($query->result()){
       $data["mainContent"] = $query->result();
     }
@@ -126,12 +124,12 @@ class Pages extends CI_Controller
     $data['head']  = "A VanHorn History";
     $parent        = "VanHorn";
     $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get();
+    $query = $this->db->get(true);
     if($query->result()){
       $data["mainContent"] = $query->result();
     }
     $this->load->view("pages/header/head", $data);
-    $this->load->view("pages/van");
+    $this->load->view("pages/sources");
     $this->load->view("pages/footer/footer");
   }
 
@@ -229,7 +227,7 @@ class Pages extends CI_Controller
       $this->db->where('family', $van);
       $this->db->order_by('Total', 'desc');
       $this->db->group_by('country');
-      $query = $this->db->get('primary');
+      $query = $this->db->get('primary', true);
       $data['van'] = $query->result();
 
       $bost = "Bostick";
@@ -238,7 +236,7 @@ class Pages extends CI_Controller
       $this->db->where('family', $bost);
       $this->db->order_by('Total', 'desc');
       $this->db->group_by('country');
-      $query = $this->db->get('primary');
+      $query = $this->db->get('primary', true);
       $data['bos'] = $query->result();
 
       $family = "VanHorn";
@@ -248,7 +246,7 @@ class Pages extends CI_Controller
       $this->db->where("family", $family);
       $this->db->group_by('relationship');
       $this->db->order_by('Total', 'desc');
-      $query = $this->db->get('primary');
+      $query = $this->db->get('primary', true);
       $data['vangrand'] = $query->result();
 
       $family = "Bostick";
@@ -258,7 +256,7 @@ class Pages extends CI_Controller
       $this->db->where("family", $family);
       $this->db->group_by('relationship');
       $this->db->order_by('Total', 'desc');
-      $query = $this->db->get('primary');
+      $query = $this->db->get('primary', true);
       $data['bosgrand'] = $query->result();
 
 
@@ -284,7 +282,7 @@ class Pages extends CI_Controller
     {
       $this->is_logged_in();
     $this->db->select("id, title, parent, date, status")->order_by("id", "asc");
-    $query = $this->db->get("posts");
+    $query = $this->db->get("posts", true);
     if ($query->result())
     {
       $data['getlist'] = $query->result();

@@ -19,6 +19,10 @@
   </ul>
 </nav>
     <article>
+      <?php
+      if($this->session->userdata('name') == true){
+          echo "Hello " .  $this->session->userdata('name');
+      }?>
       <h3>Display of visitors to the site</h3>
       <p>
         This displays the last 20 visitors to the site
@@ -28,10 +32,11 @@
       <?php
       foreach($visitor as $row)
       {
-        $subject = $row->addr;
-        $pattern = '/\w+.(com|net|co\.kr|be|uk|de|edu|us)/';
-        preg_match("/(?:.[a-z]+.[a-z]+.)\w+.(com|net|co\.kr|be|de|ua|ru|br|uk|cn|link|org|sc|pl)/", $subject, $matches);
-        $addr = $matches[0];
+        // $subject = $row->addr;
+        // $pattern = '/\w+.(com|net|co\.kr|be|uk|de|edu|us)/';
+        // preg_match("/(?:.[a-z]+.[a-z]+.)\w+.(com|net|co\.kr|be|de|ua|ru|br|uk|cn|link|org|sc|pl)/", $subject, $matches);
+        // $addr = $matches[0];
+        $addr = gethostbyaddr($row->ip);
         $date = unix_to_human($row->date);
         $this->table->add_row(
           $date,
@@ -47,37 +52,4 @@
        ?>
     </article>
   </div>
-
-<div class="flex-small">
-  <section class="wrapper">
-
-      <?php
-      if($this->session->userdata('name') == true){
-          echo "Hello " .  $this->session->userdata('name');
-      }?>
-
-    <article>
-      <?php
-      $attr = [
-        'id'     => 'ajax1',
-        'method' => 'get'
-      ];
-      echo form_open("forms/abuseip", $attr);
-      $attr1 = [
-        'id'          => 'ip',
-        'name'        => 'ip',
-        'placeholder' => 'IP'
-      ];
-      echo form_input($attr1);
-      echo form_submit("Submit", "Submit");
-      ?>
-    </article>
-    <article>
-    <div id="display"></div>
-    </article>
-      <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
-    
-    <article><?php echo $_SERVER['SERVER_SOFTWARE'];?></article>
-  </section>
-</div>
 </div>
