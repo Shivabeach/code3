@@ -70,8 +70,8 @@ class Pages extends CI_Controller
     $this->pagination->initialize($config);
 
     $parent        = "VanHorn";
-    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3), true);
+    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "desc");
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
     if($query->result()){
       $data["mainContent"]    = $query->result();
     }
@@ -98,8 +98,8 @@ class Pages extends CI_Controller
     $data['title'] = "Bostick Page";
     $data['head']  = "Bosticks";
     $parent = "Bostick";
-    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3), true);
+    $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "desc");
+    $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
     if($query->result()){
       $data["mainContent"] = $query->result();
     }
@@ -124,7 +124,7 @@ class Pages extends CI_Controller
     $data['head']  = "A VanHorn History";
     $parent        = "VanHorn";
     $this->db->select("title, content, date")->from("posts")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
-    $query = $this->db->get(true);
+    $query = $this->db->get();
     if($query->result()){
       $data["mainContent"] = $query->result();
     }
@@ -227,7 +227,7 @@ class Pages extends CI_Controller
       $this->db->where('family', $van);
       $this->db->order_by('Total', 'desc');
       $this->db->group_by('country');
-      $query = $this->db->get('primary', true);
+      $query = $this->db->get('primary');
       $data['van'] = $query->result();
 
       $bost = "Bostick";
@@ -236,7 +236,7 @@ class Pages extends CI_Controller
       $this->db->where('family', $bost);
       $this->db->order_by('Total', 'desc');
       $this->db->group_by('country');
-      $query = $this->db->get('primary', true);
+      $query = $this->db->get('primary');
       $data['bos'] = $query->result();
 
       $family = "VanHorn";
@@ -246,7 +246,7 @@ class Pages extends CI_Controller
       $this->db->where("family", $family);
       $this->db->group_by('relationship');
       $this->db->order_by('Total', 'desc');
-      $query = $this->db->get('primary', true);
+      $query = $this->db->get('primary');
       $data['vangrand'] = $query->result();
 
       $family = "Bostick";
@@ -256,7 +256,7 @@ class Pages extends CI_Controller
       $this->db->where("family", $family);
       $this->db->group_by('relationship');
       $this->db->order_by('Total', 'desc');
-      $query = $this->db->get('primary', true);
+      $query = $this->db->get('primary');
       $data['bosgrand'] = $query->result();
 
 
@@ -281,29 +281,29 @@ class Pages extends CI_Controller
     public function lists()
     {
       $this->is_logged_in();
-    $this->db->select("id, title, parent, date, status")->order_by("id", "asc");
-    $query = $this->db->get("posts", true);
-    if ($query->result())
-    {
-      $data['getlist'] = $query->result();
-    }
-    $tmpl = array (
-      'table_open'         => '<table class="m-addin"',
-      'heading_cell_start' => '<th class="m-addin--head">',
-      'heading_cell_end'   => '</th>',
-      'cell_start'         => '<td class="m-addin--data-display">',
-      'cell_end'           => '</td>',
-      'cell_alt_start'     => '<td class="m-addin--data-display">',
-      'table_close'        => '</table>'
-    );
-    $this->table->set_template($tmpl);
-    $this->table->set_heading('ID', 'Title', 'Date', 'Family', 'Status');
-    $this->table->set_caption("Post Updates");
-    $data['title'] = "Post Listing";
-    $data['head']  = "Post listing";
-    $this->load->view("pages/header/head", $data);
-    $this->load->view("admin/admin2");
-    $this->load->view("pages/footer/footer");
+      $this->db->select("id, title, parent, date, status")->order_by("id", "desc");
+      $query = $this->db->get("posts");
+      if ($query->result())
+      {
+        $data['getlist'] = $query->result();
+      }
+      $tmpl = array (
+        'table_open'         => '<table class="m-addin"',
+        'heading_cell_start' => '<th class="m-addin--head">',
+        'heading_cell_end'   => '</th>',
+        'cell_start'         => '<td class="m-addin--data-display">',
+        'cell_end'           => '</td>',
+        'cell_alt_start'     => '<td class="m-addin--data-display">',
+        'table_close'        => '</table>'
+      );
+      $this->table->set_template($tmpl);
+      $this->table->set_heading('ID', 'Title', 'Date', 'Family', 'Status');
+      $this->table->set_caption("Post Updates");
+      $data['title'] = "Post Listing";
+      $data['head']  = "Post listing";
+      $this->load->view("pages/header/head", $data);
+      $this->load->view("admin/admin2");
+      $this->load->view("pages/footer/footer");
     }
 
     public function vtime() {

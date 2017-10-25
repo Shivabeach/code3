@@ -11,7 +11,7 @@
         <article class="ancestry">
         <header>
           <h3 class="ancestry--ancestryTitle item">Family History</h3>
-        </header>  
+        </header>
           <div class="slug">
             <p>A short description of our DNA that covers the last 500 years</p>
           </div>
@@ -58,9 +58,9 @@
         </div>
       <?php endforeach;?>
           <?php echo $this->pagination->create_links();?>
-      
+
       </div>
-      
+
       <!-- <div class="flex-small">
         <section class="wrapper">
             <?php //include(APPPATH . "/views/pages/includes/side.php");  ?>
@@ -79,7 +79,7 @@
           </article> -->
         </section>
 
-      </div> -->
+      </div>
     </div>
     <?php
       $this->benchmark->mark('code_end');

@@ -22,7 +22,7 @@ class Checkmod extends CI_Model{
     $this->db->select('ip, agent, visits, date, addr, country, region,page');
     $this->db->order_by('date', 'desc');
     $this->db->limit(20);
-    $query = $this->db->get('visit');
+    $query = $this->db->get('visit1');
     return $query->result();
   }
 

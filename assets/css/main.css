@@ -90,8 +90,6 @@ textarea {
       border: 1px solid #ddd; }
   [type='color']::-webkit-input-placeholder, [type='date']::-webkit-input-placeholder, [type='datetime']::-webkit-input-placeholder, [type='datetime-local']::-webkit-input-placeholder, [type='email']::-webkit-input-placeholder, [type='month']::-webkit-input-placeholder, [type='number']::-webkit-input-placeholder, [type='password']::-webkit-input-placeholder, [type='search']::-webkit-input-placeholder, [type='tel']::-webkit-input-placeholder, [type='text']::-webkit-input-placeholder, [type='time']::-webkit-input-placeholder, [type='url']::-webkit-input-placeholder, [type='week']::-webkit-input-placeholder, input:not([type])::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #858585; }
-  [type='color']::-moz-placeholder, [type='date']::-moz-placeholder, [type='datetime']::-moz-placeholder, [type='datetime-local']::-moz-placeholder, [type='email']::-moz-placeholder, [type='month']::-moz-placeholder, [type='number']::-moz-placeholder, [type='password']::-moz-placeholder, [type='search']::-moz-placeholder, [type='tel']::-moz-placeholder, [type='text']::-moz-placeholder, [type='time']::-moz-placeholder, [type='url']::-moz-placeholder, [type='week']::-moz-placeholder, input:not([type])::-moz-placeholder, textarea::-moz-placeholder {
-    color: #858585; }
   [type='color']:-ms-input-placeholder, [type='date']:-ms-input-placeholder, [type='datetime']:-ms-input-placeholder, [type='datetime-local']:-ms-input-placeholder, [type='email']:-ms-input-placeholder, [type='month']:-ms-input-placeholder, [type='number']:-ms-input-placeholder, [type='password']:-ms-input-placeholder, [type='search']:-ms-input-placeholder, [type='tel']:-ms-input-placeholder, [type='text']:-ms-input-placeholder, [type='time']:-ms-input-placeholder, [type='url']:-ms-input-placeholder, [type='week']:-ms-input-placeholder, input:not([type]):-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #858585; }
   [type='color']::placeholder, [type='date']::placeholder, [type='datetime']::placeholder, [type='datetime-local']::placeholder, [type='email']::placeholder, [type='month']::placeholder, [type='number']::placeholder, [type='password']::placeholder, [type='search']::placeholder, [type='tel']::placeholder, [type='text']::placeholder, [type='time']::placeholder, [type='url']::placeholder, [type='week']::placeholder, input:not([type])::placeholder, textarea::placeholder {
@@ -252,10 +250,10 @@ body, html {
   font-size: calc(18px + 0.25vw);
   color: #333;
   vertical-align: baseline;
-  background: -webkit-gradient(linear, left top, right top, from(#d9c0c9), to(#F2E6E6));
-  background: -webkit-linear-gradient(left, #d9c0c9, #F2E6E6);
-  background: -o-linear-gradient(left, #d9c0c9, #F2E6E6);
-  background: linear-gradient(90deg, #d9c0c9, #F2E6E6); }
+  background: -webkit-gradient(linear, left top, right top, from(#61e69d), to(#d2e6c9));
+  background: -webkit-linear-gradient(left, #61e69d, #d2e6c9);
+  background: -o-linear-gradient(left, #61e69d, #d2e6c9);
+  background: linear-gradient(90deg, #61e69d, #d2e6c9); }
 
 body[id="post-entry"] .flex-large {
   padding: 0; }
@@ -308,22 +306,9 @@ a {
   font-style: normal;
   font-display: swap; }
 @font-face {
-  font-family: 'tanglewood_tales_nfregular';
-  src: url("../fonts/tangle/tanglewoodtalesnf-webfont.eot");
-  src: url("../fonts/tangle/tanglewoodtalesnf-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/tangle/tanglewoodtalesnf-webfont.woff2") format("woff2"), url("../fonts/tangle/tanglewoodtalesnf-webfont.woff") format("woff"), url("../fonts/tangle/tanglewoodtalesnf-webfont.ttf") format("truetype"), url("../fonts/tangle/tanglewoodtalesnf-webfont.svg#tanglewood_tales_nfregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
-@font-face {
   font-family: soriasoria;
   src: url("../fonts/soria/soria-font-webfont.eot");
   src: url("../fonts/soria/soria-font-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/soria/soria-font-webfont.woff2") format("woff2"), url("../fonts/soria/soria-font-webfont.woff") format("woff"), url("../fonts/soria/soria-font-webfont.ttf") format("truetype"), url("../fonts/soria/soria-font-webfont.svg#soriasoria") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
-@font-face {
-  font-family: 'bornregular';
-  src: url("../fonts/Born/born-webfont.woff2") format("woff2"), url("../fonts/Born/born-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
@@ -472,6 +457,7 @@ a {
 .ancestry--container {
   width: 95%;
   margin: 20px auto;
+  padding: 0 2em;
   background: #f1dcd2;
   -webkit-box-shadow: 10px 10px 1px #e7c4b2;
   box-shadow: 10px 10px 1px #e7c4b2;
@@ -484,6 +470,9 @@ a {
   @media screen and (max-width: 767px) {
     .ancestry--container {
       width: 100%; } }
+  .ancestry--container li {
+    list-style-type: none;
+    padding-left: 2em; }
 .ancestry--ancestryTitle {
   font-weight: 400;
   font-family: soriasoria;
@@ -555,7 +544,8 @@ article:not(.ancestry) {
   .m-addin--data-display {
     text-align: center;
     font-size: 0.85em;
-    padding: 0.25em 0; }
+    padding: 0.25em 0;
+    word-wrap: break-word; }
   .m-addin--head {
     text-align: center; }
 

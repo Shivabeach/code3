@@ -19,6 +19,7 @@ if($this->session->userdata('name') == true){
 <!-- <article>
 <div id="size"></div>
 </article> -->
+
 <article>
 <?php
 $date = new DateTime;
@@ -49,7 +50,7 @@ $timeago = $date->diff($ancestor);
       <hr>
       <p class="small">(William) Arthur Bostwick <br>
       Birth 22 DEC 1603 • Tarporley, Cheshire, England <br>
-      Death 10 DEC 1680 • Stratford, Fairfield, Connecticut, USA <br>  
+      Death 10 DEC 1680 • Stratford, Fairfield, Connecticut, USA <br>
       9th great grandfather
       </p>
 </article>

@@ -2,7 +2,7 @@
 
 class Fmodel extends CI_Model
 {
-	var $auto_add_visit = true;
+	var $auto_add_visit = false;
 	public function __construct()
 	{
 		parent::__construct();
@@ -10,20 +10,31 @@ class Fmodel extends CI_Model
       {
         $this->add_visit();
       }
+
 	}
+
+  public function get_ip()
+  {
+  if (isset($_SERVER['HTTP_X_SUCURI_CLIENTIP']))
+      {
+        $_SERVER["REMOTE_ADDR"] = $_SERVER['HTTP_X_SUCURI_CLIENTIP'];
+        $ip = $_SERVER["REMOTE_ADDR"];
+        return $ip;
+      }
+  }
 
 	/**
 	 * main function
 	 */
 
+
 	public function add_visit()
 	{
+    $ip = $this->get_ip();
     $page = $_SERVER["REQUEST_URI"];
-    $ip = $this->input->ip_address();
     $addr = gethostbyaddr($ip);
     $agent = $this->input->user_agent(true);
     $date = time();
-
     $this->db->where('ip', $ip);
     $query = $this->db->get('visit1');
 
@@ -60,7 +71,7 @@ class Fmodel extends CI_Model
 
 	public function city()
     {
-      $ip = $this->input->ip_address();
+      $ip = $this->get_ip();
       $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
       $city = $geo["geoplugin_city"];
       return $city;
@@ -68,14 +79,14 @@ class Fmodel extends CI_Model
 
   public function region()
   {
-    $ip = $this->input->ip_address();
+    $ip = $this->get_ip();
     $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
     $region = $geo["geoplugin_regionName"];
     return $region;
   }
   public function country($country = null)
   {
-    $ip = $this->input->ip_address();
+    $ip = $this->get_ip();
     $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ip"));
     $country = $geo["geoplugin_countryName"];
     return $country;

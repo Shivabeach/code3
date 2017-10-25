@@ -55,7 +55,7 @@ class Checkin extends CI_Controller {
         $is_logged_in = $this->session->userdata('is_logged_in');
         if (!isset($is_logged_in) || $is_logged_in != true)
         {
-          redirect("Checkin");
+          redirect("Pages/entry");
         }
     }
 
@@ -150,7 +150,7 @@ class Checkin extends CI_Controller {
           $this->email->subject('Login');
           $this->email->message($message);
           $this->email->send();
-          redirect("Checkin/admin");
+          redirect("Pages/entry");
         }else {
           die();
           // $data['head']  = "Login to admin";

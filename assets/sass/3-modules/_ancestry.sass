@@ -3,10 +3,12 @@
 /* 3-modules ancestry */
 
 .ancestry
-	
+
+
 	&--container
 		width: 95%
 		margin: 20px auto
+		padding: 0 2em
 		background: lighten($almond, 4%)
 		box-shadow: 10px 10px 1px darken($almond,4%)
 		border-top: 1px solid darken($almond,4%)
@@ -19,6 +21,10 @@
 
 		+mobile
 			width: 100%
+
+		li
+			list-style-type: none
+			padding-left: 2em
 
 	&--ancestryTitle
 		font-weight: 400
@@ -42,6 +48,7 @@
 	&--ancestryDate
 		font-weight: 200
 		float: right
+
 
 .slug
 	margin: 0 1em
