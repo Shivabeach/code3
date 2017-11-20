@@ -323,7 +323,7 @@ class Pages extends CI_Controller
     public function reading()
     {
       $data = [];
-      $data['head'] = "Reading Sources";
+      $data['head'] = "Sources";
       $data['title'] = "Historical and Data Sources";
 
       $type1 = "History";

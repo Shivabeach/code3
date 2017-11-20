@@ -1,5 +1,5 @@
 @charset 'UTF-8'
- 
+
 =center($value, $value2)
     align-items: $value2
     justify-content: $value
@@ -42,7 +42,7 @@
         @return #fff // Darker background, return light color
 
 // example
-//.notification-confirm 
+//.notification-confirm
 //  background: $notification-confirm
 //  color: set-notification-text-color($notification-confirm)
 
@@ -75,3 +75,8 @@
 
 =round($px)
     border-radius: $px
+
+//function to convert px to vw
+@function get-vw($target)
+    $vw-context: (1000*.01) * 1px
+    @return ($target/$vw-context) * 1vw

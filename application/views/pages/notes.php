@@ -1,4 +1,4 @@
-<body id="notes">  
+<body id="notes">
   <header class="m-main">
     <h1 class="m-main--head"> <?php echo $head ;?></h></h1>
   </header>
@@ -21,7 +21,7 @@
           <dt class="m-listContainer--dtstyle">Lucy A. Thompson</dt>
             <dd class="m-listContainer--ddstyle">
             <p>Until very recently we knew next to nothing about Ms Thompson. A very similar case as the Hunt's family presented. </p>
-            <p>Lucy Thompson is our great Grandmother, the mother of Mom's father Andrew Bostick. We knew she was born 29/04/1842 in New York. She passed away on April 8th, 1893 in Millington after having 10 children. </p>
+            <p>Lucy Thompson is our great Grandmother, the mother of Mom's father Andrew Bostick. We knew she was born April 29,1842 in New York. She passed away on April 8th, 1893 in Millington after having 10 children. </p>
             <p>I had no history of her until I was researching some census documents and came across her fathers name. I entered that into Ancestry and that got me her mothers name. Her father was Sherman Bradley Thompson, and her mother was Sarah Ann (Unknown). Her grandfather was John Thompson 1778 - 1850. Her mother and father both come from Windham Vermont. Her Thompson grandfather was from New Hampshire. Lucy's Grandmother was Lavina W Pierce. She was from Vermont. Lavina's father(Lucys Great Grandfather) was Sherman Pierce, born 1770 in Connecticutt, and died in 1854.</p>
             </dd>
 
@@ -64,7 +64,7 @@
           </dd>
 
           <dt class="m-listContainer--dtstyle">Petrus(Peter) Westfall</dt>
-            <dd class="m-listContainer--ddstyle"> 
+            <dd class="m-listContainer--ddstyle">
             <p>Petrus(Peter) was born to Nicholas Westfall and Sara Van Auken. He wed Arriantje Rosenkranz in the Minisink Church New Jersey on August 25, 1754. They lived in Montague and had one child:</p>
 
             <p>Abraham on November 18, 1755</p>
@@ -80,8 +80,8 @@
             </dd>
           <dt class="m-listContainer--dtstyle">Military</dt>
             <dd class="m-listContainer--ddstyle">Sergeant Thomas Reed d.1719</dd>
-          
-            <dd class="m-listContainer--ddstyle">Sgt. Jonathon Cummings Sholes d.3 JUL 1863 Gettysburg. 7th Michigan Infantry Company G. Buried in the Gettysburg National Cemetary Section C, Grave #5. Michigan lot. Enlistment Date 13 Aug 1861. Enlisted from Lapeer Michigan. Died in Picketts Charge</dd>
+
+            <dd class="m-listContainer--ddstyle">Sgt. Jonathon Cummings Sholes d. July 3, 1863 Gettysburg. 7th Michigan Infantry Company G. Buried in the Gettysburg National Cemetary Section C, Grave #5. Michigan lot. Enlistment Date Aug 13, 1861. Enlisted from Lapeer Michigan. Died in Picketts Charge</dd>
 
             <dd class="m-listContainer--ddstyle">
               Daniel Reed Jr. Washington Co NY 73 d. 1840 Connecticut </dd>
@@ -90,14 +90,14 @@
             <dd class="m-listContainer--ddstyle">
               Elisha Stoddard(1750 - 1788). Corporal. Continental Troops, Connecticut. French and Indian War</dd>
               <dd class="m-listContainer--ddstyle">Wolston Brockway.French and Indian War, 1755-62. 2nd Regiment Connecticut. Bellows Company.8th great-grandfather.</dd>
-            <dd class="m-listContainer--ddstyle">Harlan J. Sholes 1942 - 12/15/1945  WW2. Aviation Cadet. Michigan Army Sergeant Air Corps</dd>
+            <dd class="m-listContainer--ddstyle">Harlan J. Sholes 1942 - Dec 15 1945  WW2. Aviation Cadet. Michigan Army Sergeant Air Corps</dd>
             <dd class="m-listContainer--ddstyle">Col Ebenezer Condict. Continental Army, died from smallpox in service. 1735-1777</dd>
             <dd class="m-listContainer--ddstyle">Joseph Frank Steward. PVT US MARINE CORPS WORLD WAR II</dd>
-            <dd class="m-listContainer--ddstyle">Alonzo Prestage - Enlisted in Company C, Michigan 10th Cavalry Regiment on 23 Oct 1863.Promoted to Full Sergeant on 01 Sep 1865.Mustered out on 11 Nov 1865 at Memphis, TN. 2nd Great Uncle</dd>
+            <dd class="m-listContainer--ddstyle">Alonzo Prestage - Enlisted in Company C, Michigan 10th Cavalry Regiment on 23 Oct 1863.Promoted to Full Sergeant on Sep 1 1865.Mustered out on 11 Nov 1865 at Memphis, TN. 2nd Great Uncle</dd>
             <dd class="m-listContainer--ddstyle">Lt. Levi Van Auken, Albany NY. Albany Co NY 75, Revolutionary War
-              
+
             </dd>
-              
+
         </dl>
       </article>
     </div>
