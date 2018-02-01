@@ -11,9 +11,13 @@
             <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
                 <?php echo anchor('pages/vanlinage','VanHorn Linages');?>
             </li>
+            <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
+                <?php echo anchor('van/van_names','VanHorn Names');?>
+            </li>
             <li class="m-left-nav--content"><?php echo anchor('pages/vtime','VanHorn Timeline');?></li>
         </ul>
     </article>
+    <!-- <a href="http://van-horn.us/pages/army">italian-stuffy</a> -->
     <article>
         <h4 class="m-left-nav--heading">Bostick Family</h4>
         <ul>
@@ -24,6 +28,9 @@
             </li>
             <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
                 <?php echo anchor('pages/boslinage','Bostick Linages');?>
+            </li>
+            <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
+                <?php echo anchor('van/bos_names','Bostick Names');?>
             </li>
             <li class="m-left-nav--content"><?php echo anchor('pages/btime','Bostick Timeline');?></li>
         </ul>

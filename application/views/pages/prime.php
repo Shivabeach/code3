@@ -53,7 +53,7 @@
             <div class="ancestry--ancestryContent">
               <?php echo $this->typography->auto_typography($content);?>
             </div>
-              <h6 class="ancestry--ancestryDate"><?php echo "Creation " . html_escape($row->date), nbs(5), "Last Updated " . html_escape($row->last_date);?></h6>
+
         </article>
         </div>
       <?php endforeach;?>

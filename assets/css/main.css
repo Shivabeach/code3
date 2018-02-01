@@ -92,6 +92,8 @@ textarea {
     color: #858585; }
   [type='color']:-ms-input-placeholder, [type='date']:-ms-input-placeholder, [type='datetime']:-ms-input-placeholder, [type='datetime-local']:-ms-input-placeholder, [type='email']:-ms-input-placeholder, [type='month']:-ms-input-placeholder, [type='number']:-ms-input-placeholder, [type='password']:-ms-input-placeholder, [type='search']:-ms-input-placeholder, [type='tel']:-ms-input-placeholder, [type='text']:-ms-input-placeholder, [type='time']:-ms-input-placeholder, [type='url']:-ms-input-placeholder, [type='week']:-ms-input-placeholder, input:not([type]):-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #858585; }
+  [type='color']::-ms-input-placeholder, [type='date']::-ms-input-placeholder, [type='datetime']::-ms-input-placeholder, [type='datetime-local']::-ms-input-placeholder, [type='email']::-ms-input-placeholder, [type='month']::-ms-input-placeholder, [type='number']::-ms-input-placeholder, [type='password']::-ms-input-placeholder, [type='search']::-ms-input-placeholder, [type='tel']::-ms-input-placeholder, [type='text']::-ms-input-placeholder, [type='time']::-ms-input-placeholder, [type='url']::-ms-input-placeholder, [type='week']::-ms-input-placeholder, input:not([type])::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: #858585; }
   [type='color']::placeholder, [type='date']::placeholder, [type='datetime']::placeholder, [type='datetime-local']::placeholder, [type='email']::placeholder, [type='month']::placeholder, [type='number']::placeholder, [type='password']::placeholder, [type='search']::placeholder, [type='tel']::placeholder, [type='text']::placeholder, [type='time']::placeholder, [type='url']::placeholder, [type='week']::placeholder, input:not([type])::placeholder, textarea::placeholder {
     color: #858585; }
 
@@ -319,32 +321,26 @@ a {
 .m-main {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   width: 80%;
   margin: 0 auto;
   -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
   height: 15em;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .m-main {
-      height: 8em;
+      height: 5em;
       width: 100%;
       -webkit-box-align: end;
-      -webkit-align-items: flex-end;
       -ms-flex-align: end;
       align-items: flex-end;
       -webkit-box-pack: center;
-      -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; } }
   @media screen and (max-width: 767px) {
@@ -352,11 +348,9 @@ a {
       height: 5em;
       widows: 100%;
       -webkit-box-align: end;
-      -webkit-align-items: flex-end;
       -ms-flex-align: end;
       align-items: flex-end;
       -webkit-box-pack: center;
-      -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; } }
   .m-main--head {
@@ -368,19 +362,17 @@ a {
         margin-bottom: 0; } }
     @media screen and (max-width: 767px) {
       .m-main--head {
-        font-size: 5.5vw;
+        font-size: 7.5vw;
         margin-bottom: 0; } }
 
 .nav-grid, .box1, .box2 {
   -webkit-box-flex: 1;
   -ms-flex: 1;
-  -webkit-flex: 1;
   flex: 1; }
 
 .m-left-nav {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
   .m-left-nav--heading {
@@ -391,29 +383,23 @@ a {
 
 .footwrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
 
 .m-nav-grid {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1; }
   .m-nav-grid .small {
@@ -430,12 +416,10 @@ a {
         text-align: left; } }
   .m-nav-grid--center {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 20%; }
@@ -454,41 +438,49 @@ a {
   color: #ffe3e3; }
 
 /* 3-modules ancestry */
-.ancestry--container {
-  width: 95%;
-  margin: 20px auto;
-  padding: 0 2em;
-  background: transparent;
-  -webkit-box-shadow: 10px 10px 1px #e7c4b2;
-  box-shadow: 10px 10px 1px #e7c4b2;
-  border-top: 1px solid #e7c4b2;
-  border-left: 1px solid #e7c4b2;
+.ancestry {
   border-radius: 10px; }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .ancestry--container {
-      width: 100%; } }
-  @media screen and (max-width: 767px) {
-    .ancestry--container {
-      width: 100%; } }
-  .ancestry--container li {
-    list-style-type: none;
-    padding-left: 2em; }
-.ancestry--ancestryTitle {
-  font-weight: 400;
-  font-family: soriasoria;
-  letter-spacing: 2px;
-  padding-left: 1em;
-  padding-top: 1em;
-  text-shadow: 1px 0 1px #ffa500, -1px 0 1px #ffa500; }
-.ancestry--ancestryContent {
-  padding: 0.15em; }
-  .ancestry--ancestryContent p {
-    margin: 0 1em; }
-.ancestry--block {
-  padding: 0.5em; }
-.ancestry--ancestryDate {
-  font-weight: 200;
-  float: right; }
+  .ancestry--container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 0 2em;
+    background: transparent;
+    -webkit-box-shadow: 10px 10px 1px #e7c4b2;
+    box-shadow: 10px 10px 1px #e7c4b2;
+    border-top: 1px solid #e7c4b2;
+    border-left: 1px solid #e7c4b2;
+    border-radius: 10px; }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .ancestry--container {
+        width: 100%; } }
+    @media screen and (max-width: 767px) {
+      .ancestry--container {
+        width: 100%; } }
+    .ancestry--container li {
+      list-style-type: none;
+      padding-left: 2em; }
+    .ancestry--container .grab {
+      background: #bfc0ff;
+      color: #6263B2;
+      padding: 1em;
+      margin: 1em; }
+  .ancestry--ancestryTitle {
+    font-weight: 400;
+    font-family: soriasoria;
+    letter-spacing: 2px;
+    padding-left: 1em;
+    padding-top: 1em;
+    text-shadow: 1px 0 1px #ffa500, -1px 0 1px #ffa500; }
+  .ancestry--ancestryContent {
+    padding: 0.15em; }
+    .ancestry--ancestryContent p {
+      margin: 0 1em;
+      text-shadow: 1px 1px 1px #f5e1d0; }
+  .ancestry--block {
+    padding: 0.5em; }
+  .ancestry--ancestryDate {
+    font-weight: 200;
+    float: right; }
 
 .slug {
   margin: 0 1em; }
@@ -506,11 +498,9 @@ a {
 
 .centered {
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
 
@@ -530,6 +520,14 @@ article:not(.ancestry) {
     text-shadow: 1px 0 1px #ffa500, -1px 0 1px #ffa500; }
   .m-listContainer--ddstyle {
     padding: 0.5em 1em; }
+
+.inline-name {
+  display: inline;
+  padding: 3px 8px; }
+
+.inline-link:before {
+  font-family: "FontAwesome";
+  content: ""; }
 
 .pagination {
   font-family: "tanglewood_tales_nfregular";
@@ -551,13 +549,6 @@ article:not(.ancestry) {
     word-wrap: break-word; }
   .m-addin--head {
     text-align: center; }
-
-.grab {
-  background: #bfc0ff;
-  color: #6263B2;
-  padding: 1em;
-  margin: 1em;
-  border-radius: 10px; }
 
 .downer {
   float: left;
@@ -655,17 +646,13 @@ time {
 @media only screen and (min-width: 30em) {
   .wrap {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-align: start;
-    -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 100%;
@@ -733,14 +720,20 @@ time {
 .col-12 h3 {
   text-shadow: 1px 0 1px #ffa500, -1px 0 1px #ffa500; }
 
+.names {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 1em 0; }
+  .names h3 {
+    margin-top: 1em; }
+
 /* 4-Layout */
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
@@ -761,7 +754,6 @@ time {
 
 .flex1 {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0.5rem; }
@@ -774,7 +766,6 @@ time {
 
 .flex-large {
   -webkit-box-flex: 3;
-  -webkit-flex: 3;
   -ms-flex: 3;
   flex: 3;
   background: transparent;
@@ -789,13 +780,11 @@ time {
       padding: 0; } }
   .flex-large--wrapper {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
 
 .flex-small {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 0 0.5rem;

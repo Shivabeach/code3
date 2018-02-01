@@ -11,6 +11,8 @@
 
           <li class="m-nav-grid--listpad"><?php echo anchor('Pages/vanlinage','VanHorn Linages');?></li>
 
+          <li class="m-nav-grid--listpad"><?php echo anchor('van/van_names','VanHorn Names');?></li>
+
           <li class="m-nav-grid--listpad"><?php echo anchor('pages/vtime','VanHorn Timeline');?></li>
 
         </ul>
@@ -23,10 +25,11 @@
           <li class="m-nav-grid--listpad"><?php echo anchor('Pages/bos','Bostick History');?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor('Pages/bosdna','Bostick DNA');?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor('Pages/boslinage','Bostick Linages');?></li>
+          <li class="m-nav-grid--listpad"><?php echo anchor('van/bos_names','Bostick Names');?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor('pages/btime','Bostick Timeline');?></li>
         </ul>
       </div>
-
+      <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>
       <div class="m-nav-grid">
         <h4 class="m-nav-grid--title">General Links</h4>
         <ul class="m-nav-grid--center">
@@ -39,7 +42,7 @@
         </ul>
         <a href="http://van-horn.us/pages/army"><span style="display: none;">zeal</span></a>
       </div>
-
+        <!-- <a href="http://van-horn.us/pages/army">italian-stuffy</a> -->
       <div class="m-nav-grid box20">
         <p class="small">&copy; <?php
            $fromYear = 2008;

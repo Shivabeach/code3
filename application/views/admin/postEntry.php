@@ -57,7 +57,7 @@
     ];
 
     echo form_input($attr3); ?>
-
+ 
     <label for="status">Status</label>
     <?php $attr5 = [
       ''        => 'Pick a status',

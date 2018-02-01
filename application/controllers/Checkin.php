@@ -31,9 +31,9 @@ class Checkin extends CI_Controller {
       $this->form_validation->set_rules('email', 'email', 'required|valid_email|unique[check.email]');
 
       if( $this->form_validation->run() == FALSE) {
-  			echo validation_errors();
-  		}else
-  		{
+              echo validation_errors();
+          }else
+          {
         $options = [
            'cost' => 10
           ];
@@ -42,9 +42,9 @@ class Checkin extends CI_Controller {
           'pass'  => password_hash($this->input->post('pass'), PASSWORD_BCRYPT, $options),
           'email' => html_escape($this->input->post('email'))
         ];
-  			$this->db->insert('check', $data1);
-  			echo "grand shit";
-  		}
+              $this->db->insert('check', $data1);
+              echo "grand shit";
+          }
     }
     /**
      * determines if you are logged in
@@ -95,7 +95,7 @@ class Checkin extends CI_Controller {
         $this->load->view('pages/header/head', $data);
         $this->load->view('pages/login/log', $data);
         $this->load->view('pages/footer/footer');
-  		}else {
+          }else {
         $milky = trim(html_escape($this->input->post('milky')));
         if ($milky != "#008080") {
           echo "You sure messed that one up" . $time;
@@ -107,7 +107,7 @@ class Checkin extends CI_Controller {
           $this->email->send();
           die();
         }
-  		  $name  = html_escape($this->input->post('name'));
+            $name  = html_escape($this->input->post('name'));
         $email = html_escape($this->input->post('email'));
         $pass1 = html_escape($this->input->post('pass'));
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);

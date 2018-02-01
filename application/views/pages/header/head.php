@@ -35,5 +35,6 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main.min.css');?>" media="screen">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
     <link rel="stylesheet" href="<?php echo base_url('assets/plugins/vert/vertical-tabs.css');?>">
+    <script src="https://use.fontawesome.com/04d9aa23c9.js"></script>
 
   </head>
