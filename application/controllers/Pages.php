@@ -19,7 +19,7 @@ class Pages extends CI_Controller
   {
     $config['base_url']         = base_url() . '/pages/index/';
     $config['total_rows']       = $this->db->count_all_results('posts');
-    $config['per_page']         = 4;
+    $config['per_page']         = 5;
     $config['num_links']        = 4;
     $config['uri_segment']      = 3;
     $config['full_tag_open']    = "<div class='pagination'>";
@@ -59,7 +59,7 @@ class Pages extends CI_Controller
 
     $config['base_url']       = base_url() . 'pages/van';
     $config['total_rows']     = $this->db->count_all_results('posts');
-    $config['per_page']       = 4;
+    $config['per_page']       = 6;
     $config['num_links']      = 4;
     $config['uri_segment']    = 3;
     $config['full_tag_open']  = "<div class='pagination'>";
@@ -86,8 +86,8 @@ class Pages extends CI_Controller
   {
     $config['base_url']       = base_url() . 'Pages/bos';
     $config['total_rows']     = $this->db->count_all_results('posts');
-    $config['per_page']       = 4;
-    $config['num_links']      = 10;
+    $config['per_page']       = 6;
+    $config['num_links']      = 4;
     $config['uri_segment']    = 3;
     $config['full_tag_open']  = "<div class='pagination'>";
     $config['full_tag_close'] = "</div>";
@@ -347,6 +347,34 @@ class Pages extends CI_Controller
 
       $data['main_content'] = 'pages/sources';
       $this->load->view('pages/includes/template', $data);
+    }
+
+    public function cousins()
+    {
+      $config['base_url']       = base_url() . 'pages/cousins';
+      $config['total_rows']     = $this->db->count_all_results('posts');
+      $config['per_page']       = 6;
+      $config['num_links']      = 4;
+      $config['uri_segment']    = 3;
+      $config['full_tag_open']  = "<div class='pagination'>";
+      $config['full_tag_close'] = "</div>";
+      $config['first_link']     = "First";
+      $config['last_link']      = "Last";
+
+      $this->pagination->initialize($config);
+
+      $parent = "Bill";
+      $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "desc");
+      $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
+      if($query->result()){
+        $data["mainContent"] = $query->result();
+      }
+      $data['title'] = "Shafer Page";
+      $data['head']  = "Shafers";
+      $this->load->view("pages/header/head", $data);
+      $this->load->view("pages/cousins", $data);
+      $this->load->view("pages/footer/footer");
+
     }
 
 } //end of file

@@ -316,6 +316,64 @@ a {
 @font-face {
   font-family: Lovato;
   src: url(../fonts/Lovato-Light.otf); }
+/* file font-weights */
+.bold-1 {
+  font-weight: 100; }
+
+.bold-2 {
+  font-weight: 200; }
+
+.bold-3 {
+  font-weight: 300; }
+
+.bold-4 {
+  font-weight: 400; }
+
+.bold-5 {
+  font-weight: 500; }
+
+.bold-6 {
+  font-weight: 600; }
+
+.bold-7 {
+  font-weight: 700; }
+
+.bold-8 {
+  font-weight: 800; }
+
+.bold-9 {
+  font-weight: 900; }
+
+.fw-1 {
+  font-weight: 1; }
+
+.fw-2 {
+  font-weight: 2; }
+
+.fw-3 {
+  font-weight: 3; }
+
+.fw-4 {
+  font-weight: 4; }
+
+.fw-5 {
+  font-weight: 5; }
+
+.fw-6 {
+  font-weight: 6; }
+
+.fw-7 {
+  font-weight: 7; }
+
+.fw-8 {
+  font-weight: 8; }
+
+.fw-9 {
+  font-weight: 9; }
+
+.fw-10 {
+  font-weight: 10; }
+
 /* 3-Modules */
 /* main top header */
 .m-main {
@@ -473,9 +531,6 @@ a {
     text-shadow: 1px 0 1px #ffa500, -1px 0 1px #ffa500; }
   .ancestry--ancestryContent {
     padding: 0.15em; }
-    .ancestry--ancestryContent p {
-      margin: 0 1em;
-      text-shadow: 1px 1px 1px #f5e1d0; }
   .ancestry--block {
     padding: 0.5em; }
   .ancestry--ancestryDate {

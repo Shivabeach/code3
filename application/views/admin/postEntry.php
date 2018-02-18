@@ -57,7 +57,7 @@
     ];
 
     echo form_input($attr3); ?>
- 
+
     <label for="status">Status</label>
     <?php $attr5 = [
       ''        => 'Pick a status',
@@ -74,6 +74,7 @@
       "VanHorn" => "VanHorn",
       "Bostick" => "Bostick",
       "main"    => "main",
+      "Bill"    => "Bill",
       "general" => "General"
     ];
 
@@ -104,7 +105,7 @@
         <br>
         Total Word Count : <span id="display_count">0</span>
       </article>
-            
+
       <article>
         <?php $this->load->file(APPPATH . "/views/pages/includes/side1.php"); ?>
       </article>

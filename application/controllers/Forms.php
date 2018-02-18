@@ -28,11 +28,11 @@ class Forms extends CI_Controller
   {
     $this->is_logged_in();
     $data = [
-      'title'   => html_escape(trim($this->input->post('title'))),
+      'title'   => trim($this->input->post('title')),
       'content' => trim($this->input->post('content')),
-      'date'    => html_escape(trim($this->input->post('date'))),
-      'parent'  => html_escape(trim($this->input->post('parent'))),
-      'status'  => html_escape(trim($this->input->post('status'))),
+      'date'    => trim($this->input->post('date')),
+      'parent'  => trim($this->input->post('parent')),
+      'status'  => trim($this->input->post('status')),
       'slug'    => trim($this->input->post('slug'))
     ];
 
@@ -55,12 +55,12 @@ class Forms extends CI_Controller
   {
     $this->is_logged_in();
     $data = [
-      'id'        => html_escape($this->input->post('id')),
-      'title'     => html_escape($this->input->post('title')),
+      'id'        => $this->input->post('id'),
+      'title'     => trim($this->input->post('title')),
       'content'   => trim($this->input->post('content')),
-      'status'    => html_escape(trim($this->input->post('status'))),
-      'last_date' => html_escape(trim($this->input->post('last_date'))),
-      'parent'    => html_escape(trim($this->input->post('parent'))),
+      'status'    => trim($this->input->post('status')),
+      'last_date' => trim($this->input->post('last_date')),
+      'parent'    => trim($this->input->post('parent')),
       'slug'      => trim($this->input->post('slug'))
     ];
 
@@ -81,7 +81,7 @@ class Forms extends CI_Controller
 			echo "grand shit";
 		}
   } //end of enterposts
- 
+
 public function maint()
 {
     $this->is_logged_in();

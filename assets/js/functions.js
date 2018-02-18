@@ -38,8 +38,8 @@ $(function() {
         type: type,
         data: data,
         success: function(response) {
-            location.reload();
-            $('#display').html(response).delay(8000).fadeOut(1000);
+            //location.reload();
+            $('#display').html(response).delay(10000).fadeOut(1000);
         }
       });
     return false;
