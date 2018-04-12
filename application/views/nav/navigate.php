@@ -20,20 +20,30 @@
     <!-- <a href="http://van-horn.us/pages/army">italian-stuffy</a> -->
     <article>
         <h4 class="m-left-nav--heading">Bostick Family</h4>
-        <ul>
-            <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i><?php echo anchor('pages/bos','Bostick History');?>
-            </li>
-            <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
-                <?php echo anchor('pages/bosdna','Bostick DNA');?>
-            </li>
-            <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
-                <?php echo anchor('pages/boslinage','Bostick Linages');?>
-            </li>
-            <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
-                <?php echo anchor('van/bos_names','Bostick Names');?>
-            </li>
-            <li class="m-left-nav--content"><?php echo anchor('pages/btime','Bostick Timeline');?></li>
-        </ul>
+            <ul>
+                <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i><?php echo anchor('pages/bos','Bostick History');?>
+                </li>
+                <lic><i class="fa fa-link" aria-hidden="true"></i>
+                    <?php echo anchor('pages/bosdna','Bostick DNA');?>
+                </li>
+                <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
+                    <?php echo anchor('pages/boslinage','Bostick Linages');?>
+                </li>
+                <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
+                    <?php echo anchor('van/bos_names','Bostick Names');?>
+                </li>
+                <li class="m-left-nav--content"><?php echo anchor('pages/btime','Bostick Timeline');?></li>
+            </ul>
+    </article>
+    <article>
+        <h4 class="m-left-nav--heading">Shafer Family</h4>
+            <ul>
+                <li class="m-left-nav--content">
+                    <i class="fa fa-link" aria-hidden="true"></i>
+                <?php echo anchor('pages/cousins','Shafer Family');?>
+                </li>
+            </ul>
+
     </article>
     <article>
         <h4 class="m-left-nav--heading">General Links</h4>

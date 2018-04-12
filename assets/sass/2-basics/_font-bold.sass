@@ -1,0 +1,27 @@
+/* file font-weights */
+
+.bold-1
+	font-weight: 100
+.bold-2
+	font-weight: 200
+.bold-3
+	font-weight: 300
+.bold-4
+	font-weight: 400
+.bold-5
+	font-weight: 500
+.bold-6
+	font-weight: 600
+.bold-7
+	font-weight: 700
+.bold-8
+	font-weight: 800
+.bold-9
+	font-weight: 900
+
+
+@function weight($num)
+	@return  #{ $num }
+@for $i from 1 through 10
+	.fw-#{$i}
+		font-weight: weight($i)

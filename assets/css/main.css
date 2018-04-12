@@ -503,10 +503,11 @@ a {
     margin: 20px auto;
     padding: 0 2em;
     background: transparent;
-    -webkit-box-shadow: 10px 10px 1px #e7c4b2;
-    box-shadow: 10px 10px 1px #e7c4b2;
-    border-top: 1px solid #e7c4b2;
-    border-left: 1px solid #e7c4b2;
+    -webkit-box-shadow: 10px 10px 1px #e2b8a3;
+    box-shadow: 10px 10px 1px #e2b8a3;
+    border-top: 1px solid #e2b8a3;
+    border-left: 1px solid #e2b8a3;
+    background-clip: border-box;
     border-radius: 10px; }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .ancestry--container {
@@ -521,7 +522,8 @@ a {
       background: #bfc0ff;
       color: #6263B2;
       padding: 1em;
-      margin: 1em; }
+      margin: 1em;
+      cursor: pointer; }
   .ancestry--ancestryTitle {
     font-weight: 400;
     font-family: soriasoria;

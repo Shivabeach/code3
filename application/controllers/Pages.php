@@ -364,7 +364,7 @@ class Pages extends CI_Controller
       $this->pagination->initialize($config);
 
       $parent = "Bill";
-      $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "desc");
+      $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "asc");
       $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
       if($query->result()){
         $data["mainContent"] = $query->result();

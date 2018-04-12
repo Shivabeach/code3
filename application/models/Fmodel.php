@@ -12,7 +12,7 @@ class Fmodel extends CI_Model
       }
 
 	}
-
+ 
   public function get_ip()
   {
   if (isset($_SERVER['HTTP_X_SUCURI_CLIENTIP']))

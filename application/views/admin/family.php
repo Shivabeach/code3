@@ -9,7 +9,7 @@
       <?php
       $attr1 = [
         "id"    => "ajax"
-      ];
+      ]; 
       echo form_open("Forms/family", $attr1);
       ?>
       <!-- form -->
@@ -32,6 +32,15 @@
         'style'     => 'width:50%'
       ];?>
       <?php echo form_input($attr4);?>
+        <!-- added 3/28/2018 -->
+      <label for="male_name">Male Name</label>
+      <?php
+      $attr14 = [
+        'name'      => 'male_name',
+        'maxlength' => '100',
+        'style'     => 'width:50%'
+      ];?>
+      <?php echo form_input($attr14);?>
 
       <label for="female">Female</label>
       <?php
@@ -41,6 +50,15 @@
         'style'     => 'width:50%'
       ];?>
       <?php echo form_input($attr5);?>
+        <!-- added below on 3828/2018 -->
+      <label for="female_name">Female Name</label>
+      <?php
+      $attr15 = [
+        'name'      => 'female_name',
+        'maxlength' => '100',
+        'style'     => 'width:50%'
+      ];?>
+      <?php echo form_input($attr15);?>
 
       <label for="branch2">2nd Branch</label>
       <?php

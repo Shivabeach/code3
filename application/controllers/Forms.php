@@ -161,13 +161,15 @@ public function fill_form()
       return $query;
     }
   }
-
+  // updated below to add female and male names
   public function family()
   {
     $this->is_logged_in();
     $data = [
       'male'         => html_escape(trim($this->input->post('male'))),
+      'male_name'    => html_escape(trim($this->input->post('male_name'))),
       'female'       => html_escape(trim($this->input->post('female'))),
+      'female_name'  => html_escape(trim($this->input->post('female_name'))),
       'family'       => html_escape(trim($this->input->post('family'))),
       'relationship' => html_escape(trim($this->input->post('relationship'))),
       'relative'     => html_escape(trim($this->input->post('relative'))),
@@ -179,6 +181,8 @@ public function fill_form()
     ];
     $this->form_validation->set_rules('male', 'Male', 'required|alpha_numeric_spaces');
     $this->form_validation->set_rules('female', 'female', 'required|alpha_numeric_spaces');
+    $this->form_validation->set_rules('male_name', 'Male Name', 'required|alpha_numeric_spaces');
+    $this->form_validation->set_rules('female_name', 'female Name', 'required|alpha_numeric_spaces');
     $this->form_validation->set_rules('family', 'family', 'required|alpha_numeric_spaces');
     $this->form_validation->set_rules('relationship', 'Relationship', 'required');
     $this->form_validation->set_rules('relative', 'Relative', 'required|alpha_numeric_spaces');

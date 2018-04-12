@@ -25,10 +25,10 @@ class Checkin extends CI_Controller {
       'email'     => html_escape($this->input->post('email')),
       );
 
-      $this->form_validation->set_rules('name', 'name', 'required|inique[check.name]');
+      $this->form_validation->set_rules('name', 'name', 'required');
       $this->form_validation->set_rules('password', 'password', 'required');
       $this->form_validation->set_rules('password2', 'password2', 'required|matches[password2]');
-      $this->form_validation->set_rules('email', 'email', 'required|valid_email|unique[check.email]');
+      $this->form_validation->set_rules('email', 'email', 'required|valid_email');
 
       if( $this->form_validation->run() == FALSE) {
               echo validation_errors();
@@ -66,9 +66,9 @@ class Checkin extends CI_Controller {
     public function logout()
     {
       $items = ['name', 'is_logged_in']; //was email
-        $this->session->unset_userdata($items);
-        $this->session->sess_destroy();
-        redirect('Pages', 'refresh');
+      $this->session->unset_userdata($items);
+      $this->session->sess_destroy();
+      redirect('Pages', 'refresh');
     }
     /**
      * Log in script
@@ -107,7 +107,7 @@ class Checkin extends CI_Controller {
           $this->email->send();
           die();
         }
-            $name  = html_escape($this->input->post('name'));
+        $name  = html_escape($this->input->post('name'));
         $email = html_escape($this->input->post('email'));
         $pass1 = html_escape($this->input->post('pass'));
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);

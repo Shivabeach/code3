@@ -15,6 +15,8 @@
 
           <li class="m-nav-grid--listpad"><?php echo anchor('pages/vtime','VanHorn Timeline');?></li>
 
+          <li class="m-nav-grid--listpad"><?php echo anchor('pages/cousins','Shafer Family');?></li>
+
         </ul>
 
       </div>
@@ -50,7 +52,23 @@
            echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> VanHorn Family.
          </p>
          <p>
-           Mail to: <a href="mailto:&#98;&#114;&#97;&#100;&#64;&#118;&#97;&#110;&#45;&#104;&#111;&#114;&#110;&#46;&#117;&#115;">&#98;&#114;&#97;&#100;&#64;&#118;&#97;&#110;&#45;&#104;&#111;&#114;&#110;&#46;&#117;&#115;</a>
+           <script type="text/javascript">
+              //<![CDATA[
+              <!--
+              var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
+              "=118){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return " +
+              "o.substr(0,ol);}f(\")011,\\\"w{rng} 020\\\\100\\\\WPVXv710\\\\r\\\\qR[SVFBq" +
+              "\\\\\\\\9E*p771\\\\efy++[|qur\\\\130\\\\130\\\\620\\\\7T310\\\\430\\\\700\\" +
+              "\\100\\\\310\\\\.[020\\\\100\\\\500\\\\4>/+i''~ >% k*#6~X[JT610\\\\]DBEKE40" +
+              "0\\\\x730\\\\F{nr8w(08``o|ovu.t\\\\520\\\\430\\\\230\\\\000\\\\020\\\\630\\" +
+              "\\310\\\\\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;72" +
+              "1=%y;++y)011<i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitc" +
+              "nuf\")"                                                                      ;
+              while(x=eval(x));
+              //-->
+              //]]>
+              </script>
+
          </p>
          <p>Page loaded in {elapsed_time} seconds</p>
       </div>
