@@ -175,6 +175,7 @@ public function fill_form()
       'relative'     => html_escape(trim($this->input->post('relative'))),
       'level'        => html_escape(trim($this->input->post('level'))),
       'year'         => html_escape(trim($this->input->post('year'))),
+      'death'        => html_escape(trim($this->input->post('death'))),
       'branch2'      => html_escape(trim($this->input->post('branch2'))),
       'country'      => html_escape(trim($this->input->post('country'))),
       'comment'      => html_escape(trim($this->input->post('comment')))
@@ -188,6 +189,7 @@ public function fill_form()
     $this->form_validation->set_rules('relative', 'Relative', 'required|alpha_numeric_spaces');
     $this->form_validation->set_rules('level', 'level', 'required|numeric');
     $this->form_validation->set_rules('year', 'year', 'required|numeric|max_length[4]');
+    $this->form_validation->set_rules('death', 'death', 'required|numeric|max_length[4]');
     $this->form_validation->set_rules('branch2', 'branch2', 'required|alpha_numeric_spaces');
     $this->form_validation->set_rules('country', 'country', 'required|alpha_numeric_spaces');
     $this->form_validation->set_rules('comment', 'comment', 'min_length[8]');

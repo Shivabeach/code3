@@ -23,7 +23,7 @@
             <ul>
                 <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i><?php echo anchor('pages/bos','Bostick History');?>
                 </li>
-                <lic><i class="fa fa-link" aria-hidden="true"></i>
+                <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
                     <?php echo anchor('pages/bosdna','Bostick DNA');?>
                 </li>
                 <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>

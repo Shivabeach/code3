@@ -175,6 +175,7 @@ This feeds the admin area page
     }else {
       echo "No Data";
     }
+    
     $tmpl = array (
       'table_open'         => '<table class="m-addin"',
       'heading_cell_start' => '<th class="m-addin--head">',

@@ -41,7 +41,7 @@
         'style'     => 'width:50%'
       ];?>
       <?php echo form_input($attr14);?>
-
+      
       <label for="female">Female</label>
       <?php
       $attr5 = [
@@ -109,6 +109,16 @@
             'style'     => 'width:50%'
           ];?>
         <?php echo form_input($attr9);?>
+
+        <label for="death">Year Died</label>
+        <?php
+         $attr20 = [
+            'name'      => 'death',
+            'maxlength' => '4',
+            'type'      => 'number',
+            'style'     => 'width:50%'
+          ];?>
+        <?php echo form_input($attr20);?>
 
         <label for="country">Country of Birth</label>
         <?php
