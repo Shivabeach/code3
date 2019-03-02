@@ -8,8 +8,10 @@
   </div>
   <div class="flex-large">
     <?php foreach($mainContent as $row):?>
-      <?php $content = htmlspecialchars_decode($row->content);?>
-      <?php $slug    = htmlspecialchars_decode($row->slug);?>
+      <?php 
+      $content = htmlspecialchars_decode($row->content);
+      $slug    = htmlspecialchars_decode($row->slug);
+      ?>
       <div class="ancestry--container">
         <article class="ancestry">
           <h3 class="ancestry--ancestryTitle item"><?php echo $row->title;?></h3>

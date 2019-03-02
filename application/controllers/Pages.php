@@ -17,9 +17,9 @@ class Pages extends CI_Controller
  */
   public function index()
   {
-    $config['base_url']         = base_url() . '/pages/index/';
+    $config['base_url']         = base_url("/pages/index");
     $config['total_rows']       = $this->db->count_all_results('posts');
-    $config['per_page']         = 5;
+    $config['per_page']         = 4;
     $config['num_links']        = 4;
     $config['uri_segment']      = 3;
     $config['full_tag_open']    = "<div class='pagination'>";
@@ -57,9 +57,9 @@ class Pages extends CI_Controller
   public function van()
   {
 
-    $config['base_url']       = base_url() . 'pages/van';
+    $config['base_url']       = base_url("pages/van");
     $config['total_rows']     = $this->db->count_all_results('posts');
-    $config['per_page']       = 6;
+    $config['per_page']       = 4;
     $config['num_links']      = 4;
     $config['uri_segment']    = 3;
     $config['full_tag_open']  = "<div class='pagination'>";
@@ -69,11 +69,12 @@ class Pages extends CI_Controller
 
     $this->pagination->initialize($config);
 
-    $parent        = "VanHorn";
+    $parent = "VanHorn";
     $this->db->select("title, content, date, last_date, slug")->where('parent', $parent)->where('status', 'publish')->order_by("id", "desc");
+
     $query = $this->db->get('posts', $config['per_page'],$this->uri->segment(3));
     if($query->result()){
-      $data["mainContent"]    = $query->result();
+      $data["mainContent"] = $query->result();
     }
     $data['title'] = "VanHorn Page";
     $data['head']  = "VanHorn's";
@@ -84,9 +85,9 @@ class Pages extends CI_Controller
   }
   public function bos()
   {
-    $config['base_url']       = base_url() . 'Pages/bos';
+    $config['base_url']       = base_url() . 'Pages/bos/';
     $config['total_rows']     = $this->db->count_all_results('posts');
-    $config['per_page']       = 6;
+    $config['per_page']       = 4;
     $config['num_links']      = 4;
     $config['uri_segment']    = 3;
     $config['full_tag_open']  = "<div class='pagination'>";

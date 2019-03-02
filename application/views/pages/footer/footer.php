@@ -52,33 +52,19 @@
            echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> VanHorn Family.
          </p>
          <p>
-           <script type="text/javascript">
-              //<![CDATA[
-              <!--
-              var x="function f(x){var i,o=\"\",ol=x.length,l=ol;while(x.charCodeAt(l/13)!" +
-              "=118){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return " +
-              "o.substr(0,ol);}f(\")011,\\\"w{rng} 020\\\\100\\\\WPVXv710\\\\r\\\\qR[SVFBq" +
-              "\\\\\\\\9E*p771\\\\efy++[|qur\\\\130\\\\130\\\\620\\\\7T310\\\\430\\\\700\\" +
-              "\\100\\\\310\\\\.[020\\\\100\\\\500\\\\4>/+i''~ >% k*#6~X[JT610\\\\]DBEKE40" +
-              "0\\\\x730\\\\F{nr8w(08``o|ovu.t\\\\520\\\\430\\\\230\\\\000\\\\020\\\\630\\" +
-              "\\310\\\\\\\"(f};o nruter};))++y(^)i(tAedoCrahc.x(edoCrahCmorf.gnirtS=+o;72" +
-              "1=%y;++y)011<i(fi{)++i;l<i;0=i(rof;htgnel.x=l,\\\"\\\"=o,i rav{)y,x(f noitc" +
-              "nuf\")"                                                                      ;
-              while(x=eval(x));
-              //-->
-              //]]>
-              </script>
+           <a href="javascript:window.location.href=atob('<?= base64_encode("mailto:brad@van-horn.us?subject=Family%20Site") ?>')">E-Mail</a>
 
          </p>
          <p>Page loaded in {elapsed_time} seconds</p>
+         <p><?php echo 'Revision <strong>' . CI_VERSION . '</strong>';?></p>
       </div>
       <span id="men"></span>
       </article>
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="<?php echo base_url('assets/js/functions.js');?>"></script>
-  <script src="<?php echo base_url('assets/plugins/count.min.js');?>"></script>
-  <script src="<?php echo base_url('assets/plugins/vert/vertical-tabs.js');?>"></script>
+  <script async src="<?php echo base_url('assets/js/functions.js');?>"></script>
+  <script async src="<?php echo base_url('assets/plugins/count.min.js');?>"></script>
+  <script async src="<?php echo base_url('assets/plugins/vert/vertical-tabs.js');?>"></script>
 </body>
 </html>

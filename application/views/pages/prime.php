@@ -38,6 +38,7 @@
         </div>
         </article>
         </div>
+        <!-- from pages/index -->
         <?php foreach($mainContent as $row):?>
           <?php $content = htmlspecialchars_decode($row->content);?>
           <?php $slug = htmlspecialchars_decode($row->slug);?>
