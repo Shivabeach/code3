@@ -14,18 +14,21 @@ class Pages extends CI_Controller
  * [index description]
  * @method index
  * @return return database query [description]
+ * $this->db->count_all_results('posts');
  */
   public function index()
   {
-    $config['base_url']         = base_url("/pages/index");
-    $config['total_rows']       = $this->db->count_all_results('posts');
-    $config['per_page']         = 4;
-    $config['num_links']        = 4;
-    $config['uri_segment']      = 3;
-    $config['full_tag_open']    = "<div class='pagination'>";
-    $config['full_tag_close']   = "</div>";
-    $config['first_link']       = 'First';
-    $config['last_link']        = 'Last';
+    $config['base_url']       = base_url("/pages/index");
+    $config['total_rows']     = 5;
+    $config['per_page']       = 4;
+    $config['num_links']      = 4;
+    $config['uri_segment']    = 3;
+    $config['full_tag_open']  = "<div class='pagination'>";
+    $config['full_tag_close'] = "</div>";
+    $config['first_link']     = 'First';
+    $config['last_link']      = 'Last';
+    $config['cur_tag_open']   = '<b>';
+    $config['cur_tag_close']  = '</b>';
 
     $this->pagination->initialize($config);
     $parent = "main";
@@ -58,7 +61,7 @@ class Pages extends CI_Controller
   {
 
     $config['base_url']       = base_url("pages/van");
-    $config['total_rows']     = $this->db->count_all_results('posts');
+    $config['total_rows']     = 6;
     $config['per_page']       = 4;
     $config['num_links']      = 4;
     $config['uri_segment']    = 3;
@@ -86,7 +89,7 @@ class Pages extends CI_Controller
   public function bos()
   {
     $config['base_url']       = base_url() . 'Pages/bos/';
-    $config['total_rows']     = $this->db->count_all_results('posts');
+    $config['total_rows']     = 7;
     $config['per_page']       = 4;
     $config['num_links']      = 4;
     $config['uri_segment']    = 3;

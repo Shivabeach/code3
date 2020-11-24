@@ -20,11 +20,12 @@
             <p> Where we are from in the last 500 years or so.
             <blockquote>
               <ul>
-                <li>65% of our ancestry comes from Great Britain, with outliers from Scotland, France and the Netherlands</li>
-                <li>14% is from Western Europe. Germany, France, Netherlands, Austria and Switzerland.</li>
-                <li>10% Comes from Scandinavia. Sweden, Norway, Denmark and just a wee bit of Finland</li>
-                <li>6% comes from Ireland</li>
-                <li>2% Comes from Spain and the local Mediterranean areas</li>
+                <li>75% of our ancestry comes from Great Britain, with outliers from Scotland, France and the Netherlands</li>
+                <li>7% is from Norway.</li>
+                <li>6% comes from Scotland</li>
+                <li>5% comes from Germanic Europe. Primarily located in: Germany, Switzerland
+                <li>4% Comes from Sweden</li>
+                <li>3% Comes from Wales</li>
                 <li>2% comes from the Caucasus areas. That would be Turkey, Iran, Iraq, Turkmenistan, and Afghanistan.</li>
               </ul>
             </blockquote>
@@ -39,7 +40,9 @@
         </article>
         </div>
         <!-- from pages/index -->
-        <?php foreach($mainContent as $row):?>
+
+        <?php
+          foreach($mainContent as $row):?>
           <?php $content = htmlspecialchars_decode($row->content);?>
           <?php $slug = htmlspecialchars_decode($row->slug);?>
           <div class="ancestry--container">
@@ -59,6 +62,7 @@
         </div>
       <?php endforeach;?>
           <?php echo $this->pagination->create_links();?>
+
 
       </div>
 

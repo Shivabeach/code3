@@ -33,7 +33,7 @@
           $row->country,
           $row->Total
         );
-      } 
+      }
         echo $this->table->generate();
       ?>
     </div>
@@ -66,5 +66,5 @@
       </div>
     </article>
     </div>
-    
+
   </div>
