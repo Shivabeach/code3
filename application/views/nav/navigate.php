@@ -51,9 +51,7 @@
             <li class="m-left-nav--content"><i class="fa fa-home" aria-hidden="true"></i>
                 <?php echo anchor("", "Home"); ?>
             </li>
-            <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
-                <?php echo anchor("checkin", "Log In"); ?>
-            </li>
+
             <li class="m-left-nav--content"><i class="fa fa-link" aria-hidden="true"></i>
                 <?php echo anchor("pages/map", "Ancestral Map"); ?>
             </li>
