@@ -6,7 +6,7 @@ $attr1 = [
   "id"    => "ajax",
   "class" => "pure-form pure-form-stacked"
 ];
-echo form_open("Forms/upPosts", $attr1);
+echo form_open("forms/up_posts", $attr1);
 $id = [
   'name'     => 'id',
   'value'    => $row->id,
@@ -68,7 +68,6 @@ echo form_dropdown('parent', $attr4, array('value' => $row->parent));?>
 <?php $attr3 = [
   "id"    => "last_date",
   "name"  => "last_date",
-  "type"  => "date",
   "class" => "datestamp",
   "class" => "pure-form pure-input-1-2"
 ];

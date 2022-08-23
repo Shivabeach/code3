@@ -48,10 +48,11 @@
           <div class="ancestry--container">
           <article class="ancestry">
             <header>
-              <h3 class="ancestry--ancestryTitle"><?php echo html_escape($row->title);?></h3>
+              <h3 class="ancestry--ancestryTitle"><?php echo $row->title;?></h3>
             </header>
             <div class="slug">
               <?php echo  $this->typography->auto_typography($slug);?>
+              <h5><?php echo $row->last_date;?></h5>
             </div>
             <button class="grab">Read</button>
             <div class="ancestry--ancestryContent">

@@ -19,6 +19,7 @@
       <li><a href="#tabs-4">Ephraim Wheeler</a></li>
       <li><a href="#tabs-5">Robert Pease</a></li>
       <li><a href="#tabs-6">Jonathon C. Sholes</a></li>
+      <li><a href="#tabs-7">William Brewster</a></li>
     </ul>
       <!-- vertical plugin https://github.com/tjvantoll/jquery-ui-vertical-tabs -->
   <article id="tabs-1">
@@ -44,6 +45,10 @@
   <article id="tabs-6">
     <h3>Jonathon C. Sholes</h3>
     <?php include("JonathonSholes.html");?>
+  </article>
+  <article id="tabs-7">
+    <h3>William Brewster</h3>
+    <?php include("brewster.html");?>
   </article>
 
 

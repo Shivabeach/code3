@@ -9,13 +9,13 @@ class Checkin extends CI_Controller {
     $this->load->model("checkmod");
   }
 
-  function index()
-  {
-    $data['head'] = "Login to admin";
-    $data['title'] = 'Login to Admin';
-    $data['main_content'] = 'pages/login/log';
-    $this->load->view('pages/includes/template', $data);
-  }
+  // function index()
+  // {
+  //   $data['head'] = "Login to admin";
+  //   $data['title'] = 'Login to Admin';
+  //   $data['main_content'] = 'pages/login/log';
+  //   $this->load->view('pages/includes/template', $data);
+  // }
   public function process()
   {
     $data = array(
@@ -50,14 +50,14 @@ class Checkin extends CI_Controller {
      * determines if you are logged in
      * @return boolean [description]
      */
-    public function is_logged_in()
-    {
-        $is_logged_in = $this->session->userdata('is_logged_in');
-        if (!isset($is_logged_in) || $is_logged_in != true)
-        {
-          redirect("Pages/entry");
-        }
-    }
+    // public function is_logged_in()
+    // {
+    //     $is_logged_in = $this->session->userdata('is_logged_in');
+    //     if (!isset($is_logged_in) || $is_logged_in != true)
+    //     {
+    //       redirect("Pages/entry");
+    //     }
+    // }
 
     /**
      * logs you out and ends the session
@@ -168,14 +168,14 @@ This feeds the admin area page
   public function admin()
   {
     $this->load->model("checkmod");
-    $this->is_logged_in();
+    //$this->is_logged_in();
     If ($query = $this->checkmod->get_visits())
     {
       $data['visitor'] = $query;
     }else {
       echo "No Data";
     }
-    
+
     $tmpl = array (
       'table_open'         => '<table class="m-addin"',
       'heading_cell_start' => '<th class="m-addin--head">',

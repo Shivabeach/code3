@@ -7,7 +7,6 @@ class Classname extends CI_Model{
   {
     parent::__construct();
     $this->load->library('database');
-    //Codeigniter : Write Less Do More
   }
   public function get_data($parent = null)
   {
@@ -19,7 +18,7 @@ class Classname extends CI_Model{
   			}
 			return $data;
 		}
-  } 
+  }
   function fill_form()
   {
 		$id = $this->uri->segment(3);

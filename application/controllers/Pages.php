@@ -42,28 +42,28 @@ class Pages extends CI_Controller
     $this->load->view('pages/includes/template', $data);
   }
 
-  public function is_logged_in()
-    {
-        $is_logged_in = $this->session->userdata('is_logged_in');
-        if (!isset($is_logged_in) || $is_logged_in != true)
-        {
-          redirect("Checkin");
-            //$this->load->view('login_form');
-        }
-    }
-    public function logout()
-    {
-        $this->session->unset_userdata('name');
-        $this->session->sess_destroy();
-        redirect('Pages', 'refresh');
-    }
+  // public function is_logged_in()
+  //   {
+  //       $is_logged_in = $this->session->userdata('is_logged_in');
+  //       if (!isset($is_logged_in) || $is_logged_in != true)
+  //       {
+  //         redirect("Checkin");
+  //           //$this->load->view('login_form');
+  //       }
+  //   }
+  //   public function logout()
+  //   {
+  //       $this->session->unset_userdata('name');
+  //       $this->session->sess_destroy();
+  //       redirect('Pages', 'refresh');
+  //   }
   public function van()
   {
 
     $config['base_url']       = base_url("pages/van");
     $config['total_rows']     = 6;
-    $config['per_page']       = 4;
-    $config['num_links']      = 4;
+    $config['per_page']       = 5;
+    $config['num_links']      = 5;
     $config['uri_segment']    = 3;
     $config['full_tag_open']  = "<div class='pagination'>";
     $config['full_tag_close'] = "</div>";
@@ -114,13 +114,22 @@ class Pages extends CI_Controller
 
   function entry()
   {
-    $this->is_logged_in();
     $data['title'] = "Post Entry";
     $data['head']  = "Post Entry";
     $this->load->view("pages/header/head", $data);
     $this->load->view("admin/postEntry");
     $this->load->view("pages/footer/footer");
   }
+
+  function admin()
+  {
+    $data['title'] = "Post Entry";
+    $data['head']  = "Post Entry";
+    $this->load->view("pages/header/head", $data);
+    $this->load->view("admin/admin");
+    $this->load->view("pages/footer/footer");
+  }
+
 
   public function sources()
   {
@@ -139,17 +148,16 @@ class Pages extends CI_Controller
 
   public function post_up()
   {
-    $this->is_logged_in();
     $data["title"] = "Post update";
     $data['head']  = "Post update";
-  $this->load->view('pages/header/head', $data);
-  $this->load->view('admin/post_update', $data);
-  $this->load->view('pages/footer/footer');
+    $this->load->view('pages/header/head', $data);
+    $this->load->view('admin/post_update', $data);
+    $this->load->view('pages/footer/footer');
   }
 
   public function cities()
   {
-      $this->is_logged_in();
+      //$this->is_logged_in();
       $data['head']  = "Cities entry";
       $data['title'] = 'Cities entry';
       $this->load->view('pages/header/head', $data);
@@ -182,10 +190,10 @@ class Pages extends CI_Controller
     $data['main_content'] = 'style/style';
     $this->load->view('pages/includes/template', $data);
   }
-  public function army()
-  {
-    $this->load->view('army');
-  }
+  // public function army()
+  // {
+  //   $this->load->view('army');
+  // }
 
   public function vanlinage ()
   {
@@ -262,8 +270,6 @@ class Pages extends CI_Controller
       $this->db->order_by('Total', 'desc');
       $query = $this->db->get('primary');
       $data['bosgrand'] = $query->result();
-
-
       $this->table->set_template($tmpl);
 
       $data['head']         = "Relative Stats";
@@ -274,17 +280,13 @@ class Pages extends CI_Controller
 
     public function family()
     {
-      $this->is_logged_in();
       $data['head']  = "Family Entry";
       $data['title'] = 'Family entry';
       $data['main_content'] = 'admin/family';
       $this->load->view('pages/includes/template', $data);
     }
-
-
     public function lists()
     {
-      $this->is_logged_in();
       $this->db->select("id, title, parent, date, status")->order_by("id", "desc");
       $query = $this->db->get("posts");
       if ($query->result())
@@ -309,7 +311,6 @@ class Pages extends CI_Controller
       $this->load->view("admin/admin2");
       $this->load->view("pages/footer/footer");
     }
-
     public function vtime() {
       $data['head'] = "VanHorn Timeline";
       $data['title'] = "VanHorn Timeline";

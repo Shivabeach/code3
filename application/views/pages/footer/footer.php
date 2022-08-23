@@ -17,6 +17,8 @@
 
           <li class="m-nav-grid--listpad"><?php echo anchor('pages/cousins','Shafer Family');?></li>
 
+          <li class="m-nav-grid--listpad"><?php echo anchor('pages/admin','Admin');?></li>
+
         </ul>
 
       </div>

@@ -3,11 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Van extends CI_Controller {
 
-	public function index()
-	{
-
-	}
-
 	public function van_names()
 	{
 		$data['head'] = "VanHorn / Hunt Names";
@@ -26,7 +21,6 @@ class Van extends CI_Controller {
 			$data['male'] = $query->result();
 
 		}
-
 		$this->db->select('female_name AS girls');
 		$this->db->select('COUNT(female_name) AS total');
 		$this->db->where('family', 'VanHorn');

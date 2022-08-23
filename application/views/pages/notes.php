@@ -94,9 +94,11 @@
             <dd class="m-listContainer--ddstyle">Col Ebenezer Condict. Continental Army, died from smallpox in service. 1735-1777</dd>
             <dd class="m-listContainer--ddstyle">Joseph Frank Steward. PVT US MARINE CORPS WORLD WAR II</dd>
             <dd class="m-listContainer--ddstyle">Alonzo Prestage - Enlisted in Company C, Michigan 10th Cavalry Regiment on 23 Oct 1863.Promoted to Full Sergeant on Sep 1 1865.Mustered out on 11 Nov 1865 at Memphis, TN. 2nd Great Uncle</dd>
-            <dd class="m-listContainer--ddstyle">Lt. Levi Van Auken, Albany NY. Albany Co NY 75, Revolutionary War
+            <dd class="m-listContainer--ddstyle">Lt. Levi Van Auken, Albany NY. Albany Co NY 75, Revolutionary War</dd>
+            <dd class="m-listContainer--ddstyle"> Lafayette Reed 10th Michigan Infantry Company F Killed 1 Sep 1864 Jonesboro Georgia</dd>
+            <dd class="m-listContainer--ddstyle"> Hiram A Reed 9th New York Company K Artillery. Killed 9 June 1864 Cold Harbor Virginia. Brother to lafayette</dd>
+            <dd class="m-listContainer--ddstyle"> Cornelius Van Horn 16th Reg. Mich. Vol. Inf Company H</dd>
 
-            </dd>
 
         </dl>
       </article>
