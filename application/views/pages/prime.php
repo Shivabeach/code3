@@ -20,13 +20,12 @@
             <p> Where we are from in the last 500 years or so.
             <blockquote>
               <ul>
-                <li>75% of our ancestry comes from Great Britain, with outliers from Scotland, France and the Netherlands</li>
-                <li>7% is from Norway.</li>
-                <li>6% comes from Scotland</li>
-                <li>5% comes from Germanic Europe. Primarily located in: Germany, Switzerland
-                <li>4% Comes from Sweden</li>
+                <li>46% of our ancestry comes from Great Britain, with outliers from Scotland, France and the Netherlands</li>
+                <li>20% comes from Scotland</li>
+                <li>17% is from Sweden & Denmark.</li>
+                <li>11% comes from Germanic Europe. Primarily located in: Germany, Switzerland
                 <li>3% Comes from Wales</li>
-                <li>2% comes from the Caucasus areas. That would be Turkey, Iran, Iraq, Turkmenistan, and Afghanistan.</li>
+                <li>2% comes from the Ireland.</li>
               </ul>
             </blockquote>
             <p>You may well ask how can there be bleed over from one area to the other. It is a good question. Remember, those of our English ancestors also had Scottish, French and Dutch ancestors themselves. We pick that up in our DNA. Our Caucasus DNA is slightly deeper and more on Mom's side than Dad's. Remember the path out of Africa passed through the middle east on their way to Europe, Mediterranean, Russia and beyond.</p>
