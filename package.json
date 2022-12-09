@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "This is a website that I am designing for my ancestry.",
   "main": "index.js",
-  "dependencies": {
-    "csscomb": "^4.3.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
