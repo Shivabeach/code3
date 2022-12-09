@@ -39,7 +39,6 @@
         <ul class="m-nav-grid--center">
           <li class="m-nav-grid--listpad"><?php echo anchor("", "Home"); ?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor("pages/map", "Ancestoral Map"); ?></li>
-          <li class="m-nav-grid--listpad"><?php echo anchor("checkin", "Log In"); ?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor("pages/notes", "Family Notes"); ?></li>
           <li class="m-nav-grid--listpad"><?php echo anchor("pages/relatives", "Family Connections"); ?>
           <li class="m-nav-grid--listpad"><?php echo anchor("pages/reading", "Reading Sources");?></li>
